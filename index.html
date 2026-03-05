@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>9°South | Experiential Travel</title>
+<meta name="description" content="9°South curates ultra-luxury sustainable travel experiences for discerning global travelers." />
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+ :root {
+      --gold: #c6a55c;
+      --deep: #0c0c0c;
+      --charcoal: #111;
+      --soft: #1a1a1a;
+      --light: #f5f5f5;
+    }
+ 
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:white;
+color:#333;
+}
+
+/* NAVBAR */
+
+nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 15%;
+position:relative;
+top:0;
+z-index:10;
+box-shadow:0 2px 10px rgba(0,0,0,0.05);
+}
+
+nav h2{
+font-weight:600;
+letter-spacing:1px;
+}
+
+nav ul{
+display:flex;
+list-style:none;
+gap:30px;
+}
+
+nav a{
+text-decoration:none;
+color:#333;
+font-weight:500;
+}
+
+/* HERO */
+
+.hero{
+height:90vh;
+background-image:url("https://images.unsplash.com/photo-1501785888041-af3ef285b470");
+background-size:cover;
+background-position:center;
+display:flex;
+align-items:center;
+justify-content:center;
+flex-direction:column;
+text-align:center;
+color:white;
+}
+
+.hero h1{
+font-size:48px;
+margin-bottom:15px;
+}
+
+.hero p{
+font-size:18px;
+margin-bottom:30px;
+}
+
+/* SEARCH BOX */
+
+.search-box{
+background:white;
+padding:20px;
+border-radius:12px;
+display:flex;
+gap:10px;
+box-shadow:0 10px 25px rgba(0,0,0,0.15);
+}
+
+.search-box input{
+padding:12px;
+border:1px solid #ddd;
+border-radius:8px;
+outline:none;
+}
+
+.search-box button{
+background:#0f766e;
+color:white;
+border:none;
+padding:12px 20px;
+border-radius:8px;
+cursor:pointer;
+}
+
+/* DESTINATIONS */
+
+.section{
+padding:80px 8%;
+}
+
+.section h2{
+text-align:center;
+margin-bottom:40px;
+font-size:32px;
+}
+
+.destinations{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(450px,1fr));
+gap:3rem;
+}
+
+.card{
+background:white;
+border-radius:14px;
+overflow:hidden;
+box-shadow:0 6px 20px rgba(0,0,0,0.08);
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-6px);
+}
+
+.card img{
+width:100%;
+height:180px;
+object-fit:cover;
+}
+
+.card-content{
+padding:18px;
+}
+
+.card-content h3{
+margin-bottom:10px;
+}
+
+/* EXPERIENCES */
+
+.experience{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:40px;
+align-items:center;
+}
+
+.experience img{
+width:100%;
+border-radius:12px;
+}
+
+/* TESTIMONIALS */
+
+.testimonials{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+.testimonial{
+background:white;
+padding:25px;
+border-radius:12px;
+box-shadow:0 5px 18px rgba(0,0,0,0.08);
+}
+
+/* CTA */
+
+.cta{
+background:#0f766e;
+color:white;
+text-align:center;
+padding:70px 8%;
+}
+
+.cta h2{
+margin-bottom:20px;
+}
+
+.cta button{
+padding:14px 28px;
+border:none;
+background:white;
+color:#0f766e;
+border-radius:10px;
+cursor:pointer;
+font-weight:500;
+}
+
+.booking {
+      
+      border-radius: 20px;
+      padding: 4rem;
+      max-width: 800px;
+      margin: auto;
+      border: 1px solid rgba(198,165,92,0.2);
+    }
+
+    .booking form {
+      display: grid;
+      gap: 1.5rem;
+    }
+
+    .booking input, .booking select, .booking textarea {
+      padding: 1rem;
+      
+      border: 1px solid rgba(255,255,255,0.1);
+      color: black;
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    .booking input:focus, .booking textarea:focus {
+      outline: none;
+      border-color: var(--gold);
+    }
+
+.booking button{
+background:#0f766e;
+color:white;
+border:none;
+padding:12px 20px;
+border-radius:8px;
+cursor:pointer;
+}
+    footer {
+      text-align: center;
+      padding: 3rem;
+      border-top: 1px solid rgba(198,165,92,0.2);
+      font-size: 0.9rem;
+      color: #aaa;
+    }
+
+footer a{
+	text-decoration:none;
+	color: #aaa;
+
+}
+    @media(max-width:768px){
+      header h1 { font-size: 2.5rem; }
+      nav ul { display: none; }
+      .booking { padding: 2rem; }
+    }
+	
+	
+.logo-container {
+  width: auto;
+  height: 5rem;
+  
+}
+
+</style>
+</head>
+
+<body>
+
+<nav>
+  <img class="logo-container" src="C:\Users\dineshkumar.r\Downloads\logo.png">
+<ul>
+<li><a href="#destinations">Destinations</a></li>
+<li><a href="#">Experiences</a></li>
+<li><a href="#">Journal</a></li>
+<li><a href="#">Book</a></li>
+</ul>
+</nav>
+
+
+<section class="hero">
+
+<h1>Discover Travel Beyond Tourism</h1>
+<p>Curated sustainable journeys across extraordinary destinations</p>
+
+<div class="search-box">
+
+<input type="text" placeholder="Destination">
+<input type="date">
+<input type="number" placeholder="Guests">
+
+<button>Search</button>
+
+</div>
+
+</section>
+
+
+<section class="section" id="destinations">
+
+<h2>Popular Destinations</h2>
+
+<div class="destinations">
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1505761671935-60b3a7427bad">
+<div class="card-content">
+<h3>Kerala</h3>
+<p>Backwaters and slow living</p>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1516483638261-f4dbaf036963">
+<div class="card-content">
+<h3>Himalayas</h3>
+<p>Mountains and mindful retreats</p>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e">
+<div class="card-content">
+<h3>Vietnam</h3>
+<p>Culture, cuisine & coastlines</p>
+</div>
+</div>
+
+ <div class="card">
+      <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1000&q=80">
+      <div class="card-content">
+        <h3>Coastal Slow Travel</h3>
+        <p>Mindful beach stays, marine conservation walks, and locally curated coastal living experiences.</p>
+      </div>
+    </div>
+    
+	<div class="card">
+      <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1000&q=80">
+      <div class="card-content">
+        <h3>Coastal Slow Travel</h3>
+        <p>Mindful beach stays, marine conservation walks, and locally curated coastal living experiences.</p>
+      </div>
+    </div>
+	<div class="card">
+      <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1000&q=80">
+      <div class="card-content">
+        <h3>Coastal Slow Travel</h3>
+        <p>Mindful beach stays, marine conservation walks, and locally curated coastal living experiences.</p>
+      </div>
+    </div>
+</div>
+
+</section>
+
+
+
+
+
+
+<section class="section">
+
+<div class="experience">
+
+<div>
+<h2>Experiential Travel</h2>
+<p>
+9°South designs journeys rooted in culture, nature and meaningful human connections. 
+Every itinerary is curated with sustainability and depth at its core.
+</p>
+</div>
+
+<img src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1">
+
+</div>
+
+</section>
+
+
+<section class="section">
+
+<h2>What Travelers Say</h2>
+
+<div class="testimonials">
+
+<div class="testimonial">
+<p>
+“9°South completely changed how I experience travel. 
+It felt authentic and deeply personal.”
+</p>
+<b>— Aarav, Bangalore</b>
+</div>
+
+<div class="testimonial">
+<p>
+“The most thoughtfully designed trip I've ever taken.”
+</p>
+<b>— Neha, Delhi</b>
+</div>
+
+</div>
+
+</section>
+
+<section id="booking" class="section">
+
+    <h2>Request Your Private Journey</h2>
+
+  <div class="booking">
+    <!-- Replace YOUR_FORM_ID with your Formspree ID -->
+    <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+      <input type="text" name="name" placeholder="Full Name" required>
+      <input type="email" name="email" placeholder="Email Address" required>
+      <select name="experience">
+        <option value="">Preferred Experience</option>
+        <option>Oceanfront Residence</option>
+        <option>Highland Retreat</option>
+        <option>Heritage Trail</option>
+      </select>
+      <textarea name="message" rows="4" placeholder="Tell us about your travel vision..."></textarea>
+      <button type="submit" class="button">Submit Request</button>
+    </form>
+  </div>
+</section>
+
+<section class="cta">
+
+<h2>Start Your Journey</h2>
+<p>Speak with our travel concierge</p>
+
+<button onclick="window.location.href='https://wa.me/919XXXXXXXXX'">
+Chat on WhatsApp
+</button>
+
+</section>
+
+
+<footer>
+
+<p>©<a href="https://9degreesouth.in"> 9degreesouth.in</a> 2026    &nbsp; All rights reserved. </p>
+  
+
+</footer>
+
+</body>
+</html>
