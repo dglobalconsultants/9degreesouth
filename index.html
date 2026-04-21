@@ -1,0 +1,2283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>9° South Quiet Escapes</title>
+  <script src="https://cdn.tailwindcss.com">
+  
+  </script>
+<style>
+.logo-container {
+  width: auto;
+  height: 5rem;
+}
+#home p{
+font-size:18px;
+width:50%;
+
+
+}
+ html {
+    scroll-behavior: smooth;
+  }
+
+  * {
+    scroll-margin-top: 100px;
+  }
+
+  .filter-btn {
+    padding: 8px 16px;
+    border-radius: 999px;
+    border: 1px solid #ddd;
+    background: white;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+
+  .filter-btn:hover,
+  .filter-btn.active {
+    background: black;
+    color: white;
+  }
+
+  .package-card {
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    transition: 0.3s;
+  }
+
+  .package-card:hover {
+    //transform: translateY(-2px);
+	transform-scale:110;
+	transition-duration:500;
+  }
+
+  .hidden {
+    display: none;
+  }
+  
+  <!-- Hide scrollbar -->
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.active-tab {
+    background: black;
+    color: white;
+  }
+
+
+</style>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  const buttons = document.querySelectorAll(".filter-btn");
+  const cards = document.querySelectorAll(".package-card");
+
+  buttons.forEach(button => {
+    button.addEventListener("click", function () {
+
+      // active button
+      buttons.forEach(btn => btn.classList.remove("active"));
+      this.classList.add("active");
+
+      const filter = this.dataset.filter;
+
+      cards.forEach(card => {
+        const categories = card.dataset.category.split(" ");
+
+        if (filter === "all" || categories.includes(filter)) {
+          card.classList.remove("hidden");
+        } else {
+          card.classList.add("hidden");
+        }
+      });
+
+    });
+  });
+
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+
+  const slider = document.getElementById("slider");
+  const leftBtn = document.getElementById("leftBtn");
+  const rightBtn = document.getElementById("rightBtn");
+
+  if (!slider) {
+    console.log("Slider not found ❌");
+    return;
+  }
+
+  rightBtn.addEventListener("click", () => {
+    slider.scrollBy({
+      left: 320,
+      behavior: "smooth"
+    });
+  });
+
+  leftBtn.addEventListener("click", () => {
+    slider.scrollBy({
+      left: -320,
+      behavior: "smooth"
+    });
+  });
+
+});
+
+
+
+</script>
+  
+<script>
+  window.addEventListener("load", () => {
+    const hash = window.location.hash;
+
+    if (hash) {
+      const el = document.querySelector(hash);
+
+      if (el) {
+        // Prevent instant jump
+        window.scrollTo(0, 0);
+
+        // Smooth scroll after load
+        setTimeout(() => {
+          el.scrollIntoView({ behavior: "smooth" });
+        }, 150);
+      }
+    }
+  });
+</script>
+</head>
+<body class="font-sans text-gray-800 overflow-x-hidden">
+
+
+<!-- Navbar -->
+<header class="bg-white shadow-md fixed w-full z-50">
+  <div class="max-w-7xl mx-auto flex justify-between items-center p-4">
+   <a href="./index.html">
+<img class="logo-container" src="https://github.com/dglobalconsultants/9degreesouth/blob/6819fef38a43707146ae54b35dfbe01a1d980a7e/logo.png?raw=true"/></a>
+    <button id="menu-btn" class="md:hidden text-2xl">☰</button>
+    <nav class="hidden md:flex space-x-6 font-medium">
+      <a href="./index.html">Home</a>
+      <a href="./index.html#getaways_desktop">Getaways</a>
+      <a href="./index.html#itineraries">Itineraries</a>
+      <a href="./index.html#experiences">Experiences</a>
+      <a href="./index.html#contact">Contact</a>
+    </nav>
+  </div>
+  <div id="mobile-menu" class="hidden md:hidden bg-white px-4 pb-4">
+    <a href="./index.html" class="block py-2">Home</a>
+    <a href="./index.html#getaways_mobile" class="block py-2">Getaways</a>
+    <a href="./index.html#itineraries" class="block py-2">Itineraries</a>
+    <a href="./index.html#experiences" class="block py-2">Experiences</a>
+    <a href="./index.html#contact" class="block py-2">Contact</a>
+  </div>
+</header>
+
+
+	
+	
+<section class="relative h-[60vh] md:h-[80vh] bg-black text-white h-screen flex items-center justify-center scroll-mt-24">
+
+  <!-- Background Image 
+ 
+    <img src="https://images.pexels.com/photos/3601425/pexels-photo-3601425.jpeg"
+         class="absolute inset-0 w-full h-full object-cover opacity-50"
+         alt="Travel Experience">-->
+		 
+ <img src="https://images.pexels.com/photos/3279885/pexels-photo-3279885.jpeg"
+       class="absolute inset-0 w-full h-full object-cover">
+<div class="absolute inset-0 bg-gradient-to-r from-black/40 via-black/40 to-black/40"></div>
+  <!-- Overlay Content -->
+  
+  
+  
+  <div class="relative z-10 text-center ">
+
+    <!-- Headline 
+    <h1 class="text-4xl md:text-4xl text-center mb-6">
+Travel beyond itineraries. Experience places, not routes.
+    </h1> -->
+	<!--Headline-->
+<h1 class="text-white text-3xl md:text-3xl leading-relaxed text-center
+           md:max-w-3xl mx-auto mb-6 font-semibold">
+
+ Travel beyond itineraries. Experience places, not routes.
+
+  </h1>
+    <!-- Subtext -->
+   
+ 
+   <p class="text-sm md:text-lg lg:text-xl text-gray-200 tracking-wide text-center">
+      curated escapes for those who want to feel a place — not just visit	
+	  
+    </p>
+	
+
+ 
+
+ <div class="flex flex-col sm:flex-row justify-center items-center gap-3 sm:gap-4 w-full max-w-md mx-auto mt-8">
+
+  <a href="#experiences"
+     class="w-full sm:w-auto text-center px-6 py-3 bg-white text-black rounded-full font-medium 
+            hover:bg-gray-200 transition">
+    Explore Experiences
+  </a>
+
+  <a href="#plan"
+     class="w-full sm:w-auto text-center px-6 py-3 border border-white rounded-full font-medium 
+            hover:bg-white hover:text-black transition">
+    Plan A Getaway
+  </a>
+
+
+
+</div>
+
+  </div>
+
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Experiences 
+
+https://images.pexels.com/photos/29980184/pexels-photo-29980184.jpeg
+-->
+<section class="bg-white py-8 px-4 max-w-3xl mx-auto text-center">
+
+ 
+    <!-- Main Text -->
+    <h2 class="text-2xl font-semibold text-center mb-6">@ 9°South Quiet Escapes</h2>
+      <span class="block mt-2">
+        We don’t believe in packaged travel. We design journeys across culture, nature, and modern exploration — shaped by people, places, and perspective. Each experience is thoughtfully curated to go beyond itineraries, creating moments that stay with you long after you return..
+      </span>
+    
+
+</section>
+
+    
+
+
+
+<section id="getaways_desktop" class="py-10 px-4 scroll-mt-24 hidden sm:block">
+
+<h2 class="text-2xl font-semibold mb-6 text-center">
+   Our Signature Getaways
+  </h2>
+
+<p class="mb-6 mt-2 text-center">Five ways to explore. One philosophy — depth over checklist travel.</p>
+  
+
+<!--
+  <div class="flex flex-wrap justify-center gap-3 mb-10">
+    <button class="filter-btn active" data-filter="all">All</button>
+    <button class="filter-btn" data-filter="relaxed">Relaxed</button>
+    <button class="filter-btn" data-filter="explorative">Explorative</button>
+    <button class="filter-btn" data-filter="inspired">Inspired</button>
+    <button class="filter-btn" data-filter="connected">Connected</button>
+  </div>
+-->
+  
+  <div id="packages" class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+
+   
+    <!-- CARD 1 -->
+	<a href="9degreesouth_deep_reset.html" class="block">
+    <div class="package-card relative rounded-2xl overflow-hidden group" data-category="relaxed">
+
+<!-- https://images.pexels.com/photos/3355732/pexels-photo-3355732.jpeg
+https://images.pexels.com/photos/12720660/pexels-photo-12720660.jpeg"
+-->
+      <img src="https://images.pexels.com/photos/3355732/pexels-photo-3355732.jpeg"
+           class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+
+      <!-- Overlay -->
+     <!--  <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>-->
+
+     
+	  <!-- Top Badge -->
+<div class="absolute top-4 left-4">
+
+  <div class="flex items-center text-xs text-black font-medium rounded-full overflow-hidden shadow-sm border border-gray-200">
+
+    <!-- Domestic (Active) -->
+    <span class="px-3 py-1.5 bg-[#F5EFE8]  flex items-center gap-1.5">
+      🏡 Domestic
+    </span>
+
+    <!-- International -->
+    <span class="px-3 py-1.5 bg-[#EAF1FF]  flex items-center gap-1.5">
+      🌍 International
+    </span>
+
+  </div>
+
+</div>
+	  
+      <!-- Content-->
+	  
+      <div class="absolute bottom-0 w-full p-4 bg-gray/50 backdrop-blur-md">
+
+        <h3 class="text-l text-white font-semibold">Deep Reset</h3>
+        <p class="text-sm text-gray-300">Stillness • Retreat • Disconnection</p>
+
+        <div class="mt-3 flex justify-end">
+          <button class="text-yellow-400 text-sm flex items-center gap-1 group-hover:translate-x-1 transition">
+            Explore →
+          </button>
+        </div>
+
+      </div>
+	  
+	  
+	  
+	  
+
+    </div>
+</a>
+<!-- CARD 2 -->
+   <a href="9degreesouth_cultural_escapes.html" class="block">
+    <div class="package-card relative rounded-2xl overflow-hidden group" data-category="explorative connected">
+
+      <img src="https://images.pexels.com/photos/31039105/pexels-photo-31039105.jpeg"
+           class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+
+      <!--<div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>-->
+
+      
+   
+<div class="absolute top-4 left-4">
+
+  <div class="flex items-center text-xs text-black font-medium rounded-full overflow-hidden shadow-sm border border-gray-200">
+
+     <!-- Domestic (Active) -->
+    <span class="px-3 py-1.5 bg-[#F5EFE8]  flex items-center gap-1.5">
+      🏡 Domestic
+    </span>
+  </div>
+
+</div>
+	  
+<div class="absolute bottom-0 w-full p-4 bg-gray/50 backdrop-blur-md">
+
+        <h3 class="text-l text-white font-semibold">Cultural Escapes</h3>
+        <p class="text-sm text-gray-300">Heritage • People • Stories</p>
+
+        <div class="mt-3 flex justify-end">
+          <button class="text-yellow-400 text-sm flex items-center gap-1 group-hover:translate-x-1 transition">
+            Explore →
+          </button>
+        </div>
+
+      </div>
+	</div>
+</a>
+  
+    <!-- CARD 3 -->
+	<a href="9degreesouth_nature_life.html" class="block">
+    <div class="package-card relative rounded-2xl overflow-hidden group" data-category="explorative connected">
+
+      <img src="https://images.pexels.com/photos/20458200/pexels-photo-20458200.jpeg"
+           class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+
+     <!-- <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>-->
+
+      <div class="absolute top-4 left-4">
+
+  <div class="flex items-center text-xs text-black font-medium rounded-full overflow-hidden shadow-sm border border-gray-200">
+
+     <!-- Domestic (Active) -->
+    <span class="px-3 py-1.5 bg-[#F5EFE8]  flex items-center gap-1.5">
+      🏡 Domestic
+    </span>
+
+    <!-- International -->
+    <span class="px-3 py-1.5 bg-[#EAF1FF]  flex items-center gap-1.5">
+      🌍 International
+    </span>
+
+  </div>
+
+</div>
+	  
+
+     <div class="absolute bottom-0 w-full p-4 bg-gray/50 backdrop-blur-md">
+
+        <h3 class="text-l text-white font-semibold">Nature & Life</h3>
+        <p class="text-sm text-gray-300">Landscapes • Slow Living • Observation</p>
+
+        <div class="mt-3 flex justify-end">
+          <button class="text-yellow-400 text-sm flex items-center gap-1 group-hover:translate-x-1 transition">
+            Explore →
+          </button>
+        </div>
+
+      </div>
+
+	</div>
+</a>
+    
+   
+
+<!-- CARD 4 -->
+   <a href="9degreesouth_adventure_escapes.html" class="block">
+    <div class="package-card relative rounded-2xl overflow-hidden group" data-category="explorative connected">
+
+      <img src="https://images.pexels.com/photos/14186574/pexels-photo-14186574.jpeg"
+           class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+
+      <!--<div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>-->
+<!--<span class="absolute top-4 left-4 bg-yellow-400 text-black text-xs px-3 py-1 rounded-full font-medium">
+        🏠 Domestic
+      </span>
+      <span class="absolute top-4 right-4 float-right bg-blue-600 text-white text-xs px-3 py-1 rounded-full font-medium">
+        ✈️ International
+      </span>
+	  -->
+	  
+	 <div class="absolute top-4 left-4">
+
+  <div class="flex items-center text-xs text-black font-medium rounded-full overflow-hidden shadow-sm border border-gray-200">
+
+     <!-- Domestic (Active) -->
+    <span class="px-3 py-1.5 bg-[#F5EFE8]  flex items-center gap-1.5">
+      🏡 Domestic
+    </span>
+
+    <!-- International -->
+    <span class="px-3 py-1.5 bg-[#EAF1FF]  flex items-center gap-1.5">
+      🌍 International
+    </span>
+
+  </div>
+
+</div>
+	  
+	  
+	  
+	 
+      <div class="absolute bottom-0 w-full p-4 bg-gray/50 backdrop-blur-md">
+
+        <h3 class="text-l text-white font-semibold">Adventure Escapes</h3>
+        <p class="text-sm text-gray-300">Energy • Movement • Outdoors</p>
+
+        <div class="mt-3 flex justify-end">
+          <button class="text-yellow-400 text-sm flex items-center gap-1 group-hover:translate-x-1 transition">
+            Explore →
+          </button>
+        </div>
+
+      </div>
+
+
+	</div>
+</a>
+
+<!-- CARD 5 -->
+   <a href="9degreesouth_tech_immersion.html" class="block">
+    <div class="package-card relative rounded-2xl overflow-hidden group" data-category="explorative connected">
+
+      <img src="https://images.pexels.com/photos/18999296/pexels-photo-18999296.jpeg"
+           class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+
+      <!--<div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>-->
+
+     
+	<div class="absolute top-4 left-4">
+
+  <div class="flex items-center text-xs text-black font-medium rounded-full overflow-hidden shadow-sm border border-gray-200">
+
+     <!-- Domestic (Active) -->
+    <span class="px-3 py-1.5 bg-[#F5EFE8]  flex items-center gap-1.5">
+      🏡 Domestic
+    </span>
+
+   
+
+  </div>
+
+</div>
+     
+
+<div class="absolute bottom-0 w-full p-4 bg-gray/50 backdrop-blur-md">
+
+        <h3 class="text-l text-white font-semibold">Tech Immersion</h3>
+        <p class="text-sm text-gray-300">Exposure • Innovation • Access</p>
+
+        <div class="mt-3 flex justify-end">
+          <button class="text-yellow-400 text-sm flex items-center gap-1 group-hover:translate-x-1 transition">
+            Explore →
+          </button>																																								
+        </div>
+
+      </div>
+
+
+	</div>
+</a>
+
+
+  </div>
+
+
+
+
+
+
+<!--
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="py-12 bg-gray-50 text-center">
+  <h2 class="text-2xl font-semibold mb-6">
+    How do you want to feel?
+  </h2>
+
+  <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
+    
+    <div class="cursor-pointer p-6 bg-white rounded-2xl shadow-sm hover:shadow-md hover:scale-105 transition">
+      <p class="text-lg font-medium">Relaxed</p>
+    </div>
+
+    <div class="cursor-pointer p-6 bg-white rounded-2xl shadow-sm hover:shadow-md hover:scale-105 transition">
+      <p class="text-lg font-medium">Explorative</p>
+    </div>
+
+    <div class="cursor-pointer p-6 bg-white rounded-2xl shadow-sm hover:shadow-md hover:scale-105 transition">
+      <p class="text-lg font-medium">Inspired</p>
+    </div>
+
+    <div class="cursor-pointer p-6 bg-white rounded-2xl shadow-sm hover:shadow-md hover:scale-105 transition">
+      <p class="text-lg font-medium">Connected</p>
+    </div>
+
+  </div>
+</section>
+
+
+<section class="py-14 bg-white text-center">
+  <h2 class="text-3xl font-semibold mb-8">
+    How do you want to feel?
+  </h2>
+
+  <div class="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-5xl mx-auto">
+
+    <div class="group cursor-pointer p-6 rounded-2xl border hover:border-black transition">
+      <div class="text-3xl mb-2">🌿</div>
+      <p class="font-medium text-lg">Relaxed</p>
+    </div>
+
+    <div class="group cursor-pointer p-6 rounded-2xl border hover:border-black transition">
+      <div class="text-3xl mb-2">🌍</div>
+      <p class="font-medium text-lg">Explorative</p>
+    </div>
+
+    <div class="group cursor-pointer p-6 rounded-2xl border hover:border-black transition">
+      <div class="text-3xl mb-2">✨</div>
+      <p class="font-medium text-lg">Inspired</p>
+    </div>
+
+    <div class="group cursor-pointer p-6 rounded-2xl border hover:border-black transition">
+      <div class="text-3xl mb-2">🤝</div>
+      <p class="font-medium text-lg">Connected</p>
+    </div>
+
+  </div>
+</section>
+-->
+
+
+
+
+
+<!-- Signature Experiences 
+<section id="services" class="py-16 px-6">
+  <h2 class="text-3xl font-bold text-center mb-10">Signature Experiences</h2>
+  <div class="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto text-center">
+    <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+      <img src="https://images.pexels.com/photos/1024960/pexels-photo-1024960.jpeg" class="h-56 w-full object-cover"/>
+      <div class="p-4"><h3 class="text-2xl font-semibold">Quiet Escapes</h3><h4>Slow • Hidden • Restorative</h4></div>
+    </div>
+    <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+      <img src="https://images.pexels.com/photos/17744269/pexels-photo-17744269.jpeg" class="h-56 w-full object-cover"/>
+      <div class="p-4"><h3 class="text-2xl font-semibold">Exploratory Journeys </h3><h4>Learning • Culture • Industry • Perspective</h4></div>
+    </div>
+    <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+      <img src="https://images.unsplash.com/photo-1493558103817-58b2924bce98" class="h-56 w-full object-cover"/>
+      <div class="p-4"><h3 class="text-2xl font-semibold">Curated Getaways</h3><h4>Premium • Global • Effortless</h4></div>
+    </div>
+ 
+  </div>
+<!-- https://images.pexels.com/photos/6818587/pexels-photo-6818587.jpeg 
+https://images.pexels.com/photos/1024960/pexels-photo-1024960.jpeg
+https://images.pexels.com/photos/17977312/pexels-photo-17977312.jpeg
+
+  </div>
+</section>
+-->
+<!-- CTA 
+ <div class="mt-3 flex justify-center py-6">
+
+	<a href="#" class="inline-block text-sm md:text-base font-medium text-gray-900 tracking-wide group">
+      → View All Getaways
+      <span class="block h-[1px] bg-gray-900 w-0 group-hover:w-full transition-all duration-300 mt-1 mx-auto"></span>
+    </a>		  
+        </div>-->
+		</section>
+				
+
+<!-- Mobile view of signature getaways section -->
+
+<section class="py-16 bg-[#fafafa] md:hidden max-w-6xl mx-auto px-4 sm:px-6">
+
+  <div class="max-w-6xl mx-auto relative">
+
+    <!-- Header -->
+	
+    <div class="px-5 mb-8 text-center">
+      <h2 class="text-2xl font-semibold mb-6 text-center">
+   Our Signature Getaways
+  </h2>
+
+<p class="mb-6 mt-2 text-center">Five ways to explore. One philosophy — depth over checklist travel.</p>
+    </div>
+
+    <!-- Carousel Wrapper -->
+    <div class="relative">
+
+      <!-- LEFT ARROW -->
+      <button id="prevBtn"
+        class="hidden md:flex absolute left-2 top-1/2 -translate-y-1/2 z-10 
+               bg-white shadow-md w-10 h-10 rounded-full items-center justify-center">
+        ‹
+      </button>
+
+      <!-- SLIDER -->
+      <div id="carousel"
+        class="flex gap-6 overflow-hidden px-6 scroll-smooth items-center">
+
+        <!-- CARD 1-->
+		
+        <div class="carousel-item min-w-[75%] md:min-w-[40%] lg:min-w-[30%] 
+                    relative rounded-2xl overflow-hidden transition duration-500">
+<a href="9degreesouth_deep_reset.html" class="block">
+          <img src="https://images.pexels.com/photos/3355732/pexels-photo-3355732.jpeg" class="w-full h-[420px] object-cover">
+
+          
+
+          <!--<div class="absolute top-4 left-4 bg-white/90 text-gray-900 text-xs px-3 py-1 rounded-full">
+            🌿 Deep Reset
+          </div>-->
+			<!-- Top Badge -->
+<div class="absolute top-4 left-4">
+
+  <div class="flex items-center text-xs text-black font-medium rounded-full overflow-hidden shadow-sm border border-gray-200">
+
+    <!-- Domestic (Active) -->
+    <span class="px-3 py-1.5 bg-[#F5EFE8]  flex items-center gap-1.5">
+      🏡 Domestic
+    </span>
+
+    <!-- International -->
+    <span class="px-3 py-1.5 bg-[#EAF1FF]  flex items-center gap-1.5">
+      🌍 International
+    </span>
+
+  </div>
+
+</div>
+          <div class="absolute bottom-0 w-full p-4 bg-gray/50 text-white backdrop-blur-md">
+            <h3 class="text-lg text-yellow-200  font-semibold">Deep Reset</h3>
+            <p class="text-sm opacity-90">Stillness • Retreat • Disconnection</p>
+          </div>
+</a>
+        </div>
+
+        <!-- CARD 2-->
+		
+        <div class="carousel-item min-w-[75%] md:min-w-[40%] lg:min-w-[30%] 
+                    relative rounded-2xl overflow-hidden transition duration-500">
+<a href="9degreesouth_cultural_escapes.html" class="block">
+          <img src="https://images.pexels.com/photos/31039105/pexels-photo-31039105.jpeg" class="w-full h-[420px] object-cover">
+
+          <!--<div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
+
+          <div class="absolute top-4 left-4 bg-white/90 text-gray-900 text-xs px-3 py-1 rounded-full">
+            🌊 Nature
+          </div>-->
+			<div class="absolute top-4 left-4">
+
+  <div class="flex items-center text-xs text-black font-medium rounded-full overflow-hidden shadow-sm border border-gray-200">
+
+     <!-- Domestic (Active) -->
+    <span class="px-3 py-1.5 bg-[#F5EFE8]  flex items-center gap-1.5">
+      🏡 Domestic
+    </span>
+  </div>
+
+</div>
+          <div class="absolute bottom-0 w-full p-4 bg-gray/50 text-white backdrop-blur-md">
+            <h3 class="text-lg text-yellow-200 font-semibold">Cultural Escapes</h3>
+            <p class="text-sm opacity-90">Heritage • People • Stories</p>
+          </div>
+</a>
+        </div>
+
+        <!-- ADD MORE CARDS -->
+<!-- CARD 3-->
+
+        <div class="carousel-item min-w-[75%] md:min-w-[40%] lg:min-w-[30%] 
+                    relative rounded-2xl overflow-hidden transition duration-500">
+<a href="9degreesouth_nature_life.html" class="block">
+          <img src="https://images.pexels.com/photos/20458200/pexels-photo-20458200.jpeg" class="w-full h-[420px] object-cover">
+
+          <!--<div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
+
+          <div class="absolute top-4 left-4 bg-white/90 text-gray-900 text-xs px-3 py-1 rounded-full">
+            🌊 Nature
+          </div>-->
+			<div class="absolute top-4 left-4">
+
+  <div class="flex items-center text-xs text-black font-medium rounded-full overflow-hidden shadow-sm border border-gray-200">
+
+     <!-- Domestic (Active) -->
+    <span class="px-3 py-1.5 bg-[#F5EFE8]  flex items-center gap-1.5">
+      🏡 Domestic
+    </span>
+	<!-- International -->
+    <span class="px-3 py-1.5 bg-[#EAF1FF]  flex items-center gap-1.5">
+      🌍 International
+    </span>
+  </div>
+
+</div>
+          <div class="absolute bottom-0 w-full p-4 bg-gray/50 text-white backdrop-blur-md">
+            <h3 class="text-lg text-yellow-200 font-semibold">Nature & Life</h3>
+            <p class="text-sm opacity-90">Landscapes • Slow Living • Observation</p>
+          </div>
+</a>
+
+        </div>
+
+<!-- CARD 4-->
+
+        <div class="carousel-item min-w-[75%] md:min-w-[40%] lg:min-w-[30%] 
+                    relative rounded-2xl overflow-hidden transition duration-500">
+<a href="9degreesouth_adventure_escapes.html" class="block">
+          <img src="https://images.pexels.com/photos/14186574/pexels-photo-14186574.jpeg" class="w-full h-[420px] object-cover">
+
+          <!--<div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
+
+          <div class="absolute top-4 left-4 bg-white/90 text-gray-900 text-xs px-3 py-1 rounded-full">
+            🌊 Nature
+          </div>-->
+			<div class="absolute top-4 left-4">
+
+  <div class="flex items-center text-xs text-black font-medium rounded-full overflow-hidden shadow-sm border border-gray-200">
+
+     <!-- Domestic (Active) -->
+    <span class="px-3 py-1.5 bg-[#F5EFE8]  flex items-center gap-1.5">
+      🏡 Domestic
+    </span>
+	<!-- International -->
+    <span class="px-3 py-1.5 bg-[#EAF1FF]  flex items-center gap-1.5">
+      🌍 International
+    </span>
+  </div>
+
+</div>
+          <div class="absolute bottom-0 w-full p-4 bg-gray/50 text-white backdrop-blur-md">
+            <h3 class="text-lg font-semibold">Adventure Escapes</h3>
+            <p class="text-sm text-yellow-200 opacity-90">Energy • Movement • Outdoors</p>
+          </div>
+</a>
+        </div>
+
+<!-- CARD 5-->
+
+        <div class="carousel-item min-w-[75%] md:min-w-[40%] lg:min-w-[30%] 
+                    relative rounded-2xl overflow-hidden transition duration-500">
+<a href="9degreesouth_tech_immersion.html" class="block">
+          <img src="https://images.pexels.com/photos/18999296/pexels-photo-18999296.jpeg" class="w-full h-[420px] object-cover">
+
+          <!--<div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
+
+          <div class="absolute top-4 left-4 bg-white/90 text-gray-900 text-xs px-3 py-1 rounded-full">
+            🌊 Nature
+          </div>-->
+			<div class="absolute top-4 left-4">
+
+  <div class="flex items-center text-xs text-black font-medium rounded-full overflow-hidden shadow-sm border border-gray-200">
+
+     <!-- Domestic (Active) -->
+    <span class="px-3 py-1.5 bg-[#F5EFE8]  flex items-center gap-1.5">
+      🏡 Domestic
+    </span>
+	
+  </div>
+
+</div>
+          <div class="absolute bottom-0 w-full p-4 bg-gray/50 text-white backdrop-blur-md">
+            <h3 class="text-lg text-yellow-200 font-semibold">Tech Immersion</h3>
+            <p class="text-sm opacity-90">Exposure • Innovation • Access</p>
+          </div>
+</a>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+
+      <!-- RIGHT ARROW -->
+      <button id="nextBtn"
+        class="hidden md:flex absolute right-2 top-1/2 -translate-y-1/2 z-10 
+               bg-white shadow-md w-10 h-10 rounded-full items-center justify-center">
+        ›
+      </button>
+
+    </div>
+
+    <!-- DOTS -->
+    <div id="dots" class="flex justify-center mt-8 gap-2"></div>
+
+  </div>
+
+
+<!-- CTA 
+ <div class="mt-3 flex justify-center py-6">
+
+	<a href="#" class="inline-block text-sm md:text-base font-medium text-gray-900 tracking-wide group">
+      → View All Getaways
+      <span class="block h-[1px] bg-gray-900 w-0 group-hover:w-full transition-all duration-300 mt-1 mx-auto"></span>
+    </a>		  
+        </div>-->
+</section>
+
+
+
+<style>
+  #carousel::-webkit-scrollbar {
+    display: none;
+  }
+
+  .carousel-item {
+    transform: scale(0.9);
+    opacity: 0.6;
+    transition: all 0.4s ease;
+  }
+
+  .carousel-item.active {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  .dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 9999px;
+    background: #d1d5db;
+    transition: all 0.3s;
+  }
+
+  .dot.active {
+    width: 18px;
+    background: #111827;
+  }
+</style>
+
+<script>
+  const carousel = document.getElementById('carousel');
+  const items = document.querySelectorAll('.carousel-item');
+  const nextBtn = document.getElementById('nextBtn');
+  const prevBtn = document.getElementById('prevBtn');
+  const dotsContainer = document.getElementById('dots');
+
+  let index = 0;
+
+  // Create dots
+  items.forEach((_, i) => {
+    const dot = document.createElement('div');
+    dot.classList.add('dot');
+    dot.addEventListener('click', () => {
+      index = i;
+      updateCarousel();
+    });
+    dotsContainer.appendChild(dot);
+  });
+
+  const dots = document.querySelectorAll('.dot');
+
+  function updateCarousel() {
+    const cardWidth = items[0].offsetWidth + 24; // gap
+
+    const centerOffset = (carousel.offsetWidth - items[0].offsetWidth) / 2;
+
+    carousel.scrollTo({
+      left: index * cardWidth - centerOffset,
+      behavior: 'smooth'
+    });
+
+    items.forEach((item, i) => {
+      item.classList.toggle('active', i === index);
+    });
+
+    dots.forEach((dot, i) => {
+      dot.classList.toggle('active', i === index);
+    });
+  }
+
+  nextBtn.addEventListener('click', () => {
+    if (index < items.length - 1) index++;
+    updateCarousel();
+  });
+
+  prevBtn.addEventListener('click', () => {
+    if (index > 0) index--;
+    updateCarousel();
+  });
+
+  // Swipe
+  let startX = 0;
+
+  carousel.addEventListener('touchstart', (e) => {
+    startX = e.touches[0].clientX;
+  });
+
+  carousel.addEventListener('touchend', (e) => {
+    let endX = e.changedTouches[0].clientX;
+
+    if (startX - endX > 50 && index < items.length - 1) index++;
+    else if (endX - startX > 50 && index > 0) index--;
+
+    updateCarousel();
+  });
+
+  // Init
+  updateCarousel();
+</script>
+
+
+
+
+<!--
+
+<section id="getaways_mobile" class="py-16 bg-gray-100 block md:hidden max-w-6xl mx-auto px-4 sm:px-6">
+
+ <h2 class="text-2xl font-semibold mb-6 text-center">
+   Our Signature Getaways
+  </h2>
+
+
+
+<p class="mb-6 text-center">Five ways to explore. One philosophy — depth over checklist travel.</p>
+
+  <div class="relative max-w-6xl mx-auto">
+
+
+
+<button id="leftBtn"
+  class="absolute left-[-20px] top-1/2 -translate-y-1/2 
+         bg-white w-12 h-12 rounded-full shadow-lg 
+         flex items-center justify-center z-20
+         hover:scale-110 active:scale-95 transition">
+
+
+  <svg xmlns="http://www.w3.org/2000/svg" 
+       class="w-5 h-5 text-gray-700"
+       fill="none" viewBox="0 0 24 24" stroke="currentColor">
+    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+          d="M15 19l-7-7 7-7" />
+  </svg>
+
+</button>
+
+
+
+ 
+    <div id="slider"
+      class="flex gap-6 overflow-x-auto px-10 scroll-smooth no-scrollbar snap-x px-10"
+      style="scroll-behavior:smooth;">
+
+   
+	  <a href="9degreesouth_deep_reset.html" class="block">
+      <div class="min-w-[300px] snap-start">
+
+		<div class="relative rounded-2xl overflow-hidden group">
+
+      <img src="https://images.pexels.com/photos/3355732/pexels-photo-3355732.jpeg"
+           class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+
+     <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+
+<div class="absolute top-4 left-4">
+
+  <div class="flex items-center text-xs text-black font-medium rounded-full overflow-hidden shadow-sm border border-gray-200">
+
+    
+    <span class="px-3 py-1.5 bg-[#F5EFE8]  flex items-center gap-1.5">
+      🏡 Domestic
+    </span>
+
+
+    <span class="px-3 py-1.5 bg-[#EAF1FF]  flex items-center gap-1.5">
+      🌍 International
+    </span>
+
+  </div>
+
+</div>
+      <div class="absolute bottom-0 w-full p-4 bg-white/10 backdrop-blur-md">
+
+       <h3 class="text-l text-white font-semibold">Deep Reset</h3>
+        <p class="text-sm text-gray-300">Stillness • Retreat • Disconnection</p>
+
+        <div class="mt-3 flex justify-end">
+          <button class="text-yellow-400 text-sm flex items-center gap-1 group-hover:translate-x-1 transition">
+            Explore →
+          </button>
+        </div>
+
+      </div>
+
+    </div>
+      </div>
+	  </a>
+
+<a href="9degreesouth_cultural_escapes.html" class="block">
+<div class="min-w-[300px] snap-start">
+
+		<div class="relative rounded-2xl overflow-hidden group">
+
+      <img src="https://images.pexels.com/photos/31039105/pexels-photo-31039105.jpeg"
+           class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+
+  <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+
+      <div class="absolute top-4 left-4">
+
+  <div class="flex items-center text-xs text-black font-medium rounded-full overflow-hidden shadow-sm border border-gray-200">
+
+    
+    <span class="px-3 py-1.5 bg-[#F5EFE8]  flex items-center gap-1.5">
+      🏡 Domestic
+    </span>
+
+   
+
+  </div>
+
+</div>
+
+      <div class="absolute bottom-0 w-full p-4 bg-white/10 backdrop-blur-md">
+
+        <h3 class="text-l text-white font-semibold">Cultural Escapes</h3>
+        <p class="text-sm text-gray-300">Heritage • People • Stories</p>
+
+        <div class="mt-3 flex justify-end">
+          <button class="text-yellow-400 text-sm flex items-center gap-1 group-hover:translate-x-1 transition">
+            Explore →
+          </button>
+        </div>
+
+      </div>
+
+    </div>
+      </div>
+	  </a>
+	
+	  <a href="9degreesouth_nature_life.html" class="block">
+	  <div class="min-w-[300px] snap-start">
+
+		<div class="relative rounded-2xl overflow-hidden group">
+
+      <img src="https://images.pexels.com/photos/20458200/pexels-photo-20458200.jpeg"
+           class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+
+     <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+
+      <div class="absolute top-4 left-4">
+
+  <div class="flex items-center text-xs text-black font-medium rounded-full overflow-hidden shadow-sm border border-gray-200">
+
+    
+    <span class="px-3 py-1.5 bg-[#F5EFE8]  flex items-center gap-1.5">
+      🏡 Domestic
+    </span>
+
+
+    <span class="px-3 py-1.5 bg-[#EAF1FF]  flex items-center gap-1.5">
+      🌍 International
+    </span>
+
+  </div>
+
+</div>
+      <div class="absolute bottom-0 w-full p-4 bg-white/10 backdrop-blur-md">
+
+        <h3 class="text-l text-white font-semibold">Nature & Life</h3>
+        <p class="text-sm text-gray-300">Landscapes • Slow Living • Observation</p>
+
+        <div class="mt-3 flex justify-end">
+          <button class="text-yellow-400 text-sm flex items-center gap-1 group-hover:translate-x-1 transition">
+            Explore →
+          </button>
+        </div>
+
+      </div>
+
+    </div>
+      </div>
+	  </a>
+	  
+
+	  <a href="9degreesouth_adventure_escapes.html" class="block">
+	  <div class="min-w-[300px] snap-start">
+
+		<div class="relative rounded-2xl overflow-hidden group">
+
+      <img src="https://images.pexels.com/photos/14186574/pexels-photo-14186574.jpeg"
+           class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+      <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+
+      <div class="absolute top-4 left-4">
+
+  <div class="flex items-center text-xs text-black font-medium rounded-full overflow-hidden shadow-sm border border-gray-200">
+
+ 
+    <span class="px-3 py-1.5 bg-[#F5EFE8]  flex items-center gap-1.5">
+      🏡 Domestic
+    </span>
+
+   
+    <span class="px-3 py-1.5 bg-[#EAF1FF]  flex items-center gap-1.5">
+      🌍 International
+    </span>
+
+  </div>
+
+</div>
+
+      <div class="absolute bottom-0 w-full p-4 bg-white/10 backdrop-blur-md">
+
+        <h3 class="text-l text-white font-semibold">Adventure Escapes</h3>
+        <p class="text-sm text-gray-300">Energy • Movement • Outdoors</p>
+
+        <div class="mt-3 flex justify-end">
+          <button class="text-yellow-400 text-sm flex items-center gap-1 group-hover:translate-x-1 transition">
+            Explore →
+          </button>
+        </div>
+
+      </div>
+
+    </div>
+      </div>
+	  </a>
+	
+	  <a href="9degreesouth_tech_immersion.html" class="block">
+      <div class="min-w-[300px] snap-star">
+        <div class="relative rounded-2xl overflow-hidden group">
+
+      <img src="https://images.pexels.com/photos/18999296/pexels-photo-18999296.jpeg"
+           class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+
+    <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+	  <span class="absolute top-4 right-4 bg-yellow-400 text-black text-xs px-3 py-1 rounded-full font-medium">
+        🏠 Domestic
+      </span>
+	 
+
+     
+	  
+	  <div class="absolute top-4 left-4">
+
+  <div class="flex items-center text-xs text-black font-medium rounded-full overflow-hidden shadow-sm border border-gray-200">
+
+    <span class="px-3 py-1.5 bg-[#F5EFE8]  flex items-center gap-1.5">
+      🏡 Domestic
+    </span>
+
+    
+
+  </div>
+
+</div>
+
+      <div class="absolute bottom-0 w-full p-4 bg-white/10 backdrop-blur-md">
+
+        <h3 class="text-l text-white font-semibold">Tech Immersion</h3>
+        <p class="text-sm text-gray-300">Exposure • Innovation • Access</p>
+
+        <div class="mt-3 flex justify-end">
+          <button class="text-yellow-400 text-sm flex items-center gap-1 group-hover:translate-x-1 transition">
+            Explore →
+          </button>
+        </div>
+
+      </div>
+
+    </div>
+      </div>
+
+      
+
+
+      
+		
+		
+		
+
+    </div>
+</a>
+<button id="rightBtn"
+  class="absolute right-[-20px] top-1/2 -translate-y-1/2 
+         bg-white w-12 h-12 rounded-full shadow-lg 
+         flex items-center justify-center 
+         hover:scale-110 active:scale-95 transition">
+
+  <svg xmlns="http://www.w3.org/2000/svg" 
+       class="w-5 h-5 text-gray-700"
+       fill="none" viewBox="0 0 24 24" stroke="currentColor">
+    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+          d="M9 5l7 7-7 7" />
+  </svg>
+
+</button>
+    <!-- RIGHT 
+    <button id="rightBtn"
+      class="absolute right-0 top-1/2 -translate-y-1/2 bg-white p-2 shadow rounded-full z-10">
+      ▶
+    </button>
+
+ <div class="mt-3 flex justify-center py-6">
+
+	<a href="#" class="inline-block text-sm md:text-base font-medium text-gray-900 tracking-wide group">
+      → View All Getaways
+      <span class="block h-[1px] bg-gray-900 w-0 group-hover:w-full transition-all duration-300 mt-1 mx-auto"></span>
+    </a>		  
+        </div>
+  </div>
+
+</section>
+
+
+
+
+
+
+
+-->
+
+
+
+
+
+
+
+
+				
+<!-- Experience types -->
+
+<!-- Lucide Icons -->
+<script src="https://unpkg.com/lucide@latest"></script>
+
+<section class="bg-gradient-to-b from-[#f1ede7] to-[#f8f8f6] py-20 px-4">
+
+  <!-- Title -->
+  <div class="text-center max-w-2xl mx-auto mb-14">
+    <h2 class="text-2xl md:text-3xl font-semibold text-gray-900 tracking-wide">
+      Who We Design For
+    </h2>
+  </div>
+
+  <!-- Grid -->
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
+
+    <!-- Individuals & Couples -->
+    <div class="group backdrop-blur-md bg-white/40 border border-white/30 rounded-2xl p-6 text-center shadow-sm hover:shadow-xl transition duration-500">
+      
+      <div class="w-14 h-14 mx-auto mb-5 flex items-center justify-center rounded-full bg-white/60 text-[#c4a484] 
+                  group-hover:scale-110 transition duration-500">
+        <i data-lucide="heart" class="w-6 h-6"></i>
+      </div>
+
+      <h3 class="text-base md:text-lg font-medium text-gray-900 mb-2">
+        Individuals & Couples
+      </h3>
+      <p class="text-sm text-gray-600">
+        private escapes
+      </p>
+    </div>
+
+    <!-- Groups -->
+    <div class="group backdrop-blur-md bg-white/40 border border-white/30 rounded-2xl p-6 text-center shadow-sm hover:shadow-xl transition duration-500">
+      
+      <div class="w-14 h-14 mx-auto mb-5 flex items-center justify-center rounded-full bg-white/60 text-[#c4a484] 
+                  group-hover:scale-110 transition duration-500">
+        <i data-lucide="users" class="w-6 h-6"></i>
+      </div>
+
+      <h3 class="text-base md:text-lg font-medium text-gray-900 mb-2">
+        Groups & Communities
+      </h3>
+      <p class="text-sm text-gray-600">
+        shared journeys
+      </p>
+    </div>
+
+    <!-- Colleges -->
+    <div class="group backdrop-blur-md bg-white/40 border border-white/30 rounded-2xl p-6 text-center shadow-sm hover:shadow-xl transition duration-500">
+      
+      <div class="w-14 h-14 mx-auto mb-5 flex items-center justify-center rounded-full bg-white/60 text-[#c4a484] 
+                  group-hover:scale-110 transition duration-500">
+        <i data-lucide="graduation-cap" class="w-6 h-6"></i>
+      </div>
+
+      <h3 class="text-base md:text-lg font-medium text-gray-900 mb-2">
+        Colleges/Institutions
+      </h3>
+      <p class="text-sm text-gray-600">
+        immersive learning experiences
+      </p>
+    </div>
+
+    <!-- Companies -->
+    <div class="group backdrop-blur-md bg-white/40 border border-white/30 rounded-2xl p-6 text-center shadow-sm hover:shadow-xl transition duration-500">
+      
+      <div class="w-14 h-14 mx-auto mb-5 flex items-center justify-center rounded-full bg-white/60 text-[#c4a484] 
+                  group-hover:scale-110 transition duration-500">
+        <i data-lucide="briefcase" class="w-6 h-6"></i>
+      </div>
+
+      <h3 class="text-base md:text-lg font-medium text-gray-900 mb-2">
+        Organizations
+      </h3>
+      <p class="text-sm text-gray-600">
+         offsites and team experiences
+      </p>
+    </div>
+
+  </div>
+
+</section>
+
+<script>
+  lucide.createIcons();
+</script>
+
+
+<!-- Featured Journeys / Product display-->
+
+<!-- Lucide (optional if you add icons later) -->
+<script src="https://unpkg.com/lucide@latest"></script>
+
+<section id="itineraries" class=" py-20 px-4 scroll-mt-24">
+
+  <!-- Title -->
+  <div class="text-center max-w-2xl mx-auto mb-14">
+    <h2 class="text-2xl md:text-3xl font-semibold text-gray-900 mb-3 tracking-wide">
+      Featured Itineraries
+    </h2>
+    <p class="text-sm md:text-base text-gray-600">
+      A glimpse into what your experience could look like.
+    </p>
+  </div>
+
+  <!-- Grid -->
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
+
+    <!-- Card 1 -->
+    <div class="group backdrop-blur-md bg-white/40 border border-white/30 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition duration-500">
+
+      <div class="h-44 bg-gray-200 relative overflow-hidden">
+        <div class="absolute inset-0 bg-black/10 group-hover:bg-black/20 transition"></div>
+      </div>
+
+      <div class="p-5 text-center">
+        <h3 class="text-base md:text-lg font-medium text-gray-900 mb-1">
+          Switzerland Slow Escape
+        </h3>
+        <p class="text-sm text-gray-500">
+          Nature & Life
+        </p>
+      </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="group backdrop-blur-md bg-white/40 border border-white/30 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition duration-500">
+
+      <div class="h-44 bg-gray-200 relative overflow-hidden">
+        <div class="absolute inset-0 bg-black/10 group-hover:bg-black/20 transition"></div>
+      </div>
+
+      <div class="p-5 text-center">
+        <h3 class="text-base md:text-lg font-medium text-gray-900 mb-1">
+          Kochi Tech Immersion
+        </h3>
+        <p class="text-sm text-gray-500">
+          Tech
+        </p>
+      </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="group backdrop-blur-md bg-white/40 border border-white/30 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition duration-500">
+
+      <div class="h-44 bg-gray-200 relative overflow-hidden">
+        <div class="absolute inset-0 bg-black/10 group-hover:bg-black/20 transition"></div>
+      </div>
+
+      <div class="p-5 text-center">
+        <h3 class="text-base md:text-lg font-medium text-gray-900 mb-1">
+          Wayanad Deep Reset
+        </h3>
+        <p class="text-sm text-gray-500">
+          Wellness
+        </p>
+      </div>
+    </div>
+
+    <!-- Card 4 -->
+    <div class="group backdrop-blur-md bg-white/40 border border-white/30 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition duration-500">
+
+      <div class="h-44 bg-gray-200 relative overflow-hidden">
+        <div class="absolute inset-0 bg-black/10 group-hover:bg-black/20 transition"></div>
+      </div>
+
+      <div class="p-5 text-center">
+        <h3 class="text-base md:text-lg font-medium text-gray-900 mb-1">
+          Mysuru Heritage Trail
+        </h3>
+        <p class="text-sm text-gray-500">
+          Cultural
+        </p>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- CTA -->
+  <div class="text-center mt-14">
+    <a href="#" class="inline-block text-sm md:text-base font-medium text-gray-900 tracking-wide group">
+      → Explore All Journeys
+      <span class="block h-[1px] bg-gray-900 w-0 group-hover:w-full transition-all duration-300 mt-1 mx-auto"></span>
+    </a>
+  </div>
+
+</section>
+
+
+
+
+
+
+
+
+<!-- WHY 9° SOUTH (TRUST BUILDER) -->
+
+<!-- Lucide Icons -->
+<script src="https://unpkg.com/lucide@latest"></script>
+
+<section class="bg-gradient-to-b from-[#f8f8f6] to-[#f1ede7] py-20 px-4">
+
+  <!-- Title -->
+  <h2 class="text-2xl md:text-3xl font-semibold text-center text-gray-900 mb-14 tracking-wide">
+    Why Travel With Us
+  </h2>
+
+  <!-- Grid -->
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
+
+    <!-- Card -->
+    <div class="group backdrop-blur-md bg-white/40 border border-white/30 rounded-2xl p-6 text-center shadow-sm hover:shadow-xl transition duration-500">
+
+      <!-- Icon -->
+      <div class="w-14 h-14 mx-auto mb-5 flex items-center justify-center rounded-full bg-white/60 text-[#c4a484] 
+                  group-hover:scale-110 group-hover:rotate-6 transition duration-500">
+        <i data-lucide="compass" class="w-6 h-6"></i>
+      </div>
+
+      <h3 class="text-base font-medium text-gray-900 mb-2">
+        Not Mass Tourism
+      </h3>
+      <p class="text-sm text-gray-600 leading-relaxed">
+        Every journey is designed, not assembled.
+      </p>
+    </div>
+
+    <!-- Card -->
+    <div class="group backdrop-blur-md bg-white/40 border border-white/30 rounded-2xl p-6 text-center shadow-sm hover:shadow-xl transition duration-500">
+
+      <div class="w-14 h-14 mx-auto mb-5 flex items-center justify-center rounded-full bg-white/60 text-[#c4a484] 
+                  group-hover:scale-110 group-hover:-rotate-6 transition duration-500">
+        <i data-lucide="map" class="w-6 h-6"></i>
+      </div>
+
+      <h3 class="text-base font-medium text-gray-900 mb-2">
+        Local Depth
+      </h3>
+      <p class="text-sm text-gray-600 leading-relaxed">
+        We go beyond landmarks into real experiences.
+      </p>
+    </div>
+
+    <!-- Card -->
+    <div class="group backdrop-blur-md bg-white/40 border border-white/30 rounded-2xl p-6 text-center shadow-sm hover:shadow-xl transition duration-500">
+
+      <div class="w-14 h-14 mx-auto mb-5 flex items-center justify-center rounded-full bg-white/60 text-[#c4a484] 
+                  group-hover:scale-110 group-hover:rotate-3 transition duration-500">
+        <i data-lucide="layers" class="w-6 h-6"></i>
+      </div>
+
+      <h3 class="text-base font-medium text-gray-900 mb-2">
+        End-to-End Curation
+      </h3>
+      <p class="text-sm text-gray-600 leading-relaxed">
+        From stays to stories, everything is intentional.
+      </p>
+    </div>
+
+    <!-- Card -->
+    <div class="group backdrop-blur-md bg-white/40 border border-white/30 rounded-2xl p-6 text-center shadow-sm hover:shadow-xl transition duration-500">
+
+      <div class="w-14 h-14 mx-auto mb-5 flex items-center justify-center rounded-full bg-white/60 text-[#c4a484] 
+                  group-hover:scale-110 group-hover:-rotate-3 transition duration-500">
+        <i data-lucide="users" class="w-6 h-6"></i>
+      </div>
+
+      <h3 class="text-base font-medium text-gray-900 mb-2">
+        Flexible & Personal
+      </h3>
+      <p class="text-sm text-gray-600 leading-relaxed">
+        Tailored for individuals, groups, and institutions.
+      </p>
+    </div>
+
+  </div>
+
+</section>
+
+<script>
+  lucide.createIcons();
+</script>
+
+
+
+<!-- SOCIAL PROOF / Customer STORY SECTION -->
+
+<section id="experiences" class=" py-20 px-4 scroll-mt-24">
+
+  <!-- Title -->
+  <div class="text-center max-w-2xl mx-auto mb-14">
+    <h2 class="text-2xl md:text-3xl font-semibold text-gray-900 tracking-wide">
+      Real Experiences
+    </h2>
+  </div>
+
+
+
+
+  <!-- Stories -->
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+
+
+
+	    <!-- Story 1 -->
+    <div class="bg-white/60 backdrop-blur-md border border-white/40 rounded-2xl p-6">
+      
+      <button class="w-full text-left flex justify-between items-center case-toggle">
+        <div>
+          <h3 class="text-lg font-medium text-gray-900">
+            A 30-member team found clarity in just two days of slow travel.
+          </h3>
+          <p class="text-sm text-gray-500">
+			Corporate Offsite • Wayanad
+          </p>
+        </div>
+        <span class="text-sm text-gray-700 font-medium flex items-center gap-1">
+		<svg class="w-4 h-4 transition-transform duration-300 group-[.active]:rotate-180"
+         fill="none" stroke="currentColor" stroke-width="2"
+         viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round"
+            d="M19 9l-7 7-7-7"/>
+    </svg> 
+		</span>
+      </button>
+
+      <div class="case-content hidden mt-4 text-sm text-gray-600 leading-relaxed">
+        <p><strong>Challenge:</strong> Fast-paced work led to misalignment and burnout.</p>
+        <p class="mt-2"><strong>Experience:</strong> Designed a slow-travel retreat with nature immersion, guided reflection sessions, and curated local experiences.</p>
+        <p class="mt-2"><strong>Outcome:</strong> Improved team clarity, stronger bonding, and renewed focus within 48 hours.</p>
+      </div>
+    </div>
+	
+	
+   
+	<!-- Story 2 -->
+    
+	<div class="bg-white/60 backdrop-blur-md border border-white/40 rounded-2xl p-6">
+      
+      <button class="w-full text-left flex justify-between items-center case-toggle">
+        <div>
+          <h3 class="text-lg font-medium text-gray-900">
+            A couple rediscovered stillness in the quiet rhythm of the hills.
+          </h3>
+          <p class="text-sm text-gray-500">
+			Deep Reset • Kochi
+          </p>
+        </div>
+        <span class="text-sm text-gray-700 font-medium flex items-center gap-1">
+		<svg class="w-4 h-4 transition-transform duration-300 group-[.active]:rotate-180"
+         fill="none" stroke="currentColor" stroke-width="2"
+         viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round"
+            d="M19 9l-7 7-7-7"/>
+    </svg> 
+		</span>
+      </button>
+
+      <div class="case-content hidden mt-4 text-sm text-gray-600 leading-relaxed">
+        <p><strong>Intent:</strong> Take a meaningful pause from routine life.</p>
+        <p class="mt-2"><strong>Experience:</strong> Designed a scenic stay including quiet moments, nature walks with no rigid itineraries </p>
+        <p class="mt-2"><strong>Outcome:</strong> Deeper Connection, Mental Reset, Memorable, unhurried experience</p>
+      </div>
+    </div>
+	
+	
+	
+	<!-- Story 4 -->
+	
+	<div class="bg-white/60 backdrop-blur-md border border-white/40 rounded-2xl p-6">
+      
+      <button class="w-full text-left flex justify-between items-center case-toggle">
+        <div>
+          <h3 class="text-lg font-medium text-gray-900">
+            Strangers arrived together, but left with shared stories and lasting connections.
+          </h3>
+          <p class="text-sm text-gray-500">
+			Group Journey • Coorg
+          </p>
+        </div>
+      <span class="text-sm text-gray-700 font-medium flex items-center gap-1">
+		<svg class="w-4 h-4 transition-transform duration-300 group-[.active]:rotate-180"
+         fill="none" stroke="currentColor" stroke-width="2"
+         viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round"
+            d="M19 9l-7 7-7-7"/>
+    </svg> 
+		</span>
+      </button>
+
+
+      <div class="case-content hidden mt-4 text-sm text-gray-600 leading-relaxed">
+        <p><strong>Intent:</strong> Create meaningful connections within a diverse group.</p>
+        <p class="mt-2"><strong>Experience:</strong> Designed a open flexible itinerary including slow living and camp stories </p>
+        <p class="mt-2"><strong>Outcome:</strong> Strong group bonding, Organic interactions, Repeat travel interest</p>
+      </div>
+    </div>
+	
+	<!-- Story 5 -->
+    <div class="bg-white/60 backdrop-blur-md border border-white/40 rounded-2xl p-6">
+      
+      <button class="w-full text-left flex justify-between items-center case-toggle">
+        <div>
+          <h3 class="text-lg font-medium text-gray-900">
+            Students moved beyond classrooms into real-world learning environments
+          </h3>
+          <p class="text-sm text-gray-500">
+			Learning Expedition • Kochi
+          </p>
+        </div>
+        <span class="text-sm text-gray-700 font-medium flex items-center gap-1">
+		<svg class="w-4 h-4 transition-transform duration-300 group-[.active]:rotate-180"
+         fill="none" stroke="currentColor" stroke-width="2"
+         viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round"
+            d="M19 9l-7 7-7-7"/>
+    </svg> 
+		</span>
+      </button>
+
+      <div class="case-content hidden mt-4 text-sm text-gray-600 leading-relaxed">
+        <p><strong>Intent:</strong> Bridge gap between theory and real-world exposure.</p>
+        <p class="mt-2"><strong>Experience:</strong> Designed a immersion program including startup visits, founder interactions with curated tech sessions </p>
+        <p class="mt-2"><strong>Outcome:</strong> Practical industry insights, Career clarity, Higher engagement vs traditional tours</p>
+      </div>
+    </div>
+	
+	
+	
+  </div>
+  
+  
+  <!-- CTA -->
+ <div class="mt-3 flex justify-center py-6">
+
+	<a href="#" class="inline-block text-sm md:text-base font-medium text-gray-900 tracking-wide group">
+      → Plan Similar Experience
+      <span class="block h-[1px] bg-gray-900 w-0 group-hover:w-full transition-all duration-300 mt-1 mx-auto"></span>
+    </a>		  
+        </div>
+		</section>
+</section>
+
+
+
+<script>
+  // Scroll animation
+  const items = document.querySelectorAll('.story-item');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry, index) => {
+      if (entry.isIntersecting) {
+        setTimeout(() => {
+          entry.target.classList.remove('opacity-0', 'translate-y-10');
+          entry.target.classList.add('opacity-100', 'translate-y-0');
+        }, index * 200);
+      }
+    });
+  }, { threshold: 0.2 });
+
+  items.forEach(item => observer.observe(item));
+
+  // Expandable case studies
+  document.querySelectorAll('.case-toggle').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const content = btn.parentElement.querySelector('.case-content');
+      content.classList.toggle('hidden');
+    });
+  });
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Itineraries 
+<section id="itineraries" class="py-16 px-6">
+  <h2 class="text-3xl font-bold text-center mb-10">Sample Itineraries</h2>
+  <div class="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+
+    <div class="border rounded-xl overflow-hidden shadow">
+      <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34" class="h-48 w-full object-cover" />
+      <div class="p-4">
+        <h3 class="font-bold">🇨🇭 Switzerland (6D/5N)</h3>
+        <ul class="text-sm mt-2 list-disc pl-4">
+          <li>Zurich arrival</li>
+          <li>Lucerne + Mt Titlis</li>
+          <li>Interlaken + Lake cruise</li>
+          <li>Jungfraujoch excursion</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="border rounded-xl overflow-hidden shadow">
+      <img src="https://images.unsplash.com/photo-1602216056096-3b40cc0c9944" class="h-48 w-full object-cover" />
+      <div class="p-4">
+        <h3 class="font-bold">🌴 Kochi Immersion (3D/2N)</h3>
+        <ul class="text-sm mt-2 list-disc pl-4">
+          <li>Startup visits</li>
+          <li>Infopark exposure</li>
+          <li>Alleppey backwaters</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="border rounded-xl overflow-hidden shadow">
+      <img src="https://images.unsplash.com/photo-1596178065887-1198b6148b2b" class="h-48 w-full object-cover" />
+      <div class="p-4">
+        <h3 class="font-bold">🏙 Bangalore Tech (2D/1N)</h3>
+        <ul class="text-sm mt-2 list-disc pl-4">
+          <li>Startup ecosystem tour</li>
+          <li>Corporate visit</li>
+          <li>Networking session</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</section>
+-->
+
+
+
+<section id="contact" class="bg-gradient-to-b from-[#f8f8f6] to-[#f1ede7] py-24 px-4 scroll-mt-24">
+
+  <div class="max-w-3xl mx-auto text-center">
+
+    <!-- Headline -->
+    <h3 class="text-2xl md:text-3xl font-semibold tracking-wide mb-6">
+      Not Sure Where to Start?
+    </h3>
+
+    <!-- Text -->
+    <p class="text-sm md:text-lg leading-relaxed mb-10">
+      Tell us what you’re looking for. <br class="hidden md:block">
+      We’ll design a escape experience that fits you.
+    </p>
+
+    <!-- Buttons -->
+    <div class="flex flex-col sm:flex-row justify-center gap-4">
+
+      <!-- Primary CTA -->
+      <a href="#"
+         class="px-7 py-3 rounded-full bg-white text-gray-900 text-sm md:text-base font-medium 
+                hover:bg-gray-200 hover:text-gray-900 transition">
+        Plan My Escape
+      </a>
+	
+      <!-- Secondary CTA -->
+      <a href="#"
+         class="px-7 py-3 rounded-full border border-gray-400 text-sm md:text-base font-medium 
+                hover:bg-white hover:text-gray-900 hover:border-white transition">
+        Talk to Us
+      </a>
+
+    </div>
+
+	
+  </div>
+
+</section>
+
+
+<!-- Contact 
+<section id="contact" class="py-16 px-6">
+  <h2 class="text-3xl font-bold text-center mb-6">Plan Your Experience</h2>
+  <form class="max-w-xl mx-auto grid gap-4">
+    <input type="text" placeholder="Your Name" class="p-3 border rounded" />
+    <input type="email" placeholder="Email" class="p-3 border rounded" />
+    <textarea placeholder="Your requirement" class="p-3 border rounded"></textarea>
+    <button class="bg-blue-600 text-white py-3 rounded">Get Proposal</button>
+  </form>
+</section>-->
+
+<!-- WhatsApp Button 
+<a href="https://wa.me/919999999999" target="_blank" class="fixed bottom-6 right-6 bg-green-500 text-white px-4 py-3 rounded-full shadow-lg">WhatsApp</a>
+<!-- WhatsApp Floating Button -->
+<a href="https://wa.me/your-number?text=Hi%20I%20want%20to%20plan%20a%20trip"
+   target="_blank"
+   class="fixed bottom-6 right-4 z-50">
+
+  <div class="w-14 h-14 rounded-full bg-[#25D366] flex items-center justify-center
+              shadow-lg hover:scale-110 transition duration-300
+              relative">
+
+    <!-- Glow Effect -->
+    <span class="absolute inset-0 rounded-full bg-[#25D366] opacity-30 blur-xl"></span>
+
+    <!-- WhatsApp Icon -->
+    <svg class="w-7 h-7 text-white relative" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M20.52 3.48A11.8 11.8 0 0012.05 0C5.5 0 .2 5.3.2 11.85c0 2.1.55 4.15 1.6 5.96L0 24l6.34-1.66a11.8 11.8 0 005.71 1.46h.01c6.55 0 11.85-5.3 11.85-11.85 0-3.17-1.23-6.15-3.39-8.47z"/>
+    </svg>
+
+  </div>
+
+</a>
+
+
+
+<!-- Footer -->
+
+<footer class="bg-white pt-16 pb-10 px-5">
+
+  <div class="max-w-6xl mx-auto">
+
+    <!-- Grid -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-6 gap-10">
+
+      <!-- Logo + Text -->
+      <div class="md:col-span-2 flex flex-col items-start">
+
+        <img src="https://github.com/dglobalconsultants/9degreesouth/blob/6819fef38a43707146ae54b35dfbe01a1d980a7e/logo.png?raw=true"
+             class="w-32 mb-4 object-contain">
+
+        <p class="text-sm leading-relaxed max-w-full">
+          Curated, immersive journeys designed across culture, nature, and modern exploration.
+        </p>
+
+      </div>
+
+      <!-- About -->
+      <div>
+        <h4 class="text-sm font-medium mb-3">About</h4>
+        <ul class="space-y-2 text-sm">
+          <li><a href="#" class="hover:text-white transition">Our Story</a></li>
+          <li><a href="#" class="hover:text-white transition">Philosophy</a></li>
+        </ul>
+      </div>
+
+      <!-- Experiences -->
+      <div>
+        <h4 class="text-sm font-medium mb-3">Experiences</h4>
+        <ul class="space-y-2 text-sm">
+          <li><a href="#" class="hover:text-white transition">Deep Reset</a></li>
+          <li><a href="#" class="hover:text-white transition">Cultural Escapes</a></li>
+          <li><a href="#" class="hover:text-white transition">Nature & Life</a></li>
+          <li><a href="#" class="hover:text-white transition">Modern Exploration</a></li>
+        </ul>
+      </div>
+
+      <!-- Journeys + Contact (stacked on mobile) -->
+      
+
+        <div>
+          <h4 class="text-sm font-medium mb-3">Journeys</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="#" class="hover:text-white transition">All Itineraries</a></li>
+            <li><a href="#" class="hover:text-white transition">Featured</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="text-sm font-medium mb-3">Contact</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="#" class="hover:text-white transition">Talk to Us</a></li>
+            <li><a href="#" class="hover:text-white transition">Plan a Getaway</a></li>
+          </ul>
+        </div>
+
+      
+		
+		<!-- Floating Contact Bar 
+<div class="fixed right-4 bottom-6 z-50 flex flex-col gap-3">
+
+  <!-- WhatsApp 
+  <a href="https://wa.me/your-number"
+     target="_blank"
+     class="group w-12 h-12 flex items-center justify-center rounded-xl 
+            bg-white/10 backdrop-blur-md border border-white/20 
+            hover:bg-white/20 transition duration-300
+            shadow-md">
+
+    <svg class="w-5 h-5 text-[#c4a484]" fill="none" stroke="currentColor" stroke-width="2"
+         viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round"
+            d="M21 12a9 9 0 11-3-6.7L21 3v3h-3a9 9 0 013 6z"/>
+    </svg>
+
+   
+    <span class="absolute right-14 opacity-0 group-hover:opacity-100 
+                 bg-black text-white text-xs px-2 py-1 rounded-md 
+                 transition duration-300">
+      WhatsApp
+    </span>
+  </a>
+
+ 
+  <a href="tel:+919999999999"
+     class="group w-12 h-12 flex items-center justify-center rounded-xl 
+            bg-white/10 backdrop-blur-md border border-white/20 
+            hover:bg-white/20 transition duration-300
+            shadow-md">
+
+    <svg class="w-5 h-5 text-[#c4a484]" fill="none" stroke="currentColor" stroke-width="2"
+         viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round"
+            d="M3 5a2 2 0 012-2h2l2 5-2 1a11 11 0 005 5l1-2 5 2v2a2 2 0 01-2 2h-1C8 18 3 13 3 6V5z"/>
+    </svg>
+
+    <span class="absolute right-14 opacity-0 group-hover:opacity-100 
+                 bg-black text-white text-xs px-2 py-1 rounded-md 
+                 transition duration-300">
+      Call
+    </span>
+  </a>
+
+  <!-- Email 
+  <a href="mailto:youremail@example.com"
+     class="group w-12 h-12 flex items-center justify-center rounded-xl 
+            bg-white/10 backdrop-blur-md border border-white/20 
+            hover:bg-white/20 transition duration-300
+            shadow-md">
+
+    <svg class="w-5 h-5 text-[#c4a484]" fill="none" stroke="currentColor" stroke-width="2"
+         viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round"
+            d="M3 8l9 6 9-6M21 8v8a2 2 0 01-2 2H5a2 2 0 01-2-2V8"/>
+    </svg>
+
+    <span class="absolute right-14 opacity-0 group-hover:opacity-100 
+                 bg-black text-white text-xs px-2 py-1 rounded-md 
+                 transition duration-300">
+      Email
+    </span>
+  </a>-->
+
+</div>
+    </div>
+
+
+<!-- Floating Concierge Button 
+<div class="fixed bottom-6 right-4 z-50">
+
+  <!-- Toggle Button 
+  <button id="conciergeToggle"
+    class="w-14 h-14 rounded-full bg-[#1f1f1f] text-white flex items-center justify-center 
+           shadow-lg hover:scale-105 transition duration-300">
+
+    <!-- Icon 
+    <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2"
+         viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round"
+            d="M12 6v6l4 2"/>
+    </svg>
+
+  </button>
+
+  <!-- Panel 
+  <div id="conciergePanel"
+    class="absolute bottom-16 right-0 w-64 opacity-0 pointer-events-none 
+           transform translate-y-4 transition-all duration-300">
+
+    <div class="backdrop-blur-md bg-white/80 border border-white/40 
+                rounded-2xl shadow-xl p-5">
+
+      <!-- Title 
+      <p class="text-sm font-medium text-gray-900 mb-4">
+        Travel Concierge
+      </p>
+
+      <!-- Options 
+      <div class="space-y-3">
+
+        <!-- WhatsApp 
+        <a href="https://wa.me/your-number?text=Hi%20I%20want%20to%20plan%20a%20trip"
+           target="_blank"
+           class="flex items-center gap-3 p-3 rounded-xl hover:bg-gray-100 transition">
+
+          <div class="w-10 h-10 flex items-center justify-center rounded-lg bg-green-100">
+            <!-- WhatsApp Icon 
+            <svg class="w-5 h-5 text-[#25D366]" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M20.52 3.48A11.8 11.8 0 0012.05 0C5.5 0 .2 5.3.2 11.85c0 2.1.55 4.15 1.6 5.96L0 24l6.34-1.66a11.8 11.8 0 005.71 1.46h.01c6.55 0 11.85-5.3 11.85-11.85 0-3.17-1.23-6.15-3.39-8.47z"/>
+            </svg>
+          </div>
+
+          <div>
+            <p class="text-sm font-medium text-gray-900">WhatsApp</p>
+            <p class="text-xs text-gray-500">Quick chat</p>
+          </div>
+
+        </a>
+	<!-- WhatsApp Floating Button 
+<a href="https://wa.me/your-number?text=Hi%20I%20want%20to%20plan%20a%20trip"
+   target="_blank"
+   class="fixed bottom-6 right-4 z-50">
+
+  <div class="w-14 h-14 rounded-full bg-[#25D366] flex items-center justify-center
+              shadow-lg hover:scale-110 transition duration-300
+              relative">
+
+    <!-- Glow Effect 
+    <span class="absolute inset-0 rounded-full bg-[#25D366] opacity-30 blur-xl"></span>
+
+    <!-- WhatsApp Icon 
+    <svg class="w-7 h-7 text-white relative" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M20.52 3.48A11.8 11.8 0 0012.05 0C5.5 0 .2 5.3.2 11.85c0 2.1.55 4.15 1.6 5.96L0 24l6.34-1.66a11.8 11.8 0 005.71 1.46h.01c6.55 0 11.85-5.3 11.85-11.85 0-3.17-1.23-6.15-3.39-8.47z"/>
+    </svg>
+
+  </div>
+
+</a>
+        <!-- Call 
+        <a href="tel:+919999999999"
+           class="flex items-center gap-3 p-3 rounded-xl hover:bg-gray-100 transition">
+
+          <div class="w-10 h-10 flex items-center justify-center rounded-lg bg-[#f5f3ef]">
+            <!-- Phone Icon 
+            <svg class="w-5 h-5 text-[#c4a484]" fill="none" stroke="currentColor" stroke-width="2"
+                 viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M22 16.92v3a2 2 0 01-2.18 2 19.86 19.86 0 01-8.63-3.07 
+                       19.5 19.5 0 01-6-6A19.86 19.86 0 012.08 4.18 
+                       2 2 0 014.06 2h3a2 2 0 012 1.72"/>
+            </svg>
+          </div>
+
+          <div>
+            <p class="text-sm font-medium text-gray-900">Call</p>
+            <p class="text-xs text-gray-500">Speak directly</p>
+          </div>
+
+        </a>
+
+        <!-- Email 
+        <a href="mailto:youremail@example.com"
+           class="flex items-center gap-3 p-3 rounded-xl hover:bg-gray-100 transition">
+
+          <div class="w-10 h-10 flex items-center justify-center rounded-lg bg-[#f5f3ef]">
+            <!-- Email Icon 
+            <svg class="w-5 h-5 text-[#c4a484]" fill="none" stroke="currentColor" stroke-width="2"
+                 viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M4 4h16v16H4z"/>
+              <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M4 4l8 8 8-8"/>
+            </svg>
+          </div>
+
+          <div>
+            <p class="text-sm font-medium text-gray-900">Email</p>
+            <p class="text-xs text-gray-500">Detailed inquiry</p>
+          </div>
+
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+<script>
+  const toggle = document.getElementById('conciergeToggle');
+  const panel = document.getElementById('conciergePanel');
+
+  toggle.addEventListener('click', () => {
+    if (panel.classList.contains('opacity-0')) {
+      panel.classList.remove('opacity-0', 'pointer-events-none', 'translate-y-4');
+      panel.classList.add('opacity-100', 'translate-y-0');
+    } else {
+      panel.classList.add('opacity-0', 'pointer-events-none', 'translate-y-4');
+      panel.classList.remove('opacity-100', 'translate-y-0');
+    }
+  });
+</script>
+-->
+
+    <!-- Divider -->
+    <div class="border-t border-gray-800 mt-12 mb-6"></div>
+
+    <!-- Bottom -->
+    <div class="text-center">
+      <p class="text-sm text-gray-400 tracking-wide">
+        ©<a href="https://9degreesouth.in">&nbsp;9°South Quiet Escapes 2026</a>    &nbsp; All rights reserved. 
+      </p>
+    </div>
+
+  </div>
+
+</footer>
+
+
+
+
+<script>
+const btn = document.getElementById('menu-btn');
+const mobileMenu = document.getElementById('mobile-menu');
+btn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+document.querySelectorAll('#mobile-menu a').forEach(link => {
+  link.addEventListener('click', () => mobileMenu.classList.add('hidden'));
+});
+document.addEventListener('click', (e) => {
+  if (!mobileMenu.contains(e.target) && !btn.contains(e.target)) {
+    mobileMenu.classList.add('hidden');
+  }
+});
+</script>
+
+</body>
+</html>
