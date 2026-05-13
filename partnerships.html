@@ -1,0 +1,2252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>9° South</title>
+ <!-- Flatpickr core -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
+<!-- Month Select Plugin -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/plugins/monthSelect/style.css">
+<script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/plugins/monthSelect/index.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+<style>
+
+ html {
+    scroll-behavior: smooth;
+  }
+
+  * {
+    scroll-margin-top: 100px;
+  }
+
+  body {
+      font-family: 'Inter', sans-serif;
+      background: #0f1110;
+      color: #f5f3ee;
+    }
+
+</style>
+</head>
+
+<body class="overflow-x-hidden">
+
+ <!-- NAVBAR -->
+  <header class="fixed top-0 left-0 w-full z-50 border-b border-white/5 bg-[#0f1110]/80 backdrop-blur-xl">
+    <div class="max-w-7xl mx-auto px-6 lg:px-10">
+      <div class="h-20 flex items-center justify-between">
+
+        <div>
+          <h1 class="text-xl tracking-wide font-semibold">
+            9° South
+          </h1>
+        </div>
+
+		
+        <nav class="hidden md:flex items-center gap-10 text-sm text-white/70">
+		  <a href="./index.html" class="hover:text-white transition">Home</a>
+          <a href="./immersions.html" class="hover:text-white transition">Immersions</a>
+		  <a href="./programs.html" class="hover:text-white transition">Programs</a>
+		  <a href="./blogs.html" class="hover:text-white transition">Blogs</a>
+		  
+		  
+      
+		
+
+      
+		
+	  
+	  
+	  
+		<div class="relative group">
+          <button class="flex items-center gap-2 font-medium hover:text-white transition">
+            Partner With Us
+			<svg class="w-4 h-4 transform transition-transform duration-200 group-hover:rotate-180"
+       fill="none" stroke="currentColor" stroke-width="2"
+       viewBox="0 0 24 24">
+    <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+  </svg>
+          </button>
+
+          <!-- Dropdown -->
+          <div class="absolute left-0 mt-4 w-72 bg-white shadow-xl rounded-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
+
+            <div class="p-4 space-y-4">
+
+              <a href="./9degreesouth_getaways.html" class="block p-3 rounded-lg hover:bg-gray-50 transition">
+                <p class="font-medium text-gray-900">Institutions</p>
+              </a>
+
+              <a href="./9degreesouth_retreats.html" class="block p-3 rounded-lg hover:bg-gray-50 transition">
+                <p class="font-medium text-gray-900">Corporate Organizations</p>
+              </a>
+
+              <a href="./9degreesouth_journeys.html" class="block p-3 rounded-lg hover:bg-gray-50 transition">
+                <p class="font-medium text-gray-900">Startup Teams</p>
+              </a>
+
+			<a href="./9degreesouth_journeys.html" class="block p-3 rounded-lg hover:bg-gray-50 transition">
+                <p class="font-medium text-gray-900">Industries</p>
+              </a>
+			  
+			  <a href="./9degreesouth_journeys.html" class="block p-3 rounded-lg hover:bg-gray-50 transition">
+                <p class="font-medium text-gray-900">Retreat Spaces</p>
+              </a>
+			  
+			  <a href="./9degreesouth_journeys.html" class="block p-3 rounded-lg hover:bg-gray-50 transition">
+                <p class="font-medium text-gray-900">Communities</p>
+              </a>
+			  
+            </div>
+          </div>
+        </div>
+		  </nav>
+		  
+		<!-- Contact / CTA   --> 
+        <button class="hidden md:block px-5 py-2.5 rounded-full border border-white/30 hover:bg-white/50 transition text-sm">
+          Contact
+        </button>
+	
+		
+	  
+		 <!-- Mobile Menu Button -->
+      <div class="md:hidden">
+        <button id="menu-btn" class="text-white-800 focus:outline-none">
+          ☰
+        </button>
+      </div>
+	  
+      </div>
+    </div>
+	
+	<!-- Mobile Menu -->
+  <div id="mobile-menu" class="hidden md:hidden px-6 pb-6 bg-white shadow-md">
+
+    <div class="space-y-4 mt-4">
+
+	  <!-- Home -->
+      <a href="./index.html" class="block py-2 text-gray-800 font-medium">
+        Home
+      </a>
+	  
+      <div>
+		  <a href="./immersions.html" class="block py-2 text-gray-700 text-sm">Immersions</a>
+		  <a href="./programs.html" class="block py-2 text-gray-700 text-sm">Programs</a>
+		  <a href="./blogs.html" class="block py-2 text-gray-700 text-sm">Blogs</a>
+		  
+		   <!-- Partner With us -->
+      <div>
+        <p class="font-semibold text-gray-900 mt-4 mb-2 ">Partner With Us</p>
+
+        <a href="./9degreesouth_getaways.html" class="block py-2 text-sm text-gray-700">Institutions</a>
+        <a href="./9degreesouth_retreats.html" class="block py-2 text-sm text-gray-700">Corporate Organizations</a>
+        <a href="./9degreesouth_journeys.html" class="block py-2 text-sm text-gray-700">Startup Teams</a>
+		<a href="./9degreesouth_getaways.html" class="block py-2 text-sm text-gray-700">Industries</a>
+        <a href="./9degreesouth_retreats.html" class="block py-2 text-sm text-gray-700">Retreat Spaces</a>
+        <a href="./9degreesouth_journeys.html" class="block py-2 text-sm text-gray-700">Communities</a>
+		
+      </div>
+		  
+		  
+      </div>
+																																									
+
+
+      <!-- Contact / CTA -->
+        
+      <button type="button" onclick="openModal1()" class="block px-4 py-2 bg-black text-white rounded-full hover:opacity-80 transition">
+        Contact
+      </button>
+
+    </div>
+  </div>
+  
+  
+  </header>
+
+
+
+<!-- INSTITUTIONAL PARTNERSHIP SECTION -->
+<section class="py-16  bg-white border-t border-[#f1f1f1] overflow-hidden relative">
+
+  <!-- SOFT BACKGROUND -->
+  <div class="absolute top-0 right-0 w-[500px] h-[500px] rounded-full bg-[#fafafa] blur-3xl"></div>
+
+  <div class="relative z-10 max-w-7xl mx-auto px-6 lg:px-10">
+
+
+    <!-- HEADER -->
+    <div class="max-w-5xl mb-24">
+
+      <p class="uppercase tracking-[0.22em] text-sm text-[#888888] mb-6">
+        Institutional Collaborations
+      </p>
+
+      <h2 class="text-4xl md:text-6xl leading-[1.05] tracking-tight font-semibold text-[#111111] mb-8">
+
+        Institutional
+        <span class="block text-[#777777]">
+          Immersion Partnerships
+        </span>
+
+      </h2>
+
+      <p class="text-lg md:text-xl leading-relaxed text-[#666666] max-w-4xl">
+
+        Structured collaborations that help institutions create meaningful
+        exposure-driven learning experiences for students, faculty,
+        entrepreneurship ecosystems, and emerging professionals.
+
+      </p>
+
+    </div>
+
+
+
+    <!-- TOP GRID -->
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 mb-24">
+
+
+      <!-- LEFT MAIN -->
+      <div class="lg:col-span-7 rounded-[2.8rem] border border-[#eeeeee] bg-[#fafafa] p-10 md:p-14">
+
+        <!-- TAGS -->
+        <div class="flex flex-wrap gap-3 mb-10">
+
+          <span class="px-5 py-3 rounded-full bg-white border border-[#e8e8e8] text-xs uppercase tracking-[0.2em] text-[#666666]">
+            Quarterly Programs
+          </span>
+
+          <span class="px-5 py-3 rounded-full bg-white border border-[#e8e8e8] text-xs uppercase tracking-[0.2em] text-[#666666]">
+            Experiential Learning
+          </span>
+
+          <span class="px-5 py-3 rounded-full bg-white border border-[#e8e8e8] text-xs uppercase tracking-[0.2em] text-[#666666]">
+            Real-World Exposure
+          </span>
+
+        </div>
+
+
+        <h3 class="text-3xl md:text-5xl leading-[1.08] font-semibold text-[#111111] mb-8">
+
+          Long-Term Exposure
+          <span class="block text-[#777777]">
+            Designed Around Learning
+          </span>
+
+        </h3>
+
+
+        <p class="text-lg md:text-xl text-[#666666] leading-relaxed mb-12 max-w-3xl">
+
+          We become your long-term immersive exposure partner —
+          helping institutions build recurring real-world learning
+          experiences throughout the academic year.
+
+        </p>
+
+
+        <!-- FEATURES -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+
+          <!-- ITEM -->
+          <div class="rounded-[2rem] bg-white border border-[#eeeeee] p-8">
+
+            <div class="w-14 h-14 rounded-2xl bg-[#fafafa] border border-[#eeeeee] flex items-center justify-center text-xl mb-6">
+              ✦
+            </div>
+
+            <h4 class="text-2xl font-semibold text-[#111111] mb-4">
+              Startup Ecosystem Exposure
+            </h4>
+
+            <p class="text-[#666666] leading-relaxed">
+              Founder interactions, coworking ecosystems,
+              innovation hubs, incubators, and entrepreneurial exposure.
+            </p>
+
+          </div>
+
+
+
+          <!-- ITEM -->
+          <div class="rounded-[2rem] bg-white border border-[#eeeeee] p-8">
+
+            <div class="w-14 h-14 rounded-2xl bg-[#fafafa] border border-[#eeeeee] flex items-center justify-center text-xl mb-6">
+              ▲
+            </div>
+
+            <h4 class="text-2xl font-semibold text-[#111111] mb-4">
+              Industry Immersions
+            </h4>
+
+            <p class="text-[#666666] leading-relaxed">
+              Applied exposure through industries,
+              operational environments, and manufacturing ecosystems.
+            </p>
+
+          </div>
+
+
+
+          <!-- ITEM -->
+          <div class="rounded-[2rem] bg-white border border-[#eeeeee] p-8">
+
+            <div class="w-14 h-14 rounded-2xl bg-[#fafafa] border border-[#eeeeee] flex items-center justify-center text-xl mb-6">
+              ◈
+            </div>
+
+            <h4 class="text-2xl font-semibold text-[#111111] mb-4">
+              Leadership Experiences
+            </h4>
+
+            <p class="text-[#666666] leading-relaxed">
+              Reflective and collaborative environments
+              designed around leadership and perspective-building.
+            </p>
+
+          </div>
+
+
+
+          <!-- ITEM -->
+          <div class="rounded-[2rem] bg-white border border-[#eeeeee] p-8">
+
+            <div class="w-14 h-14 rounded-2xl bg-[#fafafa] border border-[#eeeeee] flex items-center justify-center text-xl mb-6">
+              ⌁
+            </div>
+
+            <h4 class="text-2xl font-semibold text-[#111111] mb-4">
+              Experiential Learning
+            </h4>
+
+            <p class="text-[#666666] leading-relaxed">
+              Immersive observation-based learning
+              designed around ecosystems and applied understanding.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+
+      <!-- RIGHT COLUMN -->
+      <div class="lg:col-span-5 flex flex-col gap-6">
+
+
+        <!-- VALUE -->
+        <div class="rounded-[2.5rem] border border-[#eeeeee] bg-[#fafafa] p-10 md:p-12">
+
+          <p class="uppercase tracking-[0.2em] text-xs text-[#888888] mb-6">
+            Institutional Value
+          </p>
+
+          <h3 class="text-3xl md:text-4xl leading-[1.08] font-semibold text-[#111111] mb-10">
+
+            What Institutions
+            <span class="block text-[#777777]">
+              Gain
+            </span>
+
+          </h3>
+
+
+          <div class="space-y-8">
+
+
+            <!-- ITEM -->
+            <div>
+
+              <h4 class="text-xl font-semibold text-[#111111] mb-3">
+                Academic Differentiation
+              </h4>
+
+              <p class="text-[#666666] leading-relaxed">
+                Create modern exposure-driven learning environments
+                beyond traditional classroom structures.
+              </p>
+
+            </div>
+
+
+
+            <!-- ITEM -->
+            <div>
+
+              <h4 class="text-xl font-semibold text-[#111111] mb-3">
+                Industry & Ecosystem Access
+              </h4>
+
+              <p class="text-[#666666] leading-relaxed">
+                Connect students with startups, founders,
+                industries, and operational ecosystems.
+              </p>
+
+            </div>
+
+
+
+            <!-- ITEM -->
+            <div>
+
+              <h4 class="text-xl font-semibold text-[#111111] mb-3">
+                Future-Ready Learning
+              </h4>
+
+              <p class="text-[#666666] leading-relaxed">
+                Enable interdisciplinary understanding through
+                immersive real-world exposure experiences.
+              </p>
+
+            </div>
+
+
+
+            <!-- ITEM -->
+            <div>
+
+              <h4 class="text-xl font-semibold text-[#111111] mb-3">
+                Institutional Positioning
+              </h4>
+
+              <p class="text-[#666666] leading-relaxed">
+                Strengthen visibility through experiential learning
+                and ecosystem collaborations.
+              </p>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+
+        <!-- ENGAGEMENT -->
+        <div class="rounded-[2.5rem] border border-[#eeeeee] bg-black p-10 md:p-12 text-white">
+
+          <p class="uppercase tracking-[0.2em] text-xs text-white/50 mb-6">
+            Flexible Collaborations
+          </p>
+
+          <h3 class="text-3xl md:text-4xl leading-[1.08] font-semibold mb-10">
+
+            Designed Around
+            <span class="block text-white/60">
+              Institutional Needs
+            </span>
+
+          </h3>
+
+
+          <div class="space-y-5 text-white/75 text-lg">
+
+            <div>• Quarterly Partnerships</div>
+            <div>• Semester-Based Programs</div>
+            <div>• Annual Immersion Calendars</div>
+            <div>• Department-Specific Experiences</div>
+            <div>• Multi-Day Exposure Journeys</div>
+            <div>• Faculty Development Programs</div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+
+
+
+   
+
+</section>
+
+<!-- ORGANIZATIONAL IMMERSION PARTNERSHIPS -->
+<section class="py-32 bg-white border-t border-[#f1f1f1] overflow-hidden relative">
+
+  <!-- BACKGROUND -->
+  <div class="absolute top-0 left-0 w-[500px] h-[500px] rounded-full bg-[#fafafa] blur-3xl"></div>
+
+  <div class="relative z-10 max-w-7xl mx-auto px-6 lg:px-10">
+
+
+    <!-- HEADER -->
+    <div class="max-w-5xl mb-24">
+
+      <p class="uppercase tracking-[0.22em] text-sm text-[#888888] mb-6">
+        Organizational Collaborations
+      </p>
+
+      <h2 class="text-4xl md:text-6xl leading-[1.05] tracking-tight font-semibold text-[#111111] mb-8">
+
+        Organizational
+        <span class="block text-[#777777]">
+          Immersion Partnerships
+        </span>
+
+      </h2>
+
+      <p class="text-lg md:text-xl leading-relaxed text-[#666666] max-w-4xl">
+
+        Structured collaborations designed for organizations looking to create
+        immersive environments around leadership, collaboration, innovation,
+        reflection, and meaningful team experiences.
+
+      </p>
+
+    </div>
+
+
+
+    <!-- TOP GRID -->
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 mb-24">
+
+
+      <!-- LEFT MAIN -->
+      <div class="lg:col-span-7 rounded-[2.8rem] border border-[#eeeeee] bg-[#fafafa] p-10 md:p-14">
+
+        <!-- TAGS -->
+        <div class="flex flex-wrap gap-3 mb-10">
+
+          <span class="px-5 py-3 rounded-full bg-white border border-[#e8e8e8] text-xs uppercase tracking-[0.2em] text-[#666666]">
+            Leadership Retreats
+          </span>
+
+          <span class="px-5 py-3 rounded-full bg-white border border-[#e8e8e8] text-xs uppercase tracking-[0.2em] text-[#666666]">
+            Team Immersions
+          </span>
+
+          <span class="px-5 py-3 rounded-full bg-white border border-[#e8e8e8] text-xs uppercase tracking-[0.2em] text-[#666666]">
+            Innovation Exposure
+          </span>
+
+        </div>
+
+
+        <h3 class="text-3xl md:text-5xl leading-[1.08] font-semibold text-[#111111] mb-8">
+
+          Experiences Designed
+          <span class="block text-[#777777]">
+            Beyond Traditional Workspaces
+          </span>
+
+        </h3>
+
+
+        <p class="text-lg md:text-xl text-[#666666] leading-relaxed mb-12 max-w-3xl">
+
+          We help organizations create meaningful immersive environments
+          where leadership, collaboration, reflection, innovation,
+          and human connection come together intentionally.
+
+        </p>
+
+
+        <!-- FEATURES -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+
+          <!-- ITEM -->
+          <div class="rounded-[2rem] bg-white border border-[#eeeeee] p-8">
+
+            <div class="w-14 h-14 rounded-2xl bg-[#fafafa] border border-[#eeeeee] flex items-center justify-center text-xl mb-6">
+              ◈
+            </div>
+
+            <h4 class="text-2xl font-semibold text-[#111111] mb-4">
+              Leadership Retreats
+            </h4>
+
+            <p class="text-[#666666] leading-relaxed">
+              Reflective and collaborative environments designed
+              around leadership, strategy, and organizational growth.
+            </p>
+
+          </div>
+
+
+
+          <!-- ITEM -->
+          <div class="rounded-[2rem] bg-white border border-[#eeeeee] p-8">
+
+            <div class="w-14 h-14 rounded-2xl bg-[#fafafa] border border-[#eeeeee] flex items-center justify-center text-xl mb-6">
+              ✦
+            </div>
+
+            <h4 class="text-2xl font-semibold text-[#111111] mb-4">
+              Innovation Exposure
+            </h4>
+
+            <p class="text-[#666666] leading-relaxed">
+              Curated interactions with startups,
+              innovation hubs, founder communities, and emerging ecosystems.
+            </p>
+
+          </div>
+
+
+
+          <!-- ITEM -->
+          <div class="rounded-[2rem] bg-white border border-[#eeeeee] p-8">
+
+            <div class="w-14 h-14 rounded-2xl bg-[#fafafa] border border-[#eeeeee] flex items-center justify-center text-xl mb-6">
+              ⌁
+            </div>
+
+            <h4 class="text-2xl font-semibold text-[#111111] mb-4">
+              Team Immersion Programs
+            </h4>
+
+            <p class="text-[#666666] leading-relaxed">
+              Shared immersive experiences focused on communication,
+              alignment, collaboration, and team culture.
+            </p>
+
+          </div>
+
+
+
+          <!-- ITEM -->
+          <div class="rounded-[2rem] bg-white border border-[#eeeeee] p-8">
+
+            <div class="w-14 h-14 rounded-2xl bg-[#fafafa] border border-[#eeeeee] flex items-center justify-center text-xl mb-6">
+              ▲
+            </div>
+
+            <h4 class="text-2xl font-semibold text-[#111111] mb-4">
+              Reflective Journeys
+            </h4>
+
+            <p class="text-[#666666] leading-relaxed">
+              Nature-based immersive experiences designed around
+              clarity, wellbeing, perspective, and intentional reflection.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+
+      <!-- RIGHT COLUMN -->
+      <div class="lg:col-span-5 flex flex-col gap-6">
+
+
+        <!-- VALUE -->
+        <div class="rounded-[2.5rem] border border-[#eeeeee] bg-[#fafafa] p-10 md:p-12">
+
+          <p class="uppercase tracking-[0.2em] text-xs text-[#888888] mb-6">
+            Organizational Value
+          </p>
+
+          <h3 class="text-3xl md:text-4xl leading-[1.08] font-semibold text-[#111111] mb-10">
+
+            What Organizations
+            <span class="block text-[#777777]">
+              Gain
+            </span>
+
+          </h3>
+
+
+          <div class="space-y-8">
+
+
+            <!-- ITEM -->
+            <div>
+
+              <h4 class="text-xl font-semibold text-[#111111] mb-3">
+                Leadership Development
+              </h4>
+
+              <p class="text-[#666666] leading-relaxed">
+                Strengthen leadership thinking, collaboration,
+                communication, and strategic reflection.
+              </p>
+
+            </div>
+
+
+
+            <!-- ITEM -->
+            <div>
+
+              <h4 class="text-xl font-semibold text-[#111111] mb-3">
+                Team Alignment & Engagement
+              </h4>
+
+              <p class="text-[#666666] leading-relaxed">
+                Create meaningful shared experiences that improve
+                connection, collaboration, and workplace culture.
+              </p>
+
+            </div>
+
+
+
+            <!-- ITEM -->
+            <div>
+
+              <h4 class="text-xl font-semibold text-[#111111] mb-3">
+                Innovation Exposure
+              </h4>
+
+              <p class="text-[#666666] leading-relaxed">
+                Introduce teams to startups, founder ecosystems,
+                innovation environments, and emerging perspectives.
+              </p>
+
+            </div>
+
+
+
+            <!-- ITEM -->
+            <div>
+
+              <h4 class="text-xl font-semibold text-[#111111] mb-3">
+                Employee Experience
+              </h4>
+
+              <p class="text-[#666666] leading-relaxed">
+                Design immersive experiences that contribute toward
+                wellbeing, engagement, and modern work culture.
+              </p>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+
+        <!-- ENGAGEMENT -->
+        <div class="rounded-[2.5rem] border border-[#eeeeee] bg-black p-10 md:p-12 text-white">
+
+          <p class="uppercase tracking-[0.2em] text-xs text-white/50 mb-6">
+            Flexible Collaborations
+          </p>
+
+          <h3 class="text-3xl md:text-4xl leading-[1.08] font-semibold mb-10">
+
+            Designed Around
+            <span class="block text-white/60">
+              Organizational Needs
+            </span>
+
+          </h3>
+
+
+          <div class="space-y-5 text-white/75 text-lg">
+
+            <div>• Quarterly Team Experiences</div>
+            <div>• Leadership Retreat Calendars</div>
+            <div>• Annual Offsite Partnerships</div>
+            <div>• Innovation Exposure Programs</div>
+            <div>• Executive Immersion Retreats</div>
+            <div>• Multi-Day Reflective Journeys</div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- STARTUP ECOSYSTEM PARTNERSHIPS -->
+<section class="py-32 bg-white border-t border-[#f1f1f1] overflow-hidden relative">
+
+  <!-- BACKGROUND -->
+  <div class="absolute top-0 right-0 w-[500px] h-[500px] rounded-full bg-[#fafafa] blur-3xl"></div>
+
+  <div class="relative z-10 max-w-7xl mx-auto px-6 lg:px-10">
+
+
+    <!-- HEADER -->
+    <div class="max-w-5xl mb-24">
+
+      <p class="uppercase tracking-[0.22em] text-sm text-[#888888] mb-6">
+        Innovation Ecosystem Collaborations
+      </p>
+
+      <h2 class="text-4xl md:text-6xl leading-[1.05] tracking-tight font-semibold text-[#111111] mb-8">
+
+        Startup Ecosystem
+        <span class="block text-[#777777]">
+          Partnerships
+        </span>
+
+      </h2>
+
+      <p class="text-lg md:text-xl leading-relaxed text-[#666666] max-w-4xl">
+
+        We collaborate with startups, founder communities, incubators,
+        coworking ecosystems, and innovation networks to create meaningful
+        exposure experiences for institutions, emerging professionals,
+        and future-focused communities.
+
+      </p>
+
+    </div>
+
+
+
+    <!-- TOP GRID -->
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 mb-24">
+
+
+      <!-- LEFT MAIN -->
+      <div class="lg:col-span-7 rounded-[2.8rem] border border-[#eeeeee] bg-[#fafafa] p-10 md:p-14">
+
+        <!-- TAGS -->
+        <div class="flex flex-wrap gap-3 mb-10">
+
+          <span class="px-5 py-3 rounded-full bg-white border border-[#e8e8e8] text-xs uppercase tracking-[0.2em] text-[#666666]">
+            Founder Ecosystems
+          </span>
+
+          <span class="px-5 py-3 rounded-full bg-white border border-[#e8e8e8] text-xs uppercase tracking-[0.2em] text-[#666666]">
+            Innovation Communities
+          </span>
+
+          <span class="px-5 py-3 rounded-full bg-white border border-[#e8e8e8] text-xs uppercase tracking-[0.2em] text-[#666666]">
+            Entrepreneurial Exposure
+          </span>
+
+        </div>
+
+
+        <h3 class="text-3xl md:text-5xl leading-[1.08] font-semibold text-[#111111] mb-8">
+
+          Connecting Innovation
+          <span class="block text-[#777777]">
+            With Emerging Learners
+          </span>
+
+        </h3>
+
+
+        <p class="text-lg md:text-xl text-[#666666] leading-relaxed mb-12 max-w-3xl">
+
+          We help startup ecosystems create meaningful engagement
+          with institutions, learners, founders, and future innovators
+          through curated immersive exposure experiences.
+
+        </p>
+
+
+        <!-- FEATURES -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+
+          <!-- ITEM -->
+          <div class="rounded-[2rem] bg-white border border-[#eeeeee] p-8">
+
+            <div class="w-14 h-14 rounded-2xl bg-[#fafafa] border border-[#eeeeee] flex items-center justify-center text-xl mb-6">
+              ✦
+            </div>
+
+            <h4 class="text-2xl font-semibold text-[#111111] mb-4">
+              Founder Circles
+            </h4>
+
+            <p class="text-[#666666] leading-relaxed">
+              Curated founder interactions focused on entrepreneurial thinking,
+              innovation journeys, leadership, and ecosystem storytelling.
+            </p>
+
+          </div>
+
+
+
+          <!-- ITEM -->
+          <div class="rounded-[2rem] bg-white border border-[#eeeeee] p-8">
+
+            <div class="w-14 h-14 rounded-2xl bg-[#fafafa] border border-[#eeeeee] flex items-center justify-center text-xl mb-6">
+              ◈
+            </div>
+
+            <h4 class="text-2xl font-semibold text-[#111111] mb-4">
+              Startup Ecosystem Exposure
+            </h4>
+
+            <p class="text-[#666666] leading-relaxed">
+              Exposure-driven experiences across coworking ecosystems,
+              incubators, accelerators, and innovation environments.
+            </p>
+
+          </div>
+
+
+
+          <!-- ITEM -->
+          <div class="rounded-[2rem] bg-white border border-[#eeeeee] p-8">
+
+            <div class="w-14 h-14 rounded-2xl bg-[#fafafa] border border-[#eeeeee] flex items-center justify-center text-xl mb-6">
+              ▲
+            </div>
+
+            <h4 class="text-2xl font-semibold text-[#111111] mb-4">
+              Innovation Interactions
+            </h4>
+
+            <p class="text-[#666666] leading-relaxed">
+              Curated conversations and immersive environments
+              around emerging industries, ideas, and innovation culture.
+            </p>
+
+          </div>
+
+
+
+          <!-- ITEM -->
+          <div class="rounded-[2rem] bg-white border border-[#eeeeee] p-8">
+
+            <div class="w-14 h-14 rounded-2xl bg-[#fafafa] border border-[#eeeeee] flex items-center justify-center text-xl mb-6">
+              ⌁
+            </div>
+
+            <h4 class="text-2xl font-semibold text-[#111111] mb-4">
+              Entrepreneurial Learning
+            </h4>
+
+            <p class="text-[#666666] leading-relaxed">
+              Immersive experiences designed to inspire entrepreneurial
+              thinking, ecosystem understanding, and future-ready perspectives.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+
+      <!-- RIGHT COLUMN -->
+      <div class="lg:col-span-5 flex flex-col gap-6">
+
+
+        <!-- VALUE -->
+        <div class="rounded-[2.5rem] border border-[#eeeeee] bg-[#fafafa] p-10 md:p-12">
+
+          <p class="uppercase tracking-[0.2em] text-xs text-[#888888] mb-6">
+            Ecosystem Value
+          </p>
+
+          <h3 class="text-3xl md:text-4xl leading-[1.08] font-semibold text-[#111111] mb-10">
+
+            What Startup Communities
+            <span class="block text-[#777777]">
+              Gain
+            </span>
+
+          </h3>
+
+
+          <div class="space-y-8">
+
+
+            <!-- ITEM -->
+            <div>
+
+              <h4 class="text-xl font-semibold text-[#111111] mb-3">
+                Ecosystem Visibility
+              </h4>
+
+              <p class="text-[#666666] leading-relaxed">
+                Showcase startup ecosystems, founder journeys,
+                innovation environments, and emerging opportunities.
+              </p>
+
+            </div>
+
+
+
+            <!-- ITEM -->
+            <div>
+
+              <h4 class="text-xl font-semibold text-[#111111] mb-3">
+                Institutional Access
+              </h4>
+
+              <p class="text-[#666666] leading-relaxed">
+                Build meaningful engagement with institutions,
+                students, faculty, and future innovators.
+              </p>
+
+            </div>
+
+
+
+            <!-- ITEM -->
+            <div>
+
+              <h4 class="text-xl font-semibold text-[#111111] mb-3">
+                Community Participation
+              </h4>
+
+              <p class="text-[#666666] leading-relaxed">
+                Enable founders and innovation communities
+                to contribute toward experiential learning ecosystems.
+              </p>
+
+            </div>
+
+
+
+            <!-- ITEM -->
+            <div>
+
+              <h4 class="text-xl font-semibold text-[#111111] mb-3">
+                Future Talent Engagement
+              </h4>
+
+              <p class="text-[#666666] leading-relaxed">
+                Create early visibility and meaningful interactions
+                with emerging entrepreneurial and technical talent.
+              </p>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+
+        <!-- ENGAGEMENT -->
+        <div class="rounded-[2.5rem] border border-[#eeeeee] bg-black p-10 md:p-12 text-white">
+
+          <p class="uppercase tracking-[0.2em] text-xs text-white/50 mb-6">
+            Flexible Collaborations
+          </p>
+
+          <h3 class="text-3xl md:text-4xl leading-[1.08] font-semibold mb-10">
+
+            Designed Around
+            <span class="block text-white/60">
+              Ecosystem Participation
+            </span>
+
+          </h3>
+
+
+          <div class="space-y-5 text-white/75 text-lg">
+
+            <div>• Founder Interaction Programs</div>
+            <div>• Innovation Exposure Partnerships</div>
+            <div>• Startup Ecosystem Immersions</div>
+            <div>• Institution Collaboration Programs</div>
+            <div>• Entrepreneurial Learning Experiences</div>
+            <div>• Community-Led Exposure Journeys</div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- INDUSTRY & MANUFACTURING ECOSYSTEM PARTNERSHIPS -->
+<section class="py-32 bg-white border-t border-[#f1f1f1] overflow-hidden relative">
+
+  <!-- BACKGROUND -->
+  <div class="absolute top-0 left-0 w-[500px] h-[500px] rounded-full bg-[#fafafa] blur-3xl"></div>
+
+  <div class="relative z-10 max-w-7xl mx-auto px-6 lg:px-10">
+
+
+    <!-- HEADER -->
+    <div class="max-w-5xl mb-24">
+
+      <p class="uppercase tracking-[0.22em] text-sm text-[#888888] mb-6">
+        Industry Collaborations
+      </p>
+
+      <h2 class="text-4xl md:text-6xl leading-[1.05] tracking-tight font-semibold text-[#111111] mb-8">
+
+        Industry &
+        <span class="block text-[#777777]">
+          Manufacturing Partnerships
+        </span>
+
+      </h2>
+
+      <p class="text-lg md:text-xl leading-relaxed text-[#666666] max-w-4xl">
+
+        We collaborate with industries, manufacturing ecosystems,
+        operational environments, and emerging sectors to create
+        applied exposure experiences that connect learning with the real world.
+
+      </p>
+
+    </div>
+
+
+
+    <!-- TOP GRID -->
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 mb-24">
+
+
+      <!-- LEFT MAIN -->
+      <div class="lg:col-span-7 rounded-[2.8rem] border border-[#eeeeee] bg-[#fafafa] p-10 md:p-14">
+
+        <!-- TAGS -->
+        <div class="flex flex-wrap gap-3 mb-10">
+
+          <span class="px-5 py-3 rounded-full bg-white border border-[#e8e8e8] text-xs uppercase tracking-[0.2em] text-[#666666]">
+            Applied Learning
+          </span>
+
+          <span class="px-5 py-3 rounded-full bg-white border border-[#e8e8e8] text-xs uppercase tracking-[0.2em] text-[#666666]">
+            Industrial Exposure
+          </span>
+
+          <span class="px-5 py-3 rounded-full bg-white border border-[#e8e8e8] text-xs uppercase tracking-[0.2em] text-[#666666]">
+            Operational Ecosystems
+          </span>
+
+        </div>
+
+
+        <h3 class="text-3xl md:text-5xl leading-[1.08] font-semibold text-[#111111] mb-8">
+
+          Connecting Industries
+          <span class="block text-[#777777]">
+            With Emerging Talent
+          </span>
+
+        </h3>
+
+
+        <p class="text-lg md:text-xl text-[#666666] leading-relaxed mb-12 max-w-3xl">
+
+          We help industries create meaningful exposure opportunities
+          that bridge academic learning with operational environments,
+          manufacturing ecosystems, applied understanding, and future-ready skills.
+
+        </p>
+
+
+        <!-- FEATURES -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+
+          <!-- ITEM -->
+          <div class="rounded-[2rem] bg-white border border-[#eeeeee] p-8">
+
+            <div class="w-14 h-14 rounded-2xl bg-[#fafafa] border border-[#eeeeee] flex items-center justify-center text-xl mb-6">
+              ▲
+            </div>
+
+            <h4 class="text-2xl font-semibold text-[#111111] mb-4">
+              Industrial Immersions
+            </h4>
+
+            <p class="text-[#666666] leading-relaxed">
+              Structured exposure to manufacturing ecosystems,
+              operational processes, and industrial environments.
+            </p>
+
+          </div>
+
+
+
+          <!-- ITEM -->
+          <div class="rounded-[2rem] bg-white border border-[#eeeeee] p-8">
+
+            <div class="w-14 h-14 rounded-2xl bg-[#fafafa] border border-[#eeeeee] flex items-center justify-center text-xl mb-6">
+              ◈
+            </div>
+
+            <h4 class="text-2xl font-semibold text-[#111111] mb-4">
+              Applied Learning Experiences
+            </h4>
+
+            <p class="text-[#666666] leading-relaxed">
+              Real-world observational learning designed around
+              operations, systems, workflows, and industrial understanding.
+            </p>
+
+          </div>
+
+
+
+          <!-- ITEM -->
+          <div class="rounded-[2rem] bg-white border border-[#eeeeee] p-8">
+
+            <div class="w-14 h-14 rounded-2xl bg-[#fafafa] border border-[#eeeeee] flex items-center justify-center text-xl mb-6">
+              ✦
+            </div>
+
+            <h4 class="text-2xl font-semibold text-[#111111] mb-4">
+              Industry Interactions
+            </h4>
+
+            <p class="text-[#666666] leading-relaxed">
+              Curated interactions with operational leaders,
+              industry professionals, and ecosystem stakeholders.
+            </p>
+
+          </div>
+
+
+
+          <!-- ITEM -->
+          <div class="rounded-[2rem] bg-white border border-[#eeeeee] p-8">
+
+            <div class="w-14 h-14 rounded-2xl bg-[#fafafa] border border-[#eeeeee] flex items-center justify-center text-xl mb-6">
+              ⌁
+            </div>
+
+            <h4 class="text-2xl font-semibold text-[#111111] mb-4">
+              Ecosystem Exposure Programs
+            </h4>
+
+            <p class="text-[#666666] leading-relaxed">
+              Exposure-driven learning initiatives connecting
+              institutions, learners, industries, and operational ecosystems.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+
+      <!-- RIGHT COLUMN -->
+      <div class="lg:col-span-5 flex flex-col gap-6">
+
+
+        <!-- VALUE -->
+        <div class="rounded-[2.5rem] border border-[#eeeeee] bg-[#fafafa] p-10 md:p-12">
+
+          <p class="uppercase tracking-[0.2em] text-xs text-[#888888] mb-6">
+            Industry Value
+          </p>
+
+          <h3 class="text-3xl md:text-4xl leading-[1.08] font-semibold text-[#111111] mb-10">
+
+            What Industries
+            <span class="block text-[#777777]">
+              Gain
+            </span>
+
+          </h3>
+
+
+          <div class="space-y-8">
+
+
+            <!-- ITEM -->
+            <div>
+
+              <h4 class="text-xl font-semibold text-[#111111] mb-3">
+                Academic Visibility
+              </h4>
+
+              <p class="text-[#666666] leading-relaxed">
+                Showcase operational ecosystems, industrial environments,
+                and applied workflows to institutions and learners.
+              </p>
+
+            </div>
+
+
+
+            <!-- ITEM -->
+            <div>
+
+              <h4 class="text-xl font-semibold text-[#111111] mb-3">
+                Future Talent Engagement
+              </h4>
+
+              <p class="text-[#666666] leading-relaxed">
+                Create meaningful exposure opportunities for students,
+                emerging professionals, and future industry talent.
+              </p>
+
+            </div>
+
+
+
+            <!-- ITEM -->
+            <div>
+
+              <h4 class="text-xl font-semibold text-[#111111] mb-3">
+                Ecosystem Contribution
+              </h4>
+
+              <p class="text-[#666666] leading-relaxed">
+                Participate in experiential learning ecosystems
+                that strengthen industry-academia collaboration.
+              </p>
+
+            </div>
+
+
+
+            <!-- ITEM -->
+            <div>
+
+              <h4 class="text-xl font-semibold text-[#111111] mb-3">
+                Industry Positioning
+              </h4>
+
+              <p class="text-[#666666] leading-relaxed">
+                Strengthen brand visibility through exposure-driven
+                educational collaborations and ecosystem participation.
+              </p>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+
+        <!-- ENGAGEMENT -->
+        <div class="rounded-[2.5rem] border border-[#eeeeee] bg-black p-10 md:p-12 text-white">
+
+          <p class="uppercase tracking-[0.2em] text-xs text-white/50 mb-6">
+            Flexible Collaborations
+          </p>
+
+          <h3 class="text-3xl md:text-4xl leading-[1.08] font-semibold mb-10">
+
+            Designed Around
+            <span class="block text-white/60">
+              Industry Participation
+            </span>
+
+          </h3>
+
+
+          <div class="space-y-5 text-white/75 text-lg">
+
+            <div>• Industrial Exposure Programs</div>
+            <div>• Manufacturing Ecosystem Visits</div>
+            <div>• Operational Learning Experiences</div>
+            <div>• Institution Collaboration Programs</div>
+            <div>• Applied Learning Initiatives</div>
+            <div>• Industry Interaction Sessions</div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- RETREAT SPACES & EXPERIENCE ENVIRONMENTS -->
+<section class="py-32 bg-white border-t border-[#f1f1f1] overflow-hidden relative">
+
+  <!-- BACKGROUND -->
+  <div class="absolute top-0 right-0 w-[500px] h-[500px] rounded-full bg-[#fafafa] blur-3xl"></div>
+
+  <div class="relative z-10 max-w-7xl mx-auto px-6 lg:px-10">
+
+
+    <!-- HEADER -->
+    <div class="max-w-5xl mb-24">
+
+      <p class="uppercase tracking-[0.22em] text-sm text-[#888888] mb-6">
+        Experience Environment Collaborations
+      </p>
+
+      <h2 class="text-4xl md:text-6xl leading-[1.05] tracking-tight font-semibold text-[#111111] mb-8">
+
+        Retreat Spaces &
+        <span class="block text-[#777777]">
+          Experience Partnerships
+        </span>
+
+      </h2>
+
+      <p class="text-lg md:text-xl leading-relaxed text-[#666666] max-w-4xl">
+
+        We collaborate with retreat spaces, experiential environments,
+        boutique stays, nature-based venues, and immersive destinations
+        to create meaningful experiences centered around reflection,
+        leadership, learning, and human connection.
+
+      </p>
+
+    </div>
+
+
+
+    <!-- TOP GRID -->
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 mb-24">
+
+
+      <!-- LEFT MAIN -->
+      <div class="lg:col-span-7 rounded-[2.8rem] border border-[#eeeeee] bg-[#fafafa] p-10 md:p-14">
+
+        <!-- TAGS -->
+        <div class="flex flex-wrap gap-3 mb-10">
+
+          <span class="px-5 py-3 rounded-full bg-white border border-[#e8e8e8] text-xs uppercase tracking-[0.2em] text-[#666666]">
+            Leadership Retreats
+          </span>
+
+          <span class="px-5 py-3 rounded-full bg-white border border-[#e8e8e8] text-xs uppercase tracking-[0.2em] text-[#666666]">
+            Reflective Experiences
+          </span>
+
+          <span class="px-5 py-3 rounded-full bg-white border border-[#e8e8e8] text-xs uppercase tracking-[0.2em] text-[#666666]">
+            Immersive Environments
+          </span>
+
+        </div>
+
+
+        <h3 class="text-3xl md:text-5xl leading-[1.08] font-semibold text-[#111111] mb-8">
+
+          Transforming Spaces
+          <span class="block text-[#777777]">
+            Into Meaningful Experiences
+          </span>
+
+        </h3>
+
+
+        <p class="text-lg md:text-xl text-[#666666] leading-relaxed mb-12 max-w-3xl">
+
+          We help experience spaces create immersive environments
+          designed around leadership, reflection, collaboration,
+          wellbeing, and intentional human experiences.
+
+        </p>
+
+
+        <!-- FEATURES -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+
+          <!-- ITEM -->
+          <div class="rounded-[2rem] bg-white border border-[#eeeeee] p-8">
+
+            <div class="w-14 h-14 rounded-2xl bg-[#fafafa] border border-[#eeeeee] flex items-center justify-center text-xl mb-6">
+              ⌁
+            </div>
+
+            <h4 class="text-2xl font-semibold text-[#111111] mb-4">
+              Leadership Retreats
+            </h4>
+
+            <p class="text-[#666666] leading-relaxed">
+              Immersive retreat environments designed around leadership,
+              collaboration, strategy, and reflective experiences.
+            </p>
+
+          </div>
+
+
+
+          <!-- ITEM -->
+          <div class="rounded-[2rem] bg-white border border-[#eeeeee] p-8">
+
+            <div class="w-14 h-14 rounded-2xl bg-[#fafafa] border border-[#eeeeee] flex items-center justify-center text-xl mb-6">
+              ▲
+            </div>
+
+            <h4 class="text-2xl font-semibold text-[#111111] mb-4">
+              Reflective Journeys
+            </h4>
+
+            <p class="text-[#666666] leading-relaxed">
+              Nature-based immersive experiences focused on perspective,
+              clarity, wellbeing, and intentional exploration.
+            </p>
+
+          </div>
+
+
+
+          <!-- ITEM -->
+          <div class="rounded-[2rem] bg-white border border-[#eeeeee] p-8">
+
+            <div class="w-14 h-14 rounded-2xl bg-[#fafafa] border border-[#eeeeee] flex items-center justify-center text-xl mb-6">
+              ✦
+            </div>
+
+            <h4 class="text-2xl font-semibold text-[#111111] mb-4">
+              Experiential Gatherings
+            </h4>
+
+            <p class="text-[#666666] leading-relaxed">
+              Curated environments for conversations, collaboration,
+              community interactions, and meaningful shared experiences.
+            </p>
+
+          </div>
+
+
+
+          <!-- ITEM -->
+          <div class="rounded-[2rem] bg-white border border-[#eeeeee] p-8">
+
+            <div class="w-14 h-14 rounded-2xl bg-[#fafafa] border border-[#eeeeee] flex items-center justify-center text-xl mb-6">
+              ◈
+            </div>
+
+            <h4 class="text-2xl font-semibold text-[#111111] mb-4">
+              Wellness & Mindfulness
+            </h4>
+
+            <p class="text-[#666666] leading-relaxed">
+              Thoughtfully curated environments centered around balance,
+              wellbeing, awareness, and intentional living.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+
+      <!-- RIGHT COLUMN -->
+      <div class="lg:col-span-5 flex flex-col gap-6">
+
+
+        <!-- VALUE -->
+        <div class="rounded-[2.5rem] border border-[#eeeeee] bg-[#fafafa] p-10 md:p-12">
+
+          <p class="uppercase tracking-[0.2em] text-xs text-[#888888] mb-6">
+            Partnership Value
+          </p>
+
+          <h3 class="text-3xl md:text-4xl leading-[1.08] font-semibold text-[#111111] mb-10">
+
+            What Experience Spaces
+            <span class="block text-[#777777]">
+              Gain
+            </span>
+
+          </h3>
+
+
+          <div class="space-y-8">
+
+
+            <!-- ITEM -->
+            <div>
+
+              <h4 class="text-xl font-semibold text-[#111111] mb-3">
+                Premium Audience Access
+              </h4>
+
+              <p class="text-[#666666] leading-relaxed">
+                Connect with institutions, organizations,
+                leadership groups, and curated immersive audiences.
+              </p>
+
+            </div>
+
+
+
+            <!-- ITEM -->
+            <div>
+
+              <h4 class="text-xl font-semibold text-[#111111] mb-3">
+                Curated Experience Programming
+              </h4>
+
+              <p class="text-[#666666] leading-relaxed">
+                Transform spaces into intentional immersive environments
+                through thoughtfully designed experiences.
+              </p>
+
+            </div>
+
+
+
+            <!-- ITEM -->
+            <div>
+
+              <h4 class="text-xl font-semibold text-[#111111] mb-3">
+                Ecosystem Participation
+              </h4>
+
+              <p class="text-[#666666] leading-relaxed">
+                Become part of exposure-driven learning,
+                leadership, and experiential ecosystems.
+              </p>
+
+            </div>
+
+
+
+            <!-- ITEM -->
+            <div>
+
+              <h4 class="text-xl font-semibold text-[#111111] mb-3">
+                Differentiated Positioning
+              </h4>
+
+              <p class="text-[#666666] leading-relaxed">
+                Position your space as a destination for meaningful,
+                immersive, and human-centered experiences.
+              </p>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+
+        <!-- ENGAGEMENT -->
+        <div class="rounded-[2.5rem] border border-[#eeeeee] bg-black p-10 md:p-12 text-white">
+
+          <p class="uppercase tracking-[0.2em] text-xs text-white/50 mb-6">
+            Flexible Collaborations
+          </p>
+
+          <h3 class="text-3xl md:text-4xl leading-[1.08] font-semibold mb-10">
+
+            Designed Around
+            <span class="block text-white/60">
+              Experience Environments
+            </span>
+
+          </h3>
+
+
+          <div class="space-y-5 text-white/75 text-lg">
+
+            <div>• Leadership Retreat Partnerships</div>
+            <div>• Reflective Experience Programs</div>
+            <div>• Immersive Offsite Experiences</div>
+            <div>• Wellness & Mindfulness Retreats</div>
+            <div>• Curated Community Gatherings</div>
+            <div>• Multi-Day Experiential Journeys</div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- COMMUNITIES & LOCAL ECOSYSTEM PARTNERSHIPS -->
+<section class="py-32 bg-white border-t border-[#f1f1f1] overflow-hidden relative">
+
+  <!-- BACKGROUND -->
+  <div class="absolute top-0 left-0 w-[500px] h-[500px] rounded-full bg-[#fafafa] blur-3xl"></div>
+
+  <div class="relative z-10 max-w-7xl mx-auto px-6 lg:px-10">
+
+
+    <!-- HEADER -->
+    <div class="max-w-5xl mb-24">
+
+      <p class="uppercase tracking-[0.22em] text-sm text-[#888888] mb-6">
+        Community Collaborations
+      </p>
+
+      <h2 class="text-4xl md:text-6xl leading-[1.05] tracking-tight font-semibold text-[#111111] mb-8">
+
+        Communities &
+        <span class="block text-[#777777]">
+          Local Ecosystem Partnerships
+        </span>
+
+      </h2>
+
+      <p class="text-lg md:text-xl leading-relaxed text-[#666666] max-w-4xl">
+
+        We collaborate with local communities, grassroots ecosystems,
+        cultural spaces, social initiatives, and emerging regional networks
+        to create meaningful exposure experiences rooted in people,
+        environments, and lived realities.
+
+      </p>
+
+    </div>
+
+
+
+    <!-- TOP GRID -->
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 mb-24">
+
+
+      <!-- LEFT MAIN -->
+      <div class="lg:col-span-7 rounded-[2.8rem] border border-[#eeeeee] bg-[#fafafa] p-10 md:p-14">
+
+        <!-- TAGS -->
+        <div class="flex flex-wrap gap-3 mb-10">
+
+          <span class="px-5 py-3 rounded-full bg-white border border-[#e8e8e8] text-xs uppercase tracking-[0.2em] text-[#666666]">
+            Local Experiences
+          </span>
+
+          <span class="px-5 py-3 rounded-full bg-white border border-[#e8e8e8] text-xs uppercase tracking-[0.2em] text-[#666666]">
+            Community Exposure
+          </span>
+
+          <span class="px-5 py-3 rounded-full bg-white border border-[#e8e8e8] text-xs uppercase tracking-[0.2em] text-[#666666]">
+            Human-Centered Learning
+          </span>
+
+        </div>
+
+
+        <h3 class="text-3xl md:text-5xl leading-[1.08] font-semibold text-[#111111] mb-8">
+
+          Connecting People
+          <span class="block text-[#777777]">
+            With Real-World Contexts
+          </span>
+
+        </h3>
+
+
+        <p class="text-lg md:text-xl text-[#666666] leading-relaxed mb-12 max-w-3xl">
+
+          We help communities and local ecosystems become part of
+          meaningful immersive journeys that create awareness,
+          perspective, connection, and experiential understanding.
+
+        </p>
+
+
+        <!-- FEATURES -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+
+          <!-- ITEM -->
+          <div class="rounded-[2rem] bg-white border border-[#eeeeee] p-8">
+
+            <div class="w-14 h-14 rounded-2xl bg-[#fafafa] border border-[#eeeeee] flex items-center justify-center text-xl mb-6">
+              ✦
+            </div>
+
+            <h4 class="text-2xl font-semibold text-[#111111] mb-4">
+              Community Experiences
+            </h4>
+
+            <p class="text-[#666666] leading-relaxed">
+              Immersive interactions centered around local stories,
+              traditions, livelihoods, and community environments.
+            </p>
+
+          </div>
+
+
+
+          <!-- ITEM -->
+          <div class="rounded-[2rem] bg-white border border-[#eeeeee] p-8">
+
+            <div class="w-14 h-14 rounded-2xl bg-[#fafafa] border border-[#eeeeee] flex items-center justify-center text-xl mb-6">
+              ◈
+            </div>
+
+            <h4 class="text-2xl font-semibold text-[#111111] mb-4">
+              Regional Ecosystem Exposure
+            </h4>
+
+            <p class="text-[#666666] leading-relaxed">
+              Curated exposure to local ecosystems,
+              sustainability practices, and regional realities.
+            </p>
+
+          </div>
+
+
+
+          <!-- ITEM -->
+          <div class="rounded-[2rem] bg-white border border-[#eeeeee] p-8">
+
+            <div class="w-14 h-14 rounded-2xl bg-[#fafafa] border border-[#eeeeee] flex items-center justify-center text-xl mb-6">
+              ▲
+            </div>
+
+            <h4 class="text-2xl font-semibold text-[#111111] mb-4">
+              Human-Centered Learning
+            </h4>
+
+            <p class="text-[#666666] leading-relaxed">
+              Experiences designed around empathy,
+              observation, reflection, and contextual understanding.
+            </p>
+
+          </div>
+
+
+
+          <!-- ITEM -->
+          <div class="rounded-[2rem] bg-white border border-[#eeeeee] p-8">
+
+            <div class="w-14 h-14 rounded-2xl bg-[#fafafa] border border-[#eeeeee] flex items-center justify-center text-xl mb-6">
+              ⌁
+            </div>
+
+            <h4 class="text-2xl font-semibold text-[#111111] mb-4">
+              Shared Experience Journeys
+            </h4>
+
+            <p class="text-[#666666] leading-relaxed">
+              Collaborative immersive experiences connecting
+              learners, professionals, communities, and local environments.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+
+      <!-- RIGHT COLUMN -->
+      <div class="lg:col-span-5 flex flex-col gap-6">
+
+
+        <!-- VALUE -->
+        <div class="rounded-[2.5rem] border border-[#eeeeee] bg-[#fafafa] p-10 md:p-12">
+
+          <p class="uppercase tracking-[0.2em] text-xs text-[#888888] mb-6">
+            Community Value
+          </p>
+
+          <h3 class="text-3xl md:text-4xl leading-[1.08] font-semibold text-[#111111] mb-10">
+
+            What Communities
+            <span class="block text-[#777777]">
+              Gain
+            </span>
+
+          </h3>
+
+
+          <div class="space-y-8">
+
+
+            <!-- ITEM -->
+            <div>
+
+              <h4 class="text-xl font-semibold text-[#111111] mb-3">
+                Meaningful Visibility
+              </h4>
+
+              <p class="text-[#666666] leading-relaxed">
+                Showcase local ecosystems, stories,
+                initiatives, and lived experiences meaningfully.
+              </p>
+
+            </div>
+
+
+
+            <!-- ITEM -->
+            <div>
+
+              <h4 class="text-xl font-semibold text-[#111111] mb-3">
+                Collaborative Participation
+              </h4>
+
+              <p class="text-[#666666] leading-relaxed">
+                Become active contributors within immersive
+                learning and exposure-driven ecosystems.
+              </p>
+
+            </div>
+
+
+
+            <!-- ITEM -->
+            <div>
+
+              <h4 class="text-xl font-semibold text-[#111111] mb-3">
+                Sustainable Engagement
+              </h4>
+
+              <p class="text-[#666666] leading-relaxed">
+                Create intentional interactions between communities,
+                learners, institutions, and emerging professionals.
+              </p>
+
+            </div>
+
+
+
+            <!-- ITEM -->
+            <div>
+
+              <h4 class="text-xl font-semibold text-[#111111] mb-3">
+                Ecosystem Recognition
+              </h4>
+
+              <p class="text-[#666666] leading-relaxed">
+                Strengthen visibility as meaningful local ecosystems
+                contributing toward experiential understanding.
+              </p>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+
+        <!-- ENGAGEMENT -->
+        <div class="rounded-[2.5rem] border border-[#eeeeee] bg-black p-10 md:p-12 text-white">
+
+          <p class="uppercase tracking-[0.2em] text-xs text-white/50 mb-6">
+            Flexible Collaborations
+          </p>
+
+          <h3 class="text-3xl md:text-4xl leading-[1.08] font-semibold mb-10">
+
+            Designed Around
+            <span class="block text-white/60">
+              Shared Participation
+            </span>
+
+          </h3>
+
+
+          <div class="space-y-5 text-white/75 text-lg">
+
+            <div>• Community Exposure Programs</div>
+            <div>• Local Ecosystem Experiences</div>
+            <div>• Sustainability & Awareness Journeys</div>
+            <div>• Human-Centered Learning Experiences</div>
+            <div>• Collaborative Regional Initiatives</div>
+            <div>• Contextual Immersion Programs</div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- 
+
+Suggested SEO Categories
+
+Industry Exposure
+Industrial Visits
+Experiential Learning
+Startup Ecosystems
+Innovation Exposure
+Leadership Retreats
+Founder Conversations
+Institutional Learning
+Future-Ready Education
+Reflective Journeys
+Corporate Learning
+Faculty Development
+Entrepreneurship Ecosystems
+Applied Learning
+Immersive Exposure
+
+
+High-Value SEO Blog Ideas
+
+
+Why Real-World Exposure Matters More Than Traditional Learning
+Industrial Visits vs Experiential Learning
+How Startup Ecosystems Shape Entrepreneurial Thinking
+Why Institutions Need Exposure-Based Learning
+Leadership Development Through Immersive Retreats
+Future-Ready Skills Beyond Classrooms
+What Students Actually Learn From Industry Exposure
+The Rise of Immersive Learning Experiences
+Why Founder Conversations Matter For Students
+Experiential Learning In Higher Education
+
+
+-->
+
+  <!-- FOOTER -->
+
+<footer class="pt-2 pb-5 px-5 bg-white">
+<div class="text-center text-xs text-black">
+      © 2026 9° South. All rights reserved.
+    </div>
+</footer>
+
+<!-- Overlay -->
+<div id="modal"
+  class="fixed inset-0 bg-black/50 backdrop-blur-sm hidden items-center justify-center z-50 px-4">
+
+  <!-- Modal Box -->
+  <div class="bg-white w-full max-w-lg rounded-2xl p-6 md:p-8 relative">
+
+    <!-- Close Button -->
+    <button onclick="closeModal()"
+      class="absolute top-4 right-4 text-gray-400 hover:text-black text-xl">
+      ×
+    </button>
+  
+
+    <!-- FORM -->
+    <form id="enquiryForm" class="space-y-5">
+
+	  <label class="text-2xl text-black font-serif mb-2">Plan a Immersion</label>
+	  
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_next" value="https://yourwebsite.com/thank-you">
+
+      <input type="text" name="name" placeholder="Organization Name"
+        class="w-full border-b border-gray-300 py-2 outline-none" required>
+
+      <input type="text" name="contact" placeholder="Email or Phone"
+        class="w-full border-b border-gray-300 py-2 outline-none" required>
+
+		
+      <input type="text" name="intent" placeholder="Exposure / Retreats / Journeys"
+        class="w-full border-b border-gray-300 py-2 outline-none">
+
+  <input id="when" name="when" type="text"
+  placeholder="When are you planning?"
+  class="w-full border-b border-gray-300 py-2 outline-none bg-transparent">
+
+      <button type="button" onclick="handleSubmit()"
+        class="w-full bg-black text-white py-2 rounded-full hover:opacity-80 transition mt-6">
+        Start Planning
+      </button>
+
+    </form>
+
+  </div>
+</div>
+  </div>
+ 
+ <!-- WhatsApp Button 
+<a href="https://wa.me/919999999999" target="_blank" class="fixed bottom-6 right-6 bg-green-500 text-white px-4 py-3 rounded-full shadow-lg">WhatsApp</a>
+<!-- WhatsApp Floating Button -->
+<a href="https://wa.me/919566358805?text=Hi%20I%20want%20to%20plan%20a%20immersion"
+   target="_blank"
+   class="fixed bottom-6 right-4 z-50">
+
+  <div class="w-14 h-14 rounded-full bg-[#25D366] flex items-center justify-center
+              shadow-lg hover:scale-110 transition duration-300
+              relative">
+
+    <!-- Glow Effect -->
+    <span class="absolute inset-0 rounded-full bg-[#25D366] opacity-30 blur-xl"></span>
+
+    <!-- WhatsApp Icon -->
+    <svg class="w-7 h-7 text-white relative" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M20.52 3.48A11.8 11.8 0 0012.05 0C5.5 0 .2 5.3.2 11.85c0 2.1.55 4.15 1.6 5.96L0 24l6.34-1.66a11.8 11.8 0 005.71 1.46h.01c6.55 0 11.85-5.3 11.85-11.85 0-3.17-1.23-6.15-3.39-8.47z"/>
+    </svg>
+
+  </div>
+
+</a>
+<!-- Footer -->
+
+
+
+
+
+
+<!-- CONTACT MODAL -->
+<div id="contactModal"
+  class="fixed inset-0 bg-black/60 backdrop-blur-sm hidden items-center justify-center z-50 px-4">
+
+  <!-- Modal Box -->
+  <div class="bg-white text-black w-full max-w-lg rounded-3xl p-6 md:p-8 relative">
+
+    <!-- Close -->
+    <button onclick="closeModal1()"
+      class="absolute top-4 right-4 text-gray-400 hover:text-black text-xl">
+      ×
+    </button>
+
+    <!-- Title -->
+    <h2 class="text-2xl mb-2">
+      Contact Us
+    </h2>
+
+    <p class="text-gray-500 text-sm mb-6">
+      Share a few details—we’ll get back to you with a thoughtfully designed plan.
+    </p>
+
+    <!-- CONTACT INFO -->
+    <div class="mb-6 space-y-2 text-sm text-gray-700">
+      <p>📞 +91 9566358805</p>
+      <p>✉️ bookings@9degreesouth.in</p>
+    </div>
+
+    
+
+  </div>
+</div>
+
+<script>
+function openModal1() {
+  const modal = document.getElementById("contactModal");
+  modal.classList.remove("hidden");
+  modal.classList.add("flex");
+}
+
+function closeModal1() {
+  const modal = document.getElementById("contactModal");
+  modal.classList.add("hidden");
+  modal.classList.remove("flex");
+}
+
+// Close on outside click
+document.getElementById("contactModal").addEventListener("click", function(e) {
+  if (e.target === this) closeModal1();
+});
+</script>
+
+  <script>
+
+flatpickr("#when", {
+  plugins: [
+    new monthSelectPlugin({
+      shorthand: true,
+      dateFormat: "M Y",   // Dec 2026
+      altFormat: "F Y"     // December 2026
+    })
+  ],
+  minDate: "today",
+  disableMobile: true
+});
+
+function handleSubmit() {
+  const form = document.getElementById("enquiryForm");
+  const btn = form.querySelector("button");
+
+  // Disable button + loading state
+  btn.innerText = "Sending...";
+  btn.disabled = true;
+
+  fetch("https://formsubmit.co/ajax/dglobalconsultants@gmail.com", {
+    method: "POST",
+    headers: { 
+      'Accept': 'application/json'
+    },
+    body: new FormData(form)
+  })
+  .then(response => response.json())
+  .then(data => {
+
+    // Success UI
+    form.innerHTML = `
+      <div class="text-center py-10">
+        <h3 class="text-xl font-serif mb-2">You're all set.</h3>
+        <p class="text-gray-500 text-sm">
+          We’ll get back to you within 24 hours.
+        </p>
+      </div>
+    `;
+
+    // Prevent resubmit popup on refresh
+    window.history.replaceState(null, null, window.location.pathname);
+  })
+  .catch(error => {
+    console.error(error);
+
+    alert("Something went wrong. Please try again.");
+
+    // Reset button
+    btn.innerText = "Start Planning";
+    btn.disabled = false;
+  });
+}
+
+
+
+  const modal = document.getElementById("modal");
+
+  function openModal() {
+    modal.classList.remove("hidden");
+    modal.classList.add("flex");
+  }
+
+  function closeModal() {
+    modal.classList.add("hidden");
+    modal.classList.remove("flex");
+  }
+
+  // Close on outside click
+  modal.addEventListener("click", function(e) {
+    if (e.target === modal) {
+      closeModal();
+    }
+  });
+
+  // Close on ESC
+  document.addEventListener("keydown", function(e) {
+    if (e.key === "Escape") {
+      closeModal();
+    }
+  });
+  
+ 
+
+const btn = document.getElementById('menu-btn');
+const mobileMenu = document.getElementById('mobile-menu');
+btn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+document.querySelectorAll('#mobile-menu a').forEach(link => {
+  link.addEventListener('click', () => mobileMenu.classList.add('hidden'));
+});
+document.addEventListener('click', (e) => {
+  if (!mobileMenu.contains(e.target) && !btn.contains(e.target)) {
+    mobileMenu.classList.add('hidden');
+  }
+});
+</script>
+
+</body>
+</html>

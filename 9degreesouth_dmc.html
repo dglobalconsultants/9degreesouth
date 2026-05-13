@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>9° South</title>
+ <!-- Flatpickr core -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
+<!-- Month Select Plugin -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/plugins/monthSelect/style.css">
+<script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/plugins/monthSelect/index.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+<style>
+.logo-container {
+  width: auto;
+  height: 3.5rem;
+}
+#home p{
+font-size:18px;
+width:50%;
+
+
+}
+ html {
+    scroll-behavior: smooth;
+  }
+
+  * {
+    scroll-margin-top: 100px;
+  }
+
+  .filter-btn {
+    padding: 8px 16px;
+    border-radius: 999px;
+    border: 1px solid #ddd;
+    background: white;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+
+  .filter-btn:hover,
+  .filter-btn.active {
+    background: black;
+    color: white;
+  }
+
+  .package-card {
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    transition: 0.3s;
+  }
+
+  .package-card:hover {
+    //transform: translateY(-2px);
+	transform-scale:110;
+	transition-duration:500;
+  }
+
+  .hidden {
+    display: none;
+  }
+  
+  <!-- Hide scrollbar -->
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.active-tab {
+    background: black;
+    color: white;
+  }
+
+
+</style>
+</head>
+
+<body class="font-sans overflow-x-hidden text-gray-800 overflow-x-hidden">
+
+<nav class="w-full bg-white shadow-sm fixed top-0 left-0 z-50">
+  <div class="max-w-7xl mx-auto px-6 lg:px-8">
+    <div class="flex justify-between items-center h-16">
+
+      <!-- Logo -->
+      <div class="text-xl font-semibold tracking-wide">
+        9° South
+      </div>
+
+      <!-- Desktop Menu -->
+      <div class="hidden md:flex items-center space-x-10">
+
+	<!-- DMC -->
+		<a href="./index.html" class="block py-2 text-gray-800 font-medium">
+        Home
+		</a>
+		
+        <!-- Experiences Dropdown -->
+        <div class="relative group">
+          <button class="flex items-center gap-2 font-medium text-gray-800 hover:text-black transition">
+            Experiences
+			<svg class="w-4 h-4 transform transition-transform duration-200 group-hover:rotate-180"
+       fill="none" stroke="currentColor" stroke-width="2"
+       viewBox="0 0 24 24">
+    <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+  </svg>
+          </button>
+
+          <!-- Dropdown -->
+          <div class="absolute left-0 mt-4 w-72 bg-white shadow-xl rounded-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
+
+            <div class="p-4 space-y-4">
+
+             <a href="./9degreesouth_getaways.html" class="block p-3 rounded-lg hover:bg-gray-50 transition">
+                <p class="font-medium text-gray-900">Getaways</p>
+                <p class="text-sm text-gray-500">Escape from routine</p>
+              </a>
+
+              <a href="./9degreesouth_retreats.html" class="block p-3 rounded-lg hover:bg-gray-50 transition">
+                <p class="font-medium text-gray-900">Retreats</p>
+                <p class="text-sm text-gray-500">Reset your rhythm </p>
+              </a>
+
+              <a href="./9degreesouth_journeys.html" class="block p-3 rounded-lg hover:bg-gray-50 transition">
+                <p class="font-medium text-gray-900">Journeys</p>
+                <p class="text-sm text-gray-500">Expand your perspective </p>
+              </a>
+
+            </div>
+          </div>
+        </div>
+
+        <!-- DMC -->
+        <a href="./9degreesouth_dmc.html" class="font-medium text-gray-700 hover:text-black transition">
+          Partner With Us
+        </a>
+
+        <!-- Contact / CTA -->
+        
+      <button type="button" onclick="openModal1()" class="block text-center px-4 py-2 bg-black text-white rounded-full hover:opacity-80 transition">
+        Contact Us
+      </button>
+
+      </div>
+
+      <!-- Mobile Menu Button -->
+      <div class="md:hidden">
+        <button id="menu-btn" class="text-gray-800 focus:outline-none">
+          ☰
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="hidden md:hidden px-6 pb-6 bg-white shadow-md">
+
+    <div class="space-y-4 mt-4">
+
+		<!-- DMC -->
+		<a href="./index.html" class="block py-2 text-gray-800 font-medium">
+        Home
+		</a>
+      <!-- Experiences -->
+      <div>
+        <p class="font-semibold text-gray-900 mb-2">Experiences</p>
+
+         <a href="./9degreesouth_getaways.html" class="block py-2 text-gray-700">Getaways</a>
+        <a href="./9degreesouth_retreats.html" class="block py-2 text-gray-700">Retreats</a>
+        <a href="./9degreesouth_journeys.html" class="block py-2 text-gray-700">Journeys</a>
+      </div>
+
+      <!-- DMC -->
+      <a href="./9degreesouth_dmc.html" class="block py-2 text-gray-800 font-medium">
+        Partner With Us
+      </a>
+
+      <!-- Contact / CTA -->
+        
+      <button type="button" onclick="openModal1()" class="block text-center px-4 py-2 bg-black text-white rounded-full hover:opacity-80 transition">
+        Contact Us
+      </button>
+
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+ <!-- HERO -->
+  <section class="relative px-6 md:px-16 pt-24 pb-6">
+
+    <div class="max-w-6xl mx-auto">
+
+	<div class="max-w-6xl">
+
+        <p class="text-xs tracking-[0.3em] text-neutral-500 uppercase mb-5">
+          Destination Management
+        </p>
+
+        <h2 class="text-3xl md:text-5xl font-light leading-tight mb-6">
+		 End-to-end destination experiences designed for organizations, institutions, and groups.
+        </h2>
+
+        <p class="text-neutral-400 leading-relaxed">
+          9° South partners with companies, educational institutions,
+          communities, and travel planners to design and manage seamless
+          experiences across South India — from retreats and offsites
+          to immersive regional journeys.
+        </p>
+
+      </div>
+      
+
+    </div>
+
+  </section>
+
+  <!-- TRUST STRIP -->
+  <section class="px-6 md:px-16 p-5">
+
+    <div class="max-w-6xl mx-auto">
+
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+
+        <div class="border rounded-[2rem] p-8">
+          <p class="text-3xl md:text-4xl font-light mb-2">50+</p>
+          <p class="text-sm text-neutral-500">Curated Experiences</p>
+        </div>
+
+        <div class="border rounded-[2rem] p-8">
+          <p class="text-3xl md:text-4xl font-light mb-2">South India</p>
+          <p class="text-sm text-neutral-500">Regional Coverage</p>
+        </div>
+
+        <div class="border rounded-[2rem] p-8">
+          <p class="text-3xl md:text-4xl font-light mb-2">End-to-End</p>
+          <p class="text-sm text-neutral-500">Execution & Coordination</p>
+        </div>
+
+        <div class="border rounded-[2rem] p-8">
+          <p class="text-3xl md:text-4xl font-light mb-2">Custom</p>
+          <p class="text-sm text-neutral-500">Built Around Your Goals</p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- WHO WE WORK WITH -->
+  <section class="px-6 md:px-16 pt-24 pb-6 bg-gray-50">
+
+
+    <div class="max-w-6xl mx-auto">
+
+      <div class="max-w-6xl mb-10">
+
+        <p class="text-xs tracking-[0.3em] text-neutral-500 uppercase mb-5">
+          Who We Work With
+        </p>
+
+        <h2 class="text-3xl md:text-5xl font-light leading-tight mb-6">
+          Designed for organizations that need more than logistics.
+        </h2>
+
+        <p class="text-neutral-400 leading-relaxed">
+          We work closely with teams and institutions to create
+          destination experiences that feel intentional, seamless,
+          and professionally managed from start to finish.
+        </p>
+
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-10">
+
+        <!-- CORPORATE -->
+        <div class="bg-white/[0.03] border rounded-[2rem] p-8">
+
+          <p class="text-sm text-yellow-500 mb-6">
+            01
+          </p>
+
+          <h3 class="text-2xl font-light mb-5">
+            Corporate Teams
+          </h3>
+
+          <p class="text-neutral-400 leading-relaxed mb-8">
+            Leadership offsites, annual retreats, incentive travel,
+            culture experiences, and team gatherings designed around
+            clarity, connection, and execution.
+          </p>
+
+          <ul class="space-y-3 text-sm text-neutral-500">
+            <li>Leadership Retreats</li>
+            <li>Team Offsites</li>
+            <li>Incentive Experiences</li>
+            <li>Multi-city Coordination</li>
+          </ul>
+
+        </div>
+
+        <!-- INSTITUTIONS -->
+        <div class="bg-white/[0.03] border rounded-[2rem] p-8">
+
+          <p class="text-sm text-yellow-500 mb-6">
+            02
+          </p>
+
+          <h3 class="text-2xl font-light mb-5">
+            Educational Institutions
+          </h3>
+
+          <p class="text-neutral-400 leading-relaxed mb-8">
+            Structured student journeys, industrial visits,
+            cultural immersions, and group experiences with
+            safety, planning, and coordination at the core.
+          </p>
+
+          <ul class="space-y-3 text-sm text-neutral-500">
+            <li>Industrial Visits</li>
+            <li>Student Retreats</li>
+            <li>Campus Experiences</li>
+            <li>Educational Tours</li>
+          </ul>
+
+        </div>
+
+        <!-- PARTNERS -->
+        <div class="bg-white/[0.03] border rounded-[2rem] p-8">
+
+          <p class="text-sm text-yellow-500 mb-6">
+            03
+          </p>
+
+          <h3 class="text-2xl font-light mb-5">
+            Travel & Event Partners
+          </h3>
+
+          <p class="text-neutral-400 leading-relaxed mb-8">
+            Reliable local execution for agencies, planners,
+            and communities looking for destination support
+            across South India.
+          </p>
+
+          <ul class="space-y-3 text-sm text-neutral-500">
+            <li>Ground Handling</li>
+            <li>Local Experiences</li>
+            <li>Accommodation Coordination</li>
+            <li>Regional Logistics</li>
+          </ul>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  
+
+
+</section>
+																		
+  <!-- SERVICES -->
+  <section class="px-6 md:px-16 pt-24 pb-6">
+
+    <div class="max-w-6xl mx-auto">
+
+      <div class="grid md:grid-cols-2 gap-16 items-start">
+
+        <!-- LEFT -->
+        <div>
+
+          <p class="text-xs tracking-[0.3em] text-neutral-500 uppercase mb-5">
+            What We Handle
+          </p>
+
+          <h2 class="text-3xl md:text-5xl font-light leading-tight mb-8">
+            Designed and managed from the ground up.
+          </h2>
+
+          <p class="text-neutral-400 leading-relaxed">
+            Every experience is coordinated end-to-end —
+            from destination planning and stays to local movement,
+            curated experiences, and on-ground support.
+          </p>
+
+        </div>
+
+        <!-- RIGHT -->
+        <div class="space-y-6">
+
+          <div class="flex justify-between border-b border-white/10 pb-5">
+            <p>Destination Planning</p>
+            <p class="text-yellow-500">01</p>
+          </div>
+
+          <div class="flex justify-between border-b border-white/10 pb-5">
+            <p>Accommodation Coordination</p>
+            <p class="text-yellow-500">02</p>
+          </div>
+
+          <div class="flex justify-between border-b border-white/10 pb-5">
+            <p>Local Transportation</p>
+            <p class="text-yellow-500">03</p>
+          </div>
+
+          <div class="flex justify-between border-b border-white/10 pb-5">
+            <p>Experience Curation</p>
+            <p class="text-yellow-500">04</p>
+          </div>
+
+          <div class="flex justify-between border-b border-white/10 pb-5">
+            <p>On-ground Coordination</p>
+            <p class="text-yellow-500">05</p>
+          </div>
+
+          <div class="flex justify-between pb-2">
+            <p>Multi-location Execution</p>
+            <p class="text-yellow-500">06</p>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- CTA -->
+  <section class="px-6 md:px-16 pt-24 pb-6 bg-gray-50">
+
+    <div class="max-w-4xl mx-auto text-center ">
+
+      <p class="text-xs tracking-[0.3em] text-neutral-500 uppercase mb-5">
+        Partner With Us
+      </p>
+
+      <h2 class="text-4xl md:text-6xl font-light leading-tight mb-8">
+        Let’s design the right experience for your organization.
+      </h2>
+
+      <p class="text-neutral-400 max-w-2xl mx-auto leading-relaxed mb-12">
+        Tell us about your group, objectives, destinations,
+        and timelines — we’ll handle the planning,
+        coordination, and execution.
+      </p>
+
+      <button class="bg-black text-white px-10 py-4 rounded-full hover:opacity-80 transition" onclick="openModal()">
+        Start Planning
+      </button>
+
+    </div>
+
+  </section>
+<!-- Overlay -->
+<div id="modal"
+  class="fixed inset-0 bg-black/50 backdrop-blur-sm hidden items-center justify-center z-50 px-4">
+
+  <!-- Modal Box -->
+  <div class="bg-white w-full max-w-lg rounded-2xl p-6 md:p-8 relative">
+
+    <!-- Close Button -->
+    <button onclick="closeModal()"
+      class="absolute top-4 right-4 text-gray-400 hover:text-black text-xl">
+      ×
+    </button>
+  
+
+    <!-- FORM -->
+    <form id="enquiryForm" class="space-y-5">
+
+	  <label class="text-2xl font-serif mb-2">Plan your Experience</label>
+	  
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_next" value="https://yourwebsite.com/thank-you">
+
+      <input type="text" name="name" placeholder="Company Name"
+        class="w-full border-b border-gray-300 py-2 outline-none" required>
+
+      <input type="text" name="contact" placeholder="Email or Phone"
+        class="w-full border-b border-gray-300 py-2 outline-none" required>
+
+		
+      <input type="text" name="intent" placeholder="Curation / Coordination"
+        class="w-full border-b border-gray-300 py-2 outline-none">
+
+  <input id="when" name="when" type="text"
+  placeholder="When are you planning?"
+  class="w-full border-b border-gray-300 py-2 outline-none bg-transparent">
+
+      <button type="button" onclick="handleSubmit()"
+        class="w-full bg-black text-white py-2 rounded-full hover:opacity-80 transition mt-6">
+        Start Planning
+      </button>
+
+    </form>
+
+  </div>
+</div>
+  </div>
+ 
+ <!-- WhatsApp Button 
+<a href="https://wa.me/919999999999" target="_blank" class="fixed bottom-6 right-6 bg-green-500 text-white px-4 py-3 rounded-full shadow-lg">WhatsApp</a>
+<!-- WhatsApp Floating Button -->
+<a href="https://wa.me/your-number?text=Hi%20I%20want%20to%20plan%20a%20trip"
+   target="_blank"
+   class="fixed bottom-6 right-4 z-50">
+
+  <div class="w-14 h-14 rounded-full bg-[#25D366] flex items-center justify-center
+              shadow-lg hover:scale-110 transition duration-300
+              relative">
+
+    <!-- Glow Effect -->
+    <span class="absolute inset-0 rounded-full bg-[#25D366] opacity-30 blur-xl"></span>
+
+    <!-- WhatsApp Icon -->
+    <svg class="w-7 h-7 text-white relative" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M20.52 3.48A11.8 11.8 0 0012.05 0C5.5 0 .2 5.3.2 11.85c0 2.1.55 4.15 1.6 5.96L0 24l6.34-1.66a11.8 11.8 0 005.71 1.46h.01c6.55 0 11.85-5.3 11.85-11.85 0-3.17-1.23-6.15-3.39-8.47z"/>
+    </svg>
+
+  </div>
+
+</a>
+
+<!-- Footer -->
+
+
+
+
+<footer class="bg-white pt-16 pb-10 px-5">
+
+  <div class="max-w-6xl mx-auto">
+
+    <!-- Grid -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-10">
+
+      <!-- Logo + Text -->
+      <div class="md:col-span-2 flex flex-col items-start">
+
+        <div class="text-xl font-semibold tracking-wide">
+        9° South
+		</div>
+
+        <p class="text-sm leading-relaxed max-w-full mt-5">
+          Destination experience company designing escapes, retreats, and journeys.
+        </p>
+
+      </div>
+
+     
+
+      <!-- Experiences -->
+      <div>
+        <h4 class="text-sm font-medium mb-3">Explore</h4>
+        <ul class="space-y-2 text-sm">
+          <li><a href="./9degreesouth_getaways.html">Getaways</a></li>
+          <li><a href="./9degreesouth_retreats.html">Retreats</a></li>
+          <li><a href="./9degreesouth_journeys.html">Journeys</a></li>
+          <li><a href="./9degreesouth_dmc.html">Partner With Us</a></li>
+        </ul>
+      </div>
+
+      <!-- Journeys + Contact (stacked on mobile) -->
+      
+
+        <div>
+          <h4 class="text-sm font-medium mb-3">Contact</h4>
+          <ul class="space-y-2 text-sm">
+           <li>+91 9566358805</li>
+            <li>bookings@9degreesouth.in</li>
+          </ul>
+        </div>
+		
+</div>
+<div class="mt-10 text-center text-xs text-gray-600">
+      © 2026 9° South. All rights reserved.
+    </div>
+    </div>  
+</footer>
+
+<!-- CONTACT MODAL -->
+<div id="contactModal"
+  class="fixed inset-0 bg-black/60 backdrop-blur-sm hidden items-center justify-center z-50 px-4">
+
+  <!-- Modal Box -->
+  <div class="bg-white text-black w-full max-w-lg rounded-3xl p-6 md:p-8 relative">
+
+    <!-- Close -->
+    <button onclick="closeModal1()"
+      class="absolute top-4 right-4 text-gray-400 hover:text-black text-xl">
+      ×
+    </button>
+
+    <!-- Title -->
+    <h2 class="text-2xl mb-2">
+      Contact Us
+    </h2>
+
+    <p class="text-gray-500 text-sm mb-6">
+      Share a few details—we’ll get back to you with a thoughtfully designed plan.
+    </p>
+
+    <!-- CONTACT INFO -->
+    <div class="mb-6 space-y-2 text-sm text-gray-700">
+      <p>📞 +91 9566358805</p>
+      <p>✉️ bookings@9degreesouth.in</p>
+    </div>
+
+    
+
+  </div>
+</div>
+
+<script>
+function openModal1() {
+  const modal = document.getElementById("contactModal");
+  modal.classList.remove("hidden");
+  modal.classList.add("flex");
+}
+
+function closeModal1() {
+  const modal = document.getElementById("contactModal");
+  modal.classList.add("hidden");
+  modal.classList.remove("flex");
+}
+
+// Close on outside click
+document.getElementById("contactModal").addEventListener("click", function(e) {
+  if (e.target === this) closeModal1();
+});
+</script>
+
+  <script>
+
+flatpickr("#when", {
+  plugins: [
+    new monthSelectPlugin({
+      shorthand: true,
+      dateFormat: "M Y",   // Dec 2026
+      altFormat: "F Y"     // December 2026
+    })
+  ],
+  minDate: "today",
+  disableMobile: true
+});
+
+function handleSubmit() {
+  const form = document.getElementById("enquiryForm");
+  const btn = form.querySelector("button");
+
+  // Disable button + loading state
+  btn.innerText = "Sending...";
+  btn.disabled = true;
+
+  fetch("https://formsubmit.co/ajax/dglobalconsultants@gmail.com", {
+    method: "POST",
+    headers: { 
+      'Accept': 'application/json'
+    },
+    body: new FormData(form)
+  })
+  .then(response => response.json())
+  .then(data => {
+
+    // Success UI
+    form.innerHTML = `
+      <div class="text-center py-10">
+        <h3 class="text-xl font-serif mb-2">You're all set.</h3>
+        <p class="text-gray-500 text-sm">
+          We’ll get back to you within 24 hours.
+        </p>
+      </div>
+    `;
+
+    // Prevent resubmit popup on refresh
+    window.history.replaceState(null, null, window.location.pathname);
+  })
+  .catch(error => {
+    console.error(error);
+
+    alert("Something went wrong. Please try again.");
+
+    // Reset button
+    btn.innerText = "Start Planning";
+    btn.disabled = false;
+  });
+}
+
+
+
+  const modal = document.getElementById("modal");
+
+  function openModal() {
+    modal.classList.remove("hidden");
+    modal.classList.add("flex");
+  }
+
+  function closeModal() {
+    modal.classList.add("hidden");
+    modal.classList.remove("flex");
+  }
+
+  // Close on outside click
+  modal.addEventListener("click", function(e) {
+    if (e.target === modal) {
+      closeModal();
+    }
+  });
+
+  // Close on ESC
+  document.addEventListener("keydown", function(e) {
+    if (e.key === "Escape") {
+      closeModal();
+    }
+  });
+  
+ 
+
+const btn = document.getElementById('menu-btn');
+const mobileMenu = document.getElementById('mobile-menu');
+btn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+document.querySelectorAll('#mobile-menu a').forEach(link => {
+  link.addEventListener('click', () => mobileMenu.classList.add('hidden'));
+});
+document.addEventListener('click', (e) => {
+  if (!mobileMenu.contains(e.target) && !btn.contains(e.target)) {
+    mobileMenu.classList.add('hidden');
+  }
+});
+</script>
+
+</body>
+</html>
