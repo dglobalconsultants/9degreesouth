@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>9° South Retreats | Leadership Offsites, Wilderness Nights, Kayaking & Wellness</title>
+  <meta name="description" content="9° South Retreats curates corporate leadership offsites, sunrise trails, canoeing & kayaking, yoga, and wilderness nights in South India." />
+  <meta name="author" content="D Global Enterprise" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://9degreesouth.in/retreats" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="9° South" />
+  <meta property="og:title" content="9° South Retreats | Leadership Offsites, Wilderness Nights, Kayaking & Wellness" />
+  <meta property="og:description" content="9° South Retreats curates corporate leadership offsites, sunrise trails, canoeing & kayaking, yoga, and wilderness nights in South India." />
+  <meta property="og:url" content="https://9degreesouth.in/retreats" />
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #ffffff;
+      --bg-soft: #f4f4f5;
+      --bg-muted: #e4e4e7;
+      --surface: #ffffff;
+      --border: #e4e4e7;
+      --border-strong: #d4d4d8;
+      --text: #18181b;
+      --text-muted: #52525b;
+      --text-light: #71717a;
+      --primary: #18181b;
+      --primary-hover: #27272a;
+      --accent: #3f3f46;
+      --accent-soft: #f4f4f5;
+      --badge-bg: #f4f4f5;
+      --badge-text: #27272a;
+      --shadow-sm: 0 1px 2px rgba(24, 24, 27, 0.05);
+      --shadow-md: 0 10px 25px -5px rgba(24, 24, 27, 0.08), 0 4px 10px -4px rgba(24, 24, 27, 0.04);
+    }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+    }
+	html {
+    scroll-behavior: smooth;
+  }
+
+  * {
+    scroll-margin-top: 100px;
+  }
+
+    h1, h2, h3, .display-font {
+      font-family: 'Inter', sans-serif;
+      letter-spacing: -0.025em;
+    }
+    a { text-decoration: none; color: inherit; }
+    .container { max-width: 1160px; margin: 0 auto; padding: 0 1.25rem; }
+
+    /* Header */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgba(255, 255, 255, 0.96);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 76px;
+    }
+    .brand { display: flex; align-items: center; gap: 0.75rem; }
+    .brand-mark {
+      width: 40px;
+      height: 40px;
+      border-radius: 8px;
+      background: #18181b;
+      color: #ffffff;
+      font-weight: 700;
+      font-size: 1.05rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      letter-spacing: -0.02em;
+    }
+    .brand-text strong {
+      display: block;
+      font-size: 1.15rem;
+      font-weight: 800;
+      color: var(--text);
+      line-height: 1.1;
+      letter-spacing: -0.01em;
+    }
+    
+    .nav-links { display: flex; align-items: center; gap: 1.75rem; font-size: 0.9rem; font-weight: 500; color: var(--text-muted); }
+    .nav-links a:hover, .nav-links a.active { color: var(--text); font-weight: 600; }
+    .nav-actions { display: flex; align-items: center; gap: 0.75rem; }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.62rem 1.2rem;
+      border-radius: 6px;
+      font-size: 0.88rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.16s ease;
+      border: 1px solid transparent;
+    }
+    .btn-outline { border-color: var(--border-strong); color: var(--text); background: #ffffff; }
+    .btn-outline:hover { border-color: var(--primary); background: var(--bg-soft); }
+    .btn-primary { background: var(--primary); color: #ffffff; }
+    .btn-primary:hover { background: var(--primary-hover); }
+    .btn-subtle { background: var(--bg-soft); color: var(--text); border-color: var(--border); }
+    .btn-subtle:hover { background: var(--bg-muted); }
+    .btn-lg { padding: 0.88rem 1.65rem; font-size: 0.96rem; border-radius: 8px; }
+    .mobile-toggle { display: none; background: #ffffff; border: 1px solid var(--border-strong); border-radius: 6px; padding: 0.45rem 0.65rem; font-size: 1.15rem; cursor: pointer; color: var(--text); }
+    .mobile-drawer { display: none; padding: 1rem 1.25rem 1.4rem; border-top: 1px solid var(--border); background: #ffffff; }
+    .mobile-drawer.open { display: block; }
+    .mobile-drawer a { display: block; padding: 0.65rem 0; font-weight: 500; color: var(--text-muted); border-bottom: 1px solid var(--bg-soft); }
+    .mobile-drawer .btn { width: 100%; margin-top: 0.9rem; }
+
+    /* Hero */
+    .hero {
+      padding: 5.5rem 0 4.75rem;
+      background: #0A192F;
+      border-bottom: 1px solid var(--border);
+      text-align: center;
+    }
+    .hero.compact { padding: 12rem 0 6.75rem; }
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.36rem 0.9rem;
+      border-radius: 999px;
+      background: var(--bg-soft);
+      border: 1px solid var(--border);
+      color: var(--text-muted);
+      font-size: 0.74rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 1.35rem;
+    }
+    .dot { width: 7px; height: 7px; border-radius: 50%; background: #18181b; }
+    .hero h1 {
+      font-size: clamp(2.3rem, 5vw, 3.85rem);
+      font-weight: 800;
+      line-height: 1.12;
+      max-width: 840px;
+      margin: 0 auto;
+      color: #ffffff;
+	  opacity:0.9;
+    }
+    .hero h1 span { color: var(--text-light); }
+    .hero p {
+      font-size: 1.1rem;
+      color: var(--text-light);
+      max-width: 680px;
+      margin: 1.3rem auto 0;
+    }
+    .hero-cta { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.9rem; margin-top: 2.2rem; }
+    .metrics {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.25rem;
+      max-width: 920px;
+      margin: 3.75rem auto 0;
+      padding-top: 2.25rem;
+      border-top: 1px solid var(--border);
+    }
+    .metric strong { display: block; font-size: 1.55rem; font-weight: 800; color: var(--text); }
+    .metric span { font-size: 0.83rem; color: var(--text-light); }
+
+    /* Sections */
+    section { padding: 5rem 0; }
+    .bg-soft { background-color: var(--bg-soft); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+    .sec-head { text-align: center; max-width: 680px; margin: 0 auto 3.25rem; }
+    .eyebrow { display: inline-block; font-size: 0.74rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-light); margin-bottom: 0.5rem; }
+    .sec-head h2 { font-size: clamp(1.75rem, 3.4vw, 2.35rem); font-weight: 800; color: var(--text); line-height: 1.2; }
+    .sec-head p { color: var(--text-muted); margin-top: 0.75rem; font-size: 1rem; }
+
+    /* Cards */
+    .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+    .grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.75rem; }
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 2rem;
+      box-shadow: var(--shadow-sm);
+      transition: transform 0.16s ease, box-shadow 0.16s ease, border-color 0.16s ease;
+    }
+    .card:hover { transform: translateY(-2px); box-shadow: var(--shadow-md); border-color: #a1a1aa; }
+    .step-badge {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0 0.75rem;
+      height: 34px;
+      border-radius: 6px;
+      background: var(--bg-soft);
+      border: 1px solid var(--border);
+      color: var(--text);
+      font-weight: 700;
+      font-size: 0.78rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      margin-bottom: 1.15rem;
+    }
+    .step-badge.dark { background: #18181b; color: #ffffff; border-color: #18181b; }
+    .card h3 { font-size: 1.2rem; font-weight: 700; margin-bottom: 0.65rem; color: var(--text); }
+    .card p { font-size: 0.94rem; color: var(--text-muted); }
+
+    /* Division / Track Cards */
+    .div-card { display: flex; flex-direction: column; justify-content: space-between; padding: 0; overflow: hidden; }
+    .div-body { padding: 2rem; }
+    .div-foot {
+      padding: 1.15rem 2rem;
+      background: var(--bg-soft);
+      border-top: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+    .tag-row { display: flex; justify-content: space-between; align-items: center; gap: 0.5rem; margin-bottom: 1rem; }
+    .tag { font-size: 0.72rem; font-weight: 700; padding: 0.28rem 0.65rem; border-radius: 4px; letter-spacing: 0.06em; text-transform: uppercase; background: var(--bg-soft); border: 1px solid var(--border); color: var(--text); }
+    .duration { font-size: 0.8rem; font-weight: 600; color: var(--text-light); }
+    .spec-list { list-style: none; margin-top: 1.35rem; padding-top: 1.35rem; border-top: 1px solid var(--border); display: grid; gap: 0.75rem; font-size: 0.91rem; color: var(--text-muted); }
+    .spec-list li { display: flex; gap: 0.6rem; align-items: flex-start; }
+    .check { color: #18181b; font-weight: 800; }
+
+    /* Table */
+    .table-wrap { overflow-x: auto; background: #ffffff; border: 1px solid var(--border); border-radius: 12px; box-shadow: var(--shadow-sm); }
+    table { width: 100%; border-collapse: collapse; text-align: left; font-size: 0.9rem; }
+    th { background: #18181b; color: #ffffff; font-weight: 600; padding: 0.95rem 1.1rem; font-size: 0.82rem; letter-spacing: 0.03em; text-transform: uppercase; }
+    td { padding: 0.9rem 1.1rem; border-bottom: 1px solid var(--border); color: var(--text-muted); vertical-align: top; }
+    tr:last-child td { border-bottom: none; }
+    tr:nth-child(even) td { background: #fafafa; }
+    td strong { color: var(--text); }
+
+    /* Institutions Box */
+    .inst-box {
+      background: #ffffff;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 3rem;
+      box-shadow: var(--shadow-md);
+      display: grid;
+      grid-template-columns: 1.2fr 0.95fr;
+      gap: 2.5rem;
+      align-items: center;
+    }
+    .mini-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 1.75rem; }
+    .mini-card { background: var(--bg-soft); border: 1px solid var(--border); border-radius: 10px; padding: 1rem; }
+    .mini-card h4 { font-size: 0.9rem; font-weight: 700; color: var(--text); }
+    .mini-card p { font-size: 0.82rem; color: var(--text-muted); margin-top: 0.3rem; }
+    .form-box { background: var(--bg-soft); border: 1px solid var(--border); border-radius: 12px; padding: 1.75rem; }
+    .form-box h3 { font-size: 1.18rem; font-weight: 700; }
+    .form-box > p { font-size: 0.84rem; color: var(--text-muted); margin: 0.3rem 0 1.2rem; }
+    .field { margin-bottom: 0.95rem; }
+    .field label { display: block; font-size: 0.8rem; font-weight: 600; color: var(--text); margin-bottom: 0.35rem; }
+    .field input, .field select {
+      width: 100%;
+      padding: 0.68rem 0.85rem;
+      border-radius: 6px;
+      border: 1px solid var(--border-strong);
+      background: #ffffff;
+      font-size: 0.9rem;
+      color: var(--text);
+    }
+    .field input:focus, .field select:focus { outline: none; border-color: #18181b; box-shadow: 0 0 0 3px rgba(24, 24, 27, 0.08); }
+
+    /* Footer & Floating WhatsApp */
+    footer { background: var(--bg-soft); border-top: 1px solid var(--border); padding: 3.25rem 0; font-size: 0.88rem; color: var(--text-muted); }
+    .foot-flex { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 1.25rem; }
+    .foot-links { display: flex; flex-wrap: wrap; gap: 1.5rem; font-weight: 500; }
+    .foot-links a:hover { color: var(--text); text-decoration: underline; }
+    .legal-note { margin-top: 1.5rem; padding-top: 1.25rem; font-size: 0.8rem; color: var(--text-light); display: flex; flex-wrap: wrap; justify-content: space-between; gap: 0.75rem; }
+    .wa-float {
+      position: fixed;
+      right: 22px;
+      bottom: 22px;
+      z-index: 60;
+      background: #18181b;
+      color: #ffffff;
+      font-weight: 600;
+      font-size: 0.85rem;
+      padding: 0.78rem 1.2rem;
+      border-radius: 999px;
+      border: 1px solid #3f3f46;
+      box-shadow: 0 10px 25px rgba(24, 24, 27, 0.25);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .wa-float:hover { background: #27272a; }
+
+    @media (max-width: 900px) {
+      .nav-links, .nav-actions { display: none; }
+      .mobile-toggle { display: inline-block; }
+      .grid-3, .grid-2, .inst-box { grid-template-columns: 1fr; }
+      .metrics { grid-template-columns: repeat(2, 1fr); }
+      .inst-box { padding: 1.75rem; }
+    }
+    @media (max-width: 540px) {
+      .div-foot { flex-direction: column; align-items: flex-start; }
+      .mini-grid { grid-template-columns: 1fr; }
+    }
+	
+	.brand-text span { display: block; font-size: 0.68rem; font-weight: 700; letter-spacing: 0.09em; margin-top: 2px; }
+  .brand-text strong { display: block; font-size: 1.5rem; font-weight: 800; letter-spacing: 0.02em; color: #0A192F; line-height: 1.5; }
+  .brand-text strong span { display: inline; font-size: 1.25rem; letter-spacing: 0.02em; line-height: 1; color: #0A192F;}
+  
+  footer { background: #0A192F; color: #e4e4e7; padding: 3.25rem 0 2.5rem; font-size: 0.88rem; }
+  .foot-flex { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 1.25rem; }
+  .foot-links { display: flex; flex-wrap: wrap; gap: 1.5rem; font-weight: 500; }
+  .foot-links a:hover { color:  #e4e4e7; }
+  .legal-note { margin-top: 1.5rem; padding-top: 1.25rem; border-top: 1px solid  #e4e4e7; font-size: 0.8rem; color:  #e4e4e7; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 0.75rem; }
+  .container { max-width: 1160px; margin: 0 auto; padding: 0 1.25rem; }
+</style>
+</head>
+<body>
+
+  <header class="fixed top-0 left-0 w-full z-50 border-b border-white/5 bg-[#ffffff] backdrop-blur-xl">
+    <div class="max-w-7xl mx-auto px-6 lg:px-10">
+      <div class="h-20 flex items-center justify-between">
+
+        <div>	     
+			
+		<div class="flex items-baseline  leading-none brand-text">
+				<a href="./index.html">
+				<strong>9° South <span> | Retreats</span></strong>
+				<span class="text-black/50 uppercase">Explore &bull; Experience &bull; Evolve</span>
+				</a>
+			
+		
+      </a>
+			</div>
+			
+        </div>
+
+		
+        <nav class="hidden md:flex items-center gap-10 text-medium	">
+		  <a href="./index.html" class="hover:underline transition">Home</a>
+          <a href="./labs.html" class="hover:underline transition">Labs</a>
+		  <a href="./immersions.html" class="hover:underline transition">Immersions</a>
+		  <a href="./retreats.html" class="transition font-semibold text-[#0A192F] px-3 py-1.5 rounded-md">Retreats</a>
+		   <a href="./blogs.html" class="hover:underline transition">Blogs</a>
+		  </nav>
+		  
+		<!-- Contact / CTA   --> 
+        <button class="hidden md:block px-5 py-2.5 rounded-full  bg-[#0A192F] hover:bg-black/30 transition text-sm text-white">
+          Contact
+        </button>
+	
+		
+	  
+		 <!-- Mobile Menu Button -->
+      <div class="md:hidden">
+        <button id="menu-btn" class="text-white-800 focus:outline-none">
+          ☰
+        </button>
+      </div>
+	  
+      </div>
+    </div>
+	
+	<!-- Mobile Menu -->
+  <div id="mobile-menu" class="hidden md:hidden px-6 pb-6 bg-white shadow-md">
+
+    <div class="space-y-4 mt-4">
+
+	  <!-- Home -->
+      <a href="./index.html" class="block py-2 text-gray-800 font-semibold">
+        Home
+      </a>
+	  
+      <div>
+	  		  
+		  <a href="./labs.html" class="block py-2 text-gray-700 text-sm">Labs</a>
+		  <a href="./immersions.html" class="block py-2 text-gray-700 text-sm">Immersions</a>
+		  <a href="./retreats.html" class="block py-2 text-gray-700 text-sm">Retreats</a>
+		  <a href="./blogs.html" class="block py-2 text-gray-700 text-sm">Blogs</a>	  
+	</div>																																		
+
+
+      <!-- Contact / CTA -->
+        
+      <button type="button" onclick="openModal1()" class="block px-4 py-2 bg-black text-white rounded-full hover:opacity-80 transition" type="button" onclick="openModal1()">
+        Connect
+      </button>
+
+    </div>
+  </div>
+  
+  
+  </header>
+
+<main>
+
+  <section class="hero compact">
+    	
+	
+	<div class="container">
+        <h1 class="text-5xl md:text-7xl leading-[1.05] font-semibold tracking-tight mb-10 text-white">
+          Reflective Spaces for Clarity &amp; Connection
+          
+        </h1>
+
+        <p class="text-lg md:text-xl text-white leading-relaxed max-w-2xl mb-10">  
+		 Thoughtfully designed leadership offsites, outdoor water expeditions, mindfulness practices, and wilderness nights crafted for founders, corporate teams, institutions, and families.
+		  
+        </p>
+		 
+		
+		<div class="mt-6 flex flex-col text-center sm:flex-row gap-4 items-center justify-center w-full px-4">
+  <a href="https://wa.me/919566358805?text=Hi%209%20Degree%20South%20Retreats,%20we%20would%20like%20to%20plan%20a%20retreat%20or%20team%20offsite." target="_blank" rel="noopener" class="btn btn-outline btn-lg">Plan a Custom Retreat</a>
+</div>
+
+  </section>
+
+
+
+<section class="py-20 bg-soft">
+
+    <div class="max-w-5xl mx-auto px-6 text-center">
+
+      <p class="uppercase tracking-[0.2em] text-sm text-black/40 mb-5">
+       Signature Retreats
+      </p>
+<h2 class="text-4xl md:text-6xl leading-[1.05] tracking-tight font-semibold text-black mb-8">
+
+      Step Away to Realign and  <span class="text-[#777777]">Recharge</span>
+     
+    </h2>
+      <p class="text-lg text-black/60 max-w-2xl mx-auto mb-10">
+          Every retreat blends intentional reflection, nature immersion, and human connection away from everyday noise.
+		  
+        </p>
+      
+	  
+	  <div id="details" class="grid-2 text-left">
+          <article class="card div-card">
+            <div class="div-body">
+              <div class="tag-row">
+                <span class="tag">Leadership Connect</span>
+                <span class="duration">3-Day</span>
+              </div>
+              <h3>Corporate & Founder Offsites</h3>
+			   
+              <p>Immersive multi-day offsites blending strategic alignment, collaborative workshops, wellness, and meaningful team bonding for startups and institutions.</p>
+              <ul class="spec-list">
+                <li><span class="check">&#10003;</span><span>Facilitated strategy &amp; alignment sessions</span></li>
+				<li><span class="check">&#10003;</span><span>Curated retreat venues across the Western Ghats</span></li>
+              </ul>
+            </div>
+            <div class="div-foot">
+              
+              <a href="https://wa.me/919566358805?text=Hi%209%20Degree%20South,%20tell%20me%20more%20about%20Manufacturing%20%26%20EV%20Immersions." target="_blank" rel="noopener" class="btn btn-primary">Request Offiste Plan &rarr;</a>
+            </div>
+          </article>
+		  
+		    
+
+          <article class="card div-card">
+            <div class="div-body">
+              <div class="tag-row">
+                <span class="tag">Reflective Experiences</span>
+                <span class="duration">3-Day</span>
+              </div>
+              <h3>Sunrise Trails & Wilderness Nights</h3>
+			  
+              <p>Quiet morning guided trails focused on clarity and intentional thinking, paired with shared outdoor campfires, storytelling, and stargazing.</p>
+              <ul class="spec-list">
+                <li><span class="check">&#10003;</span><span>Small-group guided nature walks</span></li>
+				<li><span class="check">&#10003;</span><span>Safe, curated outdoor wilderness camps</span></li>
+              </ul>
+            </div>
+            <div class="div-foot">
+              
+              <a href="https://wa.me/919566358805?text=Hi%209%20Degree%20South,%20tell%20me%20more%20about%20Startup%20%26%20IT%20Ecosystem%20Immersions." target="_blank" rel="noopener" class="btn btn-primary">Inquire Dates &rarr;</a>
+            </div>
+          </article>
+		  
+		  
+		  <article class="card div-card">
+            <div class="div-body">
+              <div class="tag-row">
+                <span class="tag">Explorative Getaways</span>
+                <span class="duration">3-Day</span>
+              </div>
+              <h3>Canoeing &amp; Kayaking Expeditions</h3>
+              <p>Slow, immersive flat-water journeys designed around presence, balance, flow, and quiet exploration in scenic backwaters and reservoirs.</p>
+              <ul class="spec-list">
+                <li><span class="check">&#10003;</span><span>Beginner-friendly with certified safety gear</span></li>
+				<li><span class="check">&#10003;</span><span>Ideal for small teams, solo explorers & groups</span></li>
+              </ul>
+            </div>
+            <div class="div-foot">
+              
+              <a href="https://wa.me/919566358805?text=Hi%209%20Degree%20South,%20tell%20me%20more%20about%20Curated%20Sustainability%20Journeys." target="_blank" rel="noopener" class="btn btn-primary">Book a Session &rarr;</a>
+            </div>
+          </article>
+
+			
+		
+          <article class="card div-card">
+            <div class="div-body">
+              <div class="tag-row">
+                <span class="tag">Wellness Retreats</span>
+                <span class="duration">3-Day</span>
+              </div>
+              <h3>Yoga, Breathwork &amp; Meditation</h3>
+              <p>Grounding wellness retreats centered on mindfulness, emotional clarity, stress recovery, and sustainable daily rhythms.</p>
+              <ul class="spec-list">
+                <li><span class="check">&#10003;</span><span>Guided morning yoga &amp; breathwork sessions</span></li>
+				<li><span class="check">&#10003;</span><span>Digital detox &amp; restorative nature stays</span></li>
+              </ul>
+            </div>
+            <div class="div-foot">
+              
+              <a href="https://wa.me/919566358805?text=Hi%209%20Degree%20South,%20tell%20me%20more%20about%20Curated%20Sustainability%20Journeys." target="_blank" rel="noopener" class="btn btn-primary">Explore Stays &rarr;</a>
+            </div>
+          </article>
+        </div>
+		
+	  
+	  
+	  
+	  
+	  
+    </section>
+	
+ 
+</main>
+
+  <footer>
+    <div class="container">
+      <div class="foot-flex">
+        <div>
+          <strong style="color: #f4f4f5; font-size: 1.02rem;">9° South</strong> &mdash; Explore. Experience. Evolve.
+        </div>
+        <div class="foot-links">
+          
+          <a href="tel:+919566358805">+91 9566358805</a>
+          <a href="mailto:bookings@9degreesouth.in">bookings@9degreesouth.in</a>
+        </div>
+      </div>
+
+      <div class="legal-note">
+        <span>&copy; 2026 9° South (9° South Labs &bull; 9° South Immersions &bull; 9° South Retreats). All rights reserved.</span>
+        <span>A Unit of <strong>D Global Enterprise</strong> (MSME Registered &bull; Coimbatore, Tamil Nadu)</span>
+      </div>
+    </div>
+  </footer>
+
+ <a href="https://wa.me/919566358805?text=Hi%20I%20want%20to%20plan%20a%20immersion"
+   target="_blank"
+   class="fixed bottom-6 right-4 z-50">
+
+  <div class="w-14 h-14 rounded-full bg-[#25D366] flex items-center justify-center
+              shadow-lg hover:scale-110 transition duration-300
+              relative">
+
+    <!-- Glow Effect -->
+    <span class="absolute inset-0 rounded-full bg-[#25D366] opacity-30 blur-xl"></span>
+
+    <!-- WhatsApp Icon -->
+    <svg class="w-7 h-7 text-white relative" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M20.52 3.48A11.8 11.8 0 0012.05 0C5.5 0 .2 5.3.2 11.85c0 2.1.55 4.15 1.6 5.96L0 24l6.34-1.66a11.8 11.8 0 005.71 1.46h.01c6.55 0 11.85-5.3 11.85-11.85 0-3.17-1.23-6.15-3.39-8.47z"/>
+    </svg>
+
+  </div>
+
+</a>
+
+  <!-- CONTACT MODAL -->
+<div id="contactModal"
+  class="fixed inset-0 bg-black/60 backdrop-blur-sm hidden items-center justify-center z-50 px-4">
+
+  <!-- Modal Box -->
+  <div class="bg-white text-black w-full max-w-lg rounded-3xl p-6 md:p-8 relative">
+
+    <!-- Close -->
+    <button onclick="closeModal1()"
+      class="absolute top-4 right-4 text-gray-400 hover:text-black text-xl">
+      ×
+    </button>
+
+    <!-- Title -->
+    <h2 class="text-2xl mb-2">
+      Contact Us
+    </h2>
+
+    <p class="text-gray-500 text-sm mb-6">
+      Share a few details—we’ll get back to you with a thoughtfully designed plan.
+    </p>
+
+    <!-- CONTACT INFO -->
+    <div class="mb-6 space-y-2 text-sm text-gray-700">
+      <p>📞 +91 9566358805</p>
+      <p>✉️ bookings@9degreesouth.in</p>
+    </div>
+
+    
+
+  </div>
+</div>
+
+<script>
+function openModal1() {
+  const modal = document.getElementById("contactModal");
+  modal.classList.remove("hidden");
+  modal.classList.add("flex");
+}
+
+function closeModal1() {
+  const modal = document.getElementById("contactModal");
+  modal.classList.add("hidden");
+  modal.classList.remove("flex");
+}
+
+// Close on outside click
+document.getElementById("contactModal").addEventListener("click", function(e) {
+  if (e.target === this) closeModal1();
+});
+
+
+function handleSubmit() {
+  const form = document.getElementById("enquiryForm");
+  const btn = form.querySelector("button");
+
+  // Disable button + loading state
+  btn.innerText = "Sending...";
+  btn.disabled = true;
+
+  fetch("https://formsubmit.co/ajax/dglobalconsultants@gmail.com", {
+    method: "POST",
+    headers: { 
+      'Accept': 'application/json'
+    },
+    body: new FormData(form)
+  })
+  .then(response => response.json())
+  .then(data => {
+
+    // Success UI
+    form.innerHTML = `
+      <div class="text-center py-10">
+        <h3 class="text-xl font-serif mb-2">You're all set.</h3>
+        <p class="text-gray-500 text-sm">
+          We’ll get back to you within 24 hours.
+        </p>
+      </div>
+    `;
+
+    // Prevent resubmit popup on refresh
+    window.history.replaceState(null, null, window.location.pathname);
+  })
+  .catch(error => {
+    console.error(error);
+
+    alert("Something went wrong. Please try again.");
+
+    // Reset button
+    btn.innerText = "Start Planning";
+    btn.disabled = false;
+  });
+}
+
+
+
+  const modal = document.getElementById("modal");
+
+  function openModal() {
+    modal.classList.remove("hidden");
+    modal.classList.add("flex");
+  }
+
+  function closeModal() {
+    modal.classList.add("hidden");
+    modal.classList.remove("flex");
+  }
+
+  // Close on outside click
+  modal.addEventListener("click", function(e) {
+    if (e.target === modal) {
+      closeModal();
+    }
+  });
+
+  // Close on ESC
+  document.addEventListener("keydown", function(e) {
+    if (e.key === "Escape") {
+      closeModal();
+    }
+  });
+  
+  </script>
+
+
+
+
+
+
+<script>
+const btn = document.getElementById('menu-btn');
+const mobileMenu = document.getElementById('mobile-menu');
+btn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+document.querySelectorAll('#mobile-menu a').forEach(link => {
+  link.addEventListener('click', () => mobileMenu.classList.add('hidden'));
+});
+document.addEventListener('click', (e) => {
+  if (!mobileMenu.contains(e.target) && !btn.contains(e.target)) {
+    mobileMenu.classList.add('hidden');
+  }
+});
+</script>
+
+
+</body>
+</html>
