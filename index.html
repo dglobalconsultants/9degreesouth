@@ -1,0 +1,822 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>9° South</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #0A192F;
+      
+    }
+
+    .glass {
+      background: rgba(255,255,255,0.04);
+      backdrop-filter: blur(px);
+      border: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .gradient-text {
+      background: linear-gradient(to right, #ffffff, #b8c0b2);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+	
+	html {
+    scroll-behavior: smooth;
+  }
+.legal-note { margin-top: 1.5rem; padding-top: 1.25rem; font-size: 0.8rem; color: var(--text-light); display: flex; flex-wrap: wrap; justify-content: space-between; gap: 0.75rem; }
+  * {
+    scroll-margin-top: 100px;
+  }
+  .step-badge {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0 0.75rem;
+      height: 34px;
+      border-radius: 6px;
+      background: var(--bg-soft);
+      border: 1px solid var(--border);
+      color: var(--text);
+      font-weight: 700;
+      font-size: 0.78rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      margin-bottom: 1.15rem;
+    }
+.step-badge.dark { background: #0A192F; color: #ffffff; border-color: #18181b; }
+  .brand-text span { display: block; font-size: 0.68rem; font-weight: 700; letter-spacing: 0.09em; text-transform: uppercase; margin-top: 2px; }
+  .brand-text strong { display: block; font-size: 1.5rem; font-weight: 800; letter-spacing: 0.02em; color: #0A192F; line-height: 1.5; }
+  
+  footer { background: #f4f4f5; color: #0A192F; padding: 3.25rem 0 2.5rem; font-size: 0.88rem; }
+  .foot-flex { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 1.25rem; }
+  .foot-links { display: flex; flex-wrap: wrap; gap: 1.5rem; font-weight: 500; }
+  .foot-links a:hover { color: #0A192F; }
+  .legal-note { margin-top: 1.5rem; padding-top: 1.25rem; border-top: 1px solid #1e293b; font-size: 0.8rem; color: #0A192F; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 0.75rem; }
+  .container { max-width: 1160px; margin: 0 auto; padding: 0 1.25rem; }
+  </style>
+</head>
+
+<body class="overflow-x-hidden">
+
+  <!-- NAVBAR -->
+  <!-- NAVBAR -->
+  <header class="fixed top-0 left-0 w-full z-50 border-b border-white/5 bg-[#ffffff] backdrop-blur-xl">
+    <div class="max-w-7xl mx-auto px-6 lg:px-10">
+      <div class="h-20 flex items-center justify-between">
+
+        <div>	     
+			<div class="flex items-baseline  leading-none brand-text">
+				<a href="./index.html">
+				<strong>9° South </strong>
+				<span class="text-black/50">Explore &bull; Experience &bull; Evolve</span>
+				</a>
+			
+		
+      </a>
+			</div>
+		
+        </div>
+
+		
+        <nav class="hidden md:flex items-center gap-10 text-medium	">
+		  <a href="./index.html" class="transition font-semibold text-[#0A192F] px-3 py-1.5 rounded-md">Home</a>
+          <a href="./labs.html" class="hover:underline transition">Labs</a>
+		  <a href="./immersions.html" class="hover:underline transition">Immersions</a>
+		  <a href="./retreats.html" class="hover:underline transition">Retreats</a>
+  	  
+	  <!--
+		<div class="relative group">
+          <button class="flex items-center gap-2 font-medium hover:text-white transition">
+            Partner With Us
+			<svg class="w-4 h-4 transform transition-transform duration-200 group-hover:rotate-180"
+       fill="none" stroke="currentColor" stroke-width="2"
+       viewBox="0 0 24 24">
+    <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+  </svg>
+          </button>
+
+       
+          <div class="absolute left-0 mt-4 w-72 bg-white shadow-xl rounded-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
+
+            <div class="p-4 space-y-4">
+
+              <a href="./institutions_partnerships.html" class="block p-3 rounded-lg hover:bg-gray-50 transition">
+                <p class="font-medium text-gray-900">Institutions</p>
+              </a>
+
+              <a href="./corporate_partnerships.html" class="block p-3 rounded-lg hover:bg-gray-50 transition">
+                <p class="font-medium text-gray-900">Corporate Organizations</p>
+              </a>
+
+              <a href="./startup_partnerships.html" class="block p-3 rounded-lg hover:bg-gray-50 transition">
+                <p class="font-medium text-gray-900">Startup Teams</p>
+              </a>
+
+			<a href="./industries_partnerships.html" class="block p-3 rounded-lg hover:bg-gray-50 transition">
+                <p class="font-medium text-gray-900">Industries</p>
+              </a>
+			  
+			  <a href="./spaces_partnerships.html" class="block p-3 rounded-lg hover:bg-gray-50 transition">
+                <p class="font-medium text-gray-900">Retreat Spaces</p>
+              </a>
+			  
+			  <a href="./communities_partnerships.html" class="block p-3 rounded-lg hover:bg-gray-50 transition">
+                <p class="font-medium text-gray-900">Communities</p>
+              </a>
+			  
+            </div>
+          </div>
+        </div>
+		-->
+		 <a href="./blogs.html" class="hover:text-white transition">Blogs</a>
+		  </nav>
+		  
+		<!-- Contact / CTA   --> 
+        <button class="hidden md:block px-5 py-2.5 rounded-full  bg-[#0A192F] hover:bg-black/30 transition text-sm text-white" type="button" onclick="openModal1()">
+          Contact
+        </button>
+	
+		
+	  
+		 <!-- Mobile Menu Button -->
+      <div class="md:hidden">
+        <button id="menu-btn" class="text-white-800 focus:outline-none">
+          ☰
+        </button>
+      </div>
+	  
+      </div>
+    </div>
+	
+	<!-- Mobile Menu -->
+  <div id="mobile-menu" class="hidden md:hidden px-6 pb-6 bg-white shadow-md">
+
+    <div class="space-y-4 mt-4">
+
+	  <!-- Home -->
+      <a href="./index.html" class="block py-2 text-gray-800 font-semibold">
+        Home
+      </a>
+	  
+      <div>
+	  		  
+		  <a href="./labs.html" class="block py-2 text-gray-700 text-sm">Labs</a>
+		  <a href="./immersions.html" class="block py-2 text-gray-700 text-sm">Immersions</a>
+		  <a href="./retreats.html" class="block py-2 text-gray-700 text-sm">Retreats</a>
+		  <a href="./blogs.html" class="block py-2 text-gray-700 text-sm">Blogs</a>	  
+	</div>
+	
+																																									
+
+
+      <!-- Contact / CTA -->
+        
+      <button type="button" onclick="openModal1()" class="block px-4 py-2 bg-black text-white rounded-full hover:opacity-80 transition">
+        Connect
+      </button>
+
+	
+    </div>
+  </div>
+  
+  
+  </header>
+
+
+  <!-- HERO -->
+  <section class="relative min-h-screen flex items-center pt-32 pb-20 ">
+
+    <div class="absolute inset-0">
+      <img 
+        src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=2000&auto=format&fit=crop"
+        class="w-full h-full object-cover opacity-30"
+      />
+      <!--<div class="absolute inset-0 bg-gradient-to-b from-[#0f1110]/50 via-[#0f1110]/80 to-[#0f1110]"></div>-->
+    </div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-6 lg:px-10">
+
+      <div class="max-w-5xl">
+
+        <div class="mb-6">
+          <span class="px-4 py-2 rounded-full border border-white/30 text-xs uppercase tracking-[0.2em] text-white/80">
+            Experience-led Learning Partner
+          </span>
+        </div>
+
+        <h1 class="text-5xl md:text-7xl leading-[1.05] font-semibold tracking-tight mb-10 text-white">
+          Connecting Learning With Real-World <span class="text-white/50">Experience</span>
+          <span class="gradient-text md:text-4xl block mt-2 text-3xl">
+          
+          </span>
+        </h1>
+
+        <p class="text-lg md:text-xl text-white/65 leading-relaxed max-w-2xl mb-10">  
+		  9° South designs structured industry immersions, hands-on innovation labs, and reflective leadership retreats that connect academic theory directly to live ecosystems.
+		  
+        </p>
+
+        <div class="flex flex-col text-center sm:flex-row gap-4">
+
+          <a href="./immersions.html" class="px-8 py-4 rounded-full bg-white text-black font-medium hover:bg-neutral-200 transition">
+            Explore Immmersions
+          </a>
+<!--
+		  <a href="./programs.html" class="px-8 py-4 rounded-full bg-white text-black font-medium hover:bg-neutral-200 transition">
+            Plan a Program
+          </a>
+-->
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+<!-- Lucide Icons -->
+<script src="https://unpkg.com/lucide@latest"></script>
+
+
+  <!-- WHAT WE DO -->
+  <section class="py-28 border-t border-white/5 bg-white">
+
+    <div class="max-w-7xl mx-auto px-6 lg:px-10">
+
+      <div class="max-w-2xl mb-16">
+        <p class="text-sm uppercase tracking-[0.2em] text-black/40 mb-4">
+          Our Core Philosophy
+        </p>
+
+        <h2 class="text-4xl md:text-5xl font-semibold leading-tight">
+          The 3E Progression  <span class="text-black/50">Framework</span>
+        </h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+        <!-- CARD -->
+        <div class="glass rounded-3xl p-8 hover:-translate-y-2 transition duration-500 border border-black/30 ">
+
+          <div class="mb-6 step-badge dark">
+		  01 &bull; Explore
+            <!--<div class="w-14 h-14 rounded-2xl border border-[#eaeaea] flex items-center justify-center ">
+				<i data-lucide="factory" class="w-6 h-6 text-white"></i>
+				
+			</div>-->
+          </div>
+
+          <h3 class="text-2xl font-semibold mb-4">
+            Step Into Live Ecosystems
+          </h3>
+
+          <p class="text-black/60 leading-relaxed">	
+			Venture beyond textbooks into active manufacturing floors, startup hubs, R&D centers, and emerging industries aligned with your domain.
+          </p>
+
+        </div>
+
+        <!-- CARD -->
+        <div class="glass rounded-2xl p-8 hover:-translate-y-2 transition duration-500 border border-black/30">
+
+          <div class="mb-6 step-badge dark">
+		  02 &bull; Experience
+            <!--02 &bull; <div class="w-14 h-14 rounded-2xl border border-[#eaeaea] flex items-center justify-center">
+				<i data-lucide="compass" class="w-6 h-6 text-white"></i>
+			</div>-->
+          </div>
+
+          <h3 class="text-2xl font-semibold mb-4">
+            Learn Through Real Exposure
+          </h3>
+
+          <p class="text-black/60 leading-relaxed">
+			Engage directly with founders, engineers, and practitioners through applied labs, live problem-solving sprints, and guided field challenges.
+          </p>
+
+        </div>
+
+        <!-- CARD -->
+        <div class="glass rounded-3xl p-8 hover:-translate-y-2 transition duration-500 border border-black/30">
+
+         <div class="mb-6 step-badge dark">
+		 03 &bull; Evolve
+            <!--<div class="w-14 h-14 rounded-2xl border border-[#eaeaea] flex items-center justify-center">
+				<i data-lucide="route" class="w-6 h-6 text-white"></i>
+			
+			</div>-->
+          </div>
+
+          <h3 class="text-2xl font-semibold mb-4">
+            Build Career Readiness
+          </h3>
+
+          <p class="text-black/60 leading-relaxed">
+			Translate field insights into actionable career pathways, industry-aligned portfolios, and confident leadership alignment.
+
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  
+<!-- EXPANDED IMMERSION PHILOSOPHY SECTION -->
+<section class="py-32 border-t border-[#f0f0f0] overflow-hidden relative bg-white">
+
+  <!-- SOFT BACKGROUND -->
+  <div class="absolute top-0 right-0 w-[500px] h-[500px] rounded-full bg-[#f7f7f7] blur-3xl"></div>
+  <div class="absolute bottom-0 left-0 w-[500px] h-[500px] rounded-full bg-[#fafafa] blur-3xl"></div>
+
+
+  <div class="relative z-10 max-w-7xl mx-auto px-6 lg:px-10">
+  
+  <!-- SECTION HEADER -->
+    <div class="max-w-4xl mb-20">
+
+      <p class="uppercase tracking-[0.22em] text-sm text-[#888888] mb-5">
+        WHAT WE DELIVER
+      </p>
+
+      <h2 class="text-4xl md:text-6xl leading-[1.05] tracking-tight font-semibold text-[#111111] mb-8">
+
+        Real-World Exposure,
+        <span class="block text-[#777777]">
+          Beyond Traditional Learning
+        </span>
+
+      </h2>
+
+      <p class="text-lg md:text-xl leading-relaxed text-[#666666] max-w-3xl">
+
+        Curated immersion experiences designed around industries,
+        innovation ecosystems, entrepreneurial culture, and practical exposure.
+
+      </p>
+
+    </div>
+	
+	
+	<!-- Service GRID -->
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+
+
+
+
+
+      <!-- LEFT COLUMN -->
+      <div class="lg:col-span-5 flex flex-col gap-6">
+
+
+		<!-- LABS CARD -->
+        <div class="relative rounded-[2.5rem] overflow-hidden min-h-[347px] group">
+
+          <img
+            src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1800&auto=format&fit=crop"
+            class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition duration-700"
+          />
+
+          <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
+
+
+          <!-- CONTENT -->
+          <div class="absolute bottom-0 p-8 md:p-10 max-w-xl">
+
+            <span class="px-4 py-2 rounded-full bg-white/10 backdrop-blur-md text-xs uppercase tracking-[0.2em] text-white/70">
+              LIVE LABS
+            </span>
+
+            <h3 class="text-4xl leading-[1.08] font-semibold text-white mt-6 mb-5">
+
+              Hands-on & Experiential Labs
+              
+            </h3>
+
+            <p class="text-lg text-white/75 leading-relaxed">
+
+              Projects mapped directly to academic syllabi—covering emerging technologies, product teardowns, design thinking, and real-world case sprints.
+
+            </p>
+
+          </div>
+
+        </div>
+
+		<!-- IMMERSION ECOSYSTEMS -->
+        <div class="relative rounded-[2.5rem] overflow-hidden min-h-[347px] group">
+
+          <img
+            src="https://images.pexels.com/photos/18999469/pexels-photo-18999469.jpeg"
+            class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition duration-700"
+          />
+
+          <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
+
+																																
+          <!-- CONTENT -->
+          <div class="absolute bottom-0 p-8 md:p-10 max-w-xl">
+
+            <span class="px-4 py-2 rounded-full bg-white/10 backdrop-blur-md text-xs uppercase tracking-[0.2em] text-white/70">
+              Immersions
+            </span>
+
+            <h3 class="text-4xl leading-[1.08] font-semibold text-white mt-6 mb-5">
+
+              Industry Immersions
+             
+
+            </h3>
+
+            <p class="text-lg text-white/75 leading-relaxed">
+
+              Curated multi-day journeys into startup ecosystems, industrial operations, coworking cultures, and sustainability hubs with founder conversations.
+
+            </p>
+
+          </div>
+
+        </div>
+      </div>
+
+	<!-- RIGHT COLUMN -->
+      <div class="lg:col-span-7 relative rounded-[2.5rem] overflow-hidden min-h-[720px] group">
+
+        <img
+          src="https://images.unsplash.com/photo-1494412574643-ff11b0a5c1c3?q=80&w=1800&auto=format&fit=crop"
+          class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition duration-700"
+        />
+
+        <div class="absolute inset-0 bg-gradient-to-t from-black via-black/45 to-transparent"></div>
+
+
+        <!-- CONTENT -->
+        <div class="absolute bottom-0 p-8 md:p-12 max-w-2xl">
+
+          <!-- TAGS -->
+          <div class="flex flex-wrap gap-3 mb-6">
+
+            <span class="px-4 py-2 rounded-full bg-white/10 backdrop-blur-md text-xs uppercase tracking-[0.2em] text-white/70">
+              Retreats		
+            </span>
+
+           
+
+          </div>
+
+          <h3 class="text-4xl md:text-6xl leading-[1.05] font-semibold text-white mb-6">
+
+            Leadership & Reflective Retreats
+           
+          </h3>
+
+          <p class="text-lg text-white/75 leading-relaxed mb-8">
+
+            Reflective offsites blending strategic alignment, mindfulness, sunrise trails, kayaking, and wilderness storytelling for leaders and teams.
+
+          </p>
+
+
+        </div>
+
+      </div>
+    </div>
+  
+
+<script>
+  lucide.createIcons();
+</script>
+  
+
+
+
+  
+
+
+    <!-- MANIFESTO -->
+    <div class="mt-32 rounded-[3rem] border border-[#eeeeee] bg-[#fafafa] p-10 md:p-20 relative overflow-hidden">
+
+      <div class="absolute top-[-80px] right-[-80px] w-[260px] h-[260px] rounded-full bg-white shadow-2xl"></div>
+
+      <div class="relative z-10 max-w-4xl">
+
+        <p class="uppercase tracking-[0.22em] text-sm text-[#888888] mb-6">
+          Manifesto
+        </p>
+
+        <h2 class="text-4xl md:text-6xl leading-[1.08] tracking-tight font-semibold text-[#111111] mb-10">
+
+          We Believe
+          <span class="text-[#777777]">
+            Exposure Changes Perspective
+          </span>
+
+        </h2>
+
+        <div class="space-y-6 text-lg leading-relaxed text-[#666666]">
+
+			<p>
+			From experiential labs, innovation ecosystems, leadership retreats, reflective experiences, and outdoor explorations — every immersion is designed to create meaningful perspective shifts.
+			</p>
+          <!--<p>
+            Meaningful learning happens through ecosystems,
+            environments, conversations, cultures, and shared experiences.
+          </p>
+
+         <p>
+            We create immersive journeys that connect people with innovation,
+            leadership, wellness, creativity, nature, and new ways of seeing the world.
+          </p>
+
+          <p>
+            Because the right exposure can reshape ambition,
+            collaboration, clarity, and the direction of future possibilities.
+          </p>-->
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+  <!-- CTA -->
+ 
+ <section class="py-32">
+
+    <div class="max-w-5xl mx-auto px-6 text-center">
+
+      <p class="uppercase tracking-[0.2em] text-sm text-white/40 mb-5">
+        Collaborate
+      </p>
+<h2 class="text-4xl md:text-6xl leading-[1.05] tracking-tight font-semibold text-white mb-8">
+
+      Design your <span class="text-[#777777]">Experience</span> now
+     
+    </h2>
+      <p class="text-lg text-white/60 max-w-2xl mx-auto mb-10">
+          We partner with institutions, startups, organizations,
+          and communities to create meaningful experiential programs.
+        </p>
+
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+
+          <button class="px-8 py-4 rounded-full bg-white text-black font-medium hover:bg-neutral-200 transition" onclick="openModal()">
+            Start a Conversation
+          </button>
+
+         
+        </div>
+
+    </div>
+	
+  </section>
+  
+  <!-- Overlay -->
+<div id="modal"
+  class="fixed inset-0 bg-black/50 backdrop-blur-sm hidden items-center justify-center z-50 px-4">
+
+  <!-- Modal Box -->
+  <div class="bg-white w-full max-w-lg rounded-2xl p-6 md:p-8 relative">
+
+    <!-- Close Button -->
+    <button onclick="closeModal()"
+      class="absolute top-4 right-4 text-gray-400 hover:text-black text-xl">
+      ×
+    </button>
+  
+
+    <!-- FORM -->
+    <form id="enquiryForm" class="space-y-5 text-black">
+
+	  <label class="text-2xl text-black font-serif mb-2">Colloborate With Us</label>
+	  
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_next" value="https://yourwebsite.com/thank-you">
+
+      <input type="text" name="name" placeholder="Organization Name"
+        class="w-full border-b border-gray-300 py-2 outline-none" required>
+
+      <input type="text" name="contact" placeholder="Email or Phone"
+        class="w-full border-b border-gray-300 py-2 outline-none" required>
+
+		
+     
+  
+
+      <button type="button" onclick="handleSubmit()"
+        class="w-full bg-black text-white py-2 rounded-full hover:opacity-80 transition mt-6">
+        Start Collaboration
+      </button>
+
+    </form>
+
+  </div>
+</div>
+
+
+
+<footer>
+        <div class="container">
+      <div class="foot-flex">
+        <div>
+          <strong style="color: #0A192F; font-size: 1.05rem;">9° South</strong> &mdash; Explore. Experience. Evolve.
+        </div>
+        <div class="foot-links">
+          
+          <a href="tel:+919566358805">+91 9566358805</a>
+          <a href="mailto:bookings@9degreesouth.in">bookings@9degreesouth.in</a>
+        </div>
+      </div>
+
+      <div class="legal-note">
+        <span>&copy; 2026 9° South (9° South Labs &bull; 9° South Immersions &bull; 9° South Retreats). All rights reserved.</span>
+        <span>A Unit of <strong style="color: #0A192F;">D Global Enterprise</strong> (MSME Registered &bull; Coimbatore, Tamil Nadu)</span>
+      </div>
+ </div>
+  </footer>
+
+
+<a href="https://wa.me/919566358805?text=Hi%20I%20want%20to%20plan%20a%20immersion"
+   target="_blank"
+   class="fixed bottom-6 right-4 z-50">
+
+  <div class="w-14 h-14 rounded-full bg-[#25D366] flex items-center justify-center
+              shadow-lg hover:scale-110 transition duration-300
+              relative">
+
+    <!-- Glow Effect -->
+    <span class="absolute inset-0 rounded-full bg-[#25D366] opacity-30 blur-xl"></span>
+
+    <!-- WhatsApp Icon -->
+    <svg class="w-7 h-7 text-white relative" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M20.52 3.48A11.8 11.8 0 0012.05 0C5.5 0 .2 5.3.2 11.85c0 2.1.55 4.15 1.6 5.96L0 24l6.34-1.66a11.8 11.8 0 005.71 1.46h.01c6.55 0 11.85-5.3 11.85-11.85 0-3.17-1.23-6.15-3.39-8.47z"/>
+    </svg>
+
+  </div>
+
+</a>
+
+  
+
+
+<!-- CONTACT MODAL -->
+<div id="contactModal"
+  class="fixed inset-0 bg-black/60 backdrop-blur-sm hidden items-center justify-center z-50 px-4">
+
+  <!-- Modal Box -->
+  <div class="bg-white text-black w-full max-w-lg rounded-3xl p-6 md:p-8 relative">
+
+    <!-- Close -->
+    <button onclick="closeModal1()"
+      class="absolute top-4 right-4 text-gray-400 hover:text-black text-xl">
+      ×
+    </button>
+
+    <!-- Title -->
+    <h2 class="text-2xl mb-2">
+      Contact Us
+    </h2>
+
+    <p class="text-gray-500 text-sm mb-6">
+      Share a few details—we’ll get back to you with a thoughtfully designed plan.
+    </p>
+
+    <!-- CONTACT INFO -->
+    <div class="mb-6 space-y-2 text-sm text-gray-700">
+      <p>📞 +91 9566358805</p>
+      <p>✉️ bookings@9degreesouth.in</p>
+    </div>
+
+    
+
+  </div>
+</div>
+
+<script>
+function openModal1() {
+  const modal = document.getElementById("contactModal");
+  modal.classList.remove("hidden");
+  modal.classList.add("flex");
+}
+
+function closeModal1() {
+  const modal = document.getElementById("contactModal");
+  modal.classList.add("hidden");
+  modal.classList.remove("flex");
+}
+
+// Close on outside click
+document.getElementById("contactModal").addEventListener("click", function(e) {
+  if (e.target === this) closeModal1();
+});
+
+
+function handleSubmit() {
+  const form = document.getElementById("enquiryForm");
+  const btn = form.querySelector("button");
+
+  // Disable button + loading state
+  btn.innerText = "Sending...";
+  btn.disabled = true;
+
+  fetch("https://formsubmit.co/ajax/dglobalconsultants@gmail.com", {
+    method: "POST",
+    headers: { 
+      'Accept': 'application/json'
+    },
+    body: new FormData(form)
+  })
+  .then(response => response.json())
+  .then(data => {
+
+    // Success UI
+    form.innerHTML = `
+      <div class="text-center py-10">
+        <h3 class="text-xl font-serif mb-2">You're all set.</h3>
+        <p class="text-gray-500 text-sm">
+          We’ll get back to you within 24 hours.
+        </p>
+      </div>
+    `;
+
+    // Prevent resubmit popup on refresh
+    window.history.replaceState(null, null, window.location.pathname);
+  })
+  .catch(error => {
+    console.error(error);
+
+    alert("Something went wrong. Please try again.");
+
+    // Reset button
+    btn.innerText = "Start Planning";
+    btn.disabled = false;
+  });
+}
+
+
+
+  const modal = document.getElementById("modal");
+
+  function openModal() {
+    modal.classList.remove("hidden");
+    modal.classList.add("flex");
+  }
+
+  function closeModal() {
+    modal.classList.add("hidden");
+    modal.classList.remove("flex");
+  }
+
+  // Close on outside click
+  modal.addEventListener("click", function(e) {
+    if (e.target === modal) {
+      closeModal();
+    }
+  });
+
+  // Close on ESC
+  document.addEventListener("keydown", function(e) {
+    if (e.key === "Escape") {
+      closeModal();
+    }
+  });
+  
+  </script>
+
+
+
+
+
+
+<script>
+const btn = document.getElementById('menu-btn');
+const mobileMenu = document.getElementById('mobile-menu');
+btn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+document.querySelectorAll('#mobile-menu a').forEach(link => {
+  link.addEventListener('click', () => mobileMenu.classList.add('hidden'));
+});
+document.addEventListener('click', (e) => {
+  if (!mobileMenu.contains(e.target) && !btn.contains(e.target)) {
+    mobileMenu.classList.add('hidden');
+  }
+});
+</script>
+
+</body>
+</html>
